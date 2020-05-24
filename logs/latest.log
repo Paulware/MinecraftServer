@@ -1,174 +1,417 @@
-[17:16:51] [Server thread/INFO]: Loading properties
-[17:16:52] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-9de398a-9c887d4 (MC: 1.14.4) (Implementing API version 1.14.4-R0.1-SNAPSHOT)
-[17:16:53] [Server thread/INFO]: Debug logging is disabled
-[17:16:53] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:16:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:16:53] [Server thread/INFO]: Default game type: SURVIVAL
-[17:16:53] [Server thread/INFO]: Generating keypair
-[17:16:53] [Server thread/INFO]: Starting Minecraft server on *:25565
-[17:16:53] [Server thread/INFO]: Using default channel type
-[17:17:02] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
-[17:17:02] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
-[17:17:02] [Server thread/INFO]: Preparing level "world"
-[17:17:03] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
-[17:17:04] [Server thread/INFO]: Loaded 6 recipes
-[17:17:05] [Server thread/INFO]: -------- World Settings For [world] --------
-[17:17:05] [Server thread/INFO]: View Distance: 10
-[17:17:05] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:17:05] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:17:05] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:17:05] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
-[17:17:05] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:17:05] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:17:05] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:17:05] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:17:05] [Server thread/INFO]: Mob Spawn Range: 6
-[17:17:05] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Potato Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Vine Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[17:17:05] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[17:17:05] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:17:05] [Server thread/INFO]: Max TNT Explosions: 100
-[17:17:05] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[17:17:05] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:17:07] [Server thread/INFO]: -------- World Settings For [world_nether] --------
-[17:17:07] [Server thread/INFO]: View Distance: 10
-[17:17:07] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:17:07] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:17:07] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:17:07] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
-[17:17:07] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:17:07] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:17:07] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:17:07] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:17:07] [Server thread/INFO]: Mob Spawn Range: 6
-[17:17:07] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Potato Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Vine Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[17:17:07] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:17:07] [Server thread/INFO]: Max TNT Explosions: 100
-[17:17:07] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[17:17:07] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:17:07] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
-[17:17:07] [Server thread/INFO]: View Distance: 10
-[17:17:07] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:17:07] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:17:07] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:17:07] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
-[17:17:07] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:17:07] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:17:07] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:17:07] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:17:07] [Server thread/INFO]: Mob Spawn Range: 6
-[17:17:07] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Beetroot Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Carrot Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Potato Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Vine Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Cocoa Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Bamboo Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Kelp Growth Modifier: 100%
-[17:17:07] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
-[17:17:07] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:17:07] [Server thread/INFO]: Max TNT Explosions: 100
-[17:17:07] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
-[17:17:07] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:17:16] [Server thread/INFO]: Preparing start region for dimension 'world'/minecraft:overworld
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:19] [Server thread/INFO]: Preparing spawn area: 49%
-[17:17:22] [Server-Worker-3/INFO]: Preparing spawn area: 83%
-[17:17:22] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:22] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:22] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:22] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:22] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:23] [Server-Worker-3/INFO]: Preparing spawn area: 83%
-[17:17:23] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:24] [Server-Worker-1/INFO]: Preparing spawn area: 83%
-[17:17:24] [Server-Worker-1/INFO]: Preparing spawn area: 83%
-[17:17:25] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:25] [Server-Worker-1/INFO]: Preparing spawn area: 84%
-[17:17:26] [Server-Worker-2/INFO]: Preparing spawn area: 86%
-[17:17:26] [Server-Worker-1/INFO]: Preparing spawn area: 87%
-[17:17:27] [Server-Worker-2/INFO]: Preparing spawn area: 88%
-[17:17:27] [Server-Worker-3/INFO]: Preparing spawn area: 91%
-[17:17:28] [Server-Worker-1/INFO]: Preparing spawn area: 94%
-[17:17:28] [Server thread/INFO]: Preparing spawn area: 96%
-[17:17:28] [Server thread/INFO]: Time elapsed: 12012 ms
-[17:17:28] [Server thread/INFO]: Preparing start region for dimension 'world_nether'/minecraft:the_nether
-[17:17:29] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:29] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:29] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:30] [Server-Worker-1/INFO]: Preparing spawn area: 83%
-[17:17:30] [Server-Worker-3/INFO]: Preparing spawn area: 83%
-[17:17:31] [Server-Worker-2/INFO]: Preparing spawn area: 83%
-[17:17:31] [Server-Worker-3/INFO]: Preparing spawn area: 83%
-[17:17:32] [Server-Worker-2/INFO]: Preparing spawn area: 90%
-[17:17:32] [Server thread/INFO]: Time elapsed: 3929 ms
-[17:17:32] [Server thread/INFO]: Preparing start region for dimension 'world_the_end'/minecraft:the_end
-[17:17:33] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:33] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:33] [Server thread/INFO]: Preparing spawn area: 0%
-[17:17:34] [Server-Worker-1/INFO]: Preparing spawn area: 83%
-[17:17:34] [Server thread/INFO]: Time elapsed: 1976 ms
-[17:17:34] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
-[17:17:39] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
-[17:17:41] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
-[17:17:42] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:17:42] [Server thread/INFO]: Done (39.322s)! For help, type "help"
-[17:17:42] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
-[17:17:42] [Server thread/INFO]: Unknown command. Type "/help" for help.[m
-[17:17:42] [Server thread/INFO]: Stopping the server
-[17:17:42] [Server thread/INFO]: Stopping server
-[17:17:42] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
-[17:17:42] [Server thread/INFO]: Saving players
-[17:17:42] [Server thread/INFO]: Saving worlds
-[17:17:42] [Server thread/INFO]: Saving chunks for level 'world'/minecraft:overworld
-[17:17:43] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[17:17:43] [Server thread/INFO]: Saving chunks for level 'world_nether'/minecraft:the_nether
-[17:17:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17:17:45] [Server thread/INFO]: Saving chunks for level 'world_the_end'/minecraft:the_end
-[17:17:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17:17:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[17:17:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17:17:45] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:21:40] [Server thread/INFO]: Starting minecraft server version 1.14.4
+[17:21:40] [Server thread/INFO]: Loading properties
+[17:21:40] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-9de398a-9c887d4 (MC: 1.14.4) (Implementing API version 1.14.4-R0.1-SNAPSHOT)
+[17:21:41] [Server thread/INFO]: Debug logging is disabled
+[17:21:41] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:21:41] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:21:41] [Server thread/INFO]: Default game type: SURVIVAL
+[17:21:41] [Server thread/INFO]: Generating keypair
+[17:21:41] [Server thread/INFO]: Starting Minecraft server on *:25565
+[17:21:41] [Server thread/INFO]: Using default channel type
+[17:21:50] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:21:50] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:21:50] [Server thread/INFO]: Preparing level "world"
+[17:21:51] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:21:52] [Server thread/INFO]: Loaded 6 recipes
+[17:21:53] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:21:53] [Server thread/INFO]: View Distance: 10
+[17:21:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:21:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:21:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:21:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:21:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:21:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:21:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:21:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:21:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:21:53] [Server thread/INFO]: Mob Spawn Range: 6
+[17:21:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:21:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:21:53] [Server thread/INFO]: Max TNT Explosions: 100
+[17:21:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:21:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:21:55] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:21:55] [Server thread/INFO]: View Distance: 10
+[17:21:55] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:21:55] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:21:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:21:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:21:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:21:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:21:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:21:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:21:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:21:55] [Server thread/INFO]: Mob Spawn Range: 6
+[17:21:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:21:55] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:21:55] [Server thread/INFO]: Max TNT Explosions: 100
+[17:21:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:21:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:21:56] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:21:56] [Server thread/INFO]: View Distance: 10
+[17:21:56] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:21:56] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:21:56] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:21:56] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:21:56] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:21:56] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:21:56] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:21:56] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:21:56] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:21:56] [Server thread/INFO]: Mob Spawn Range: 6
+[17:21:56] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:21:56] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:21:56] [Server thread/INFO]: Max TNT Explosions: 100
+[17:21:56] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:21:56] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:21:56] [Server thread/INFO]: Preparing start region for dimension 'world'/minecraft:overworld
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:21:59] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-1/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-2/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server-Worker-3/INFO]: Preparing spawn area: 0%
+[17:22:08] [Server thread/INFO]: Preparing spawn area: 1%
+[17:22:11] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:11] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:11] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:11] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:11] [Server-Worker-1/INFO]: Preparing spawn area: 83%
+[17:22:11] [Server-Worker-1/INFO]: Preparing spawn area: 83%
+[17:22:12] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:12] [Server-Worker-1/INFO]: Preparing spawn area: 83%
+[17:22:13] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[17:22:13] [Server-Worker-2/INFO]: Preparing spawn area: 83%
+[17:22:14] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:14] [Server-Worker-3/INFO]: Preparing spawn area: 84%
+[17:22:15] [Server-Worker-3/INFO]: Preparing spawn area: 89%
+[17:22:15] [Server-Worker-2/INFO]: Preparing spawn area: 91%
+[17:22:16] [Server thread/INFO]: Preparing spawn area: 97%
+[17:22:16] [Server thread/INFO]: Time elapsed: 19714 ms
+[17:22:16] [Server thread/INFO]: Preparing start region for dimension 'world_nether'/minecraft:the_nether
+[17:22:18] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:18] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:18] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:18] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:18] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:18] [Server-Worker-1/INFO]: Preparing spawn area: 83%
+[17:22:19] [Server-Worker-1/INFO]: Preparing spawn area: 83%
+[17:22:19] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:20] [Server-Worker-2/INFO]: Preparing spawn area: 92%
+[17:22:20] [Server thread/INFO]: Time elapsed: 4349 ms
+[17:22:20] [Server thread/INFO]: Preparing start region for dimension 'world_the_end'/minecraft:the_end
+[17:22:21] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:21] [Server thread/INFO]: Preparing spawn area: 0%
+[17:22:21] [Server-Worker-3/INFO]: Preparing spawn area: 83%
+[17:22:22] [Server thread/INFO]: Time elapsed: 1443 ms
+[17:22:22] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:22:24] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:22:26] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:22:26] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:22:26] [Server thread/INFO]: Done (36.016s)! For help, type "help"
+[17:22:26] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[18:23:24] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2917676ms or 58353 ticks behind
+[19:02:13] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 98127ms or 1962 ticks behind
+[19:29:13] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 1331834ms or 26636 ticks behind
+[19:43:27] [User Authenticator #1/INFO]: UUID of player Paulware is ec0b0602-91e3-4f83-99c8-fa2ab771d224
+[19:43:28] [Server thread/INFO]: Paulware[/127.0.0.1:54495] logged in with entity id 56 at ([world]-121.5, 63.0, -174.5)
+[19:43:33] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 5749ms or 114 ticks behind
+[19:48:10] [Server thread/INFO]: Made MasiRichards a server operator
+[19:48:14] [Server thread/INFO]: Made Paulware a server operator
+[19:48:26] [Server thread/INFO]: Paulware issued server command: /js spleef()
+[19:48:26] [Server thread/ERROR]: [scriptcraft] Error while trying to evaluate javascript: spleef(), Error: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:48:26] [Server thread/ERROR]: [scriptcraft] javax.script.ScriptException: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1 in <eval> at line number 695 at column number 8
+[19:48:26] [Server thread/WARN]: javax.script.ScriptException: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1 in <eval> at line number 695 at column number 8
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:392)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:190)
+[19:48:26] [Server thread/WARN]: 	at org.scriptcraftjs.bukkit.ScriptCraftPlugin.onCommand(ScriptCraftPlugin.java:75)
+[19:48:26] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[19:48:26] [Server thread/WARN]: 	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:149)
+[19:48:26] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_14_R1.CraftServer.dispatchCommand(CraftServer.java:710)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.PlayerConnection.handleCommand(PlayerConnection.java:1641)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.PlayerConnection.a(PlayerConnection.java:1481)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.PacketPlayInChat.a(PacketPlayInChat.java:47)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.PacketPlayInChat.a(PacketPlayInChat.java:1)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.TickTask.run(SourceFile:18)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeTask(SourceFile:144)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeNext(SourceFile:118)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.aX(MinecraftServer.java:910)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.executeNext(MinecraftServer.java:903)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeAll(SourceFile:103)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.sleepForTick(MinecraftServer.java:886)
+[19:48:26] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:820)
+[19:48:26] [Server thread/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[19:48:26] [Server thread/WARN]: Caused by: <eval>:695:8 java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAException.create(ECMAException.java:113)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$273$\^eval\_.__onEnable#__onCommand(<eval>:695)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:628)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:199)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:386)
+[19:48:26] [Server thread/WARN]: 	... 20 more
+[19:48:26] [Server thread/WARN]: Caused by: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.arrays.IteratorAction.apply(IteratorAction.java:116)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.NativeArray.forEach(NativeArray.java:1618)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$273$\^eval\_.__onEnable#__onCommand(<eval>:649)
+[19:48:26] [Server thread/WARN]: 	... 25 more
+[19:48:26] [Server thread/WARN]: Caused by: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:454)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:406)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:402)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:155)
+[19:48:26] [Server thread/WARN]: 	at javax.script.AbstractScriptEngine.eval(Unknown Source)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$20$19902A$\^eval\_.__onEnable#engineEval(<eval>:598)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$274$21177ADA$\^eval\_.__onEnable#__onCommand#L:649(<eval>:650)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.NativeArray$9.forEach(NativeArray.java:1615)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.arrays.IteratorAction.apply(IteratorAction.java:110)
+[19:48:26] [Server thread/WARN]: 	... 27 more
+[19:48:26] [Server thread/WARN]: Caused by: <eval>:1 ReferenceError: "spleef" is not defined
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:319)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:291)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.Global.__noSuchProperty__(Global.java:1441)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$275$\^eval\_.:program(<eval>:1)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:637)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+[19:48:26] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:449)
+[19:48:26] [Server thread/WARN]: 	... 35 more
+[19:48:33] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[19:48:33] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[19:48:33] [Server thread/INFO]: Debug logging is disabled
+[19:48:33] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[19:48:33] [Server thread/INFO]: Using 4 threads for Netty based IO
+[19:48:33] [Server thread/INFO]: -------- World Settings For [world] --------
+[19:48:33] [Server thread/INFO]: View Distance: 10
+[19:48:33] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:48:33] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:48:33] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:48:33] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:48:33] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[19:48:33] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:48:33] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:48:33] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[19:48:33] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Potato Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Vine Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mob Spawn Range: 6
+[19:48:33] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[19:48:33] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:48:33] [Server thread/INFO]: Max TNT Explosions: 100
+[19:48:33] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[19:48:33] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:48:33] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[19:48:33] [Server thread/INFO]: View Distance: 10
+[19:48:33] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:48:33] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:48:33] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:48:33] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:48:33] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[19:48:33] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:48:33] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:48:33] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[19:48:33] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Potato Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Vine Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mob Spawn Range: 6
+[19:48:33] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[19:48:33] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:48:33] [Server thread/INFO]: Max TNT Explosions: 100
+[19:48:33] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[19:48:33] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:48:33] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[19:48:33] [Server thread/INFO]: View Distance: 10
+[19:48:33] [Server thread/INFO]: Item Despawn Rate: 6000
+[19:48:33] [Server thread/INFO]: Item Merge Radius: 2.5
+[19:48:33] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[19:48:33] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[19:48:33] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[19:48:33] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[19:48:33] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[19:48:33] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[19:48:33] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cane Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Melon Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Potato Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Vine Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[19:48:33] [Server thread/INFO]: Mob Spawn Range: 6
+[19:48:33] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[19:48:33] [Server thread/INFO]: Experience Merge Radius: 3.0
+[19:48:33] [Server thread/INFO]: Max TNT Explosions: 100
+[19:48:33] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[19:48:33] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[19:48:33] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[19:48:34] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[19:48:34] [Server thread/INFO]: Loaded 6 recipes
+[19:48:34] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[19:48:36] [Server thread/INFO]: Loaded 6 recipes
+[19:48:36] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[19:48:36] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[19:48:36] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[19:48:38] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[19:48:40] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[19:48:41] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[19:48:41] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[19:48:41] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 7285ms or 145 ticks behind
+[19:48:41] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[19:49:27] [Server thread/ERROR]: [scriptcraft] Error while trying to evaluate javascript: spleef(), Error: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:49:27] [Server thread/INFO]: Error while trying to evaluate javascript: spleef(), Error: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1[m
+[19:49:27] [Server thread/ERROR]: [scriptcraft] javax.script.ScriptException: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1 in <eval> at line number 695 at column number 8
+[19:49:27] [Server thread/WARN]: javax.script.ScriptException: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1 in <eval> at line number 695 at column number 8
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:392)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:190)
+[19:49:27] [Server thread/WARN]: 	at org.scriptcraftjs.bukkit.ScriptCraftPlugin.onCommand(ScriptCraftPlugin.java:75)
+[19:49:27] [Server thread/WARN]: 	at org.bukkit.command.PluginCommand.execute(PluginCommand.java:45)
+[19:49:27] [Server thread/WARN]: 	at org.bukkit.command.SimpleCommandMap.dispatch(SimpleCommandMap.java:149)
+[19:49:27] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_14_R1.CraftServer.dispatchCommand(CraftServer.java:710)
+[19:49:27] [Server thread/WARN]: 	at org.bukkit.craftbukkit.v1_14_R1.CraftServer.dispatchServerCommand(CraftServer.java:695)
+[19:49:27] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.DedicatedServer.handleCommandQueue(DedicatedServer.java:433)
+[19:49:27] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.DedicatedServer.b(DedicatedServer.java:397)
+[19:49:27] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.a(MinecraftServer.java:971)
+[19:49:27] [Server thread/WARN]: 	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:816)
+[19:49:27] [Server thread/WARN]: 	at java.lang.Thread.run(Unknown Source)
+[19:49:27] [Server thread/WARN]: Caused by: <eval>:695:8 java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAException.create(ECMAException.java:113)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$550$\^eval\_.__onEnable#__onCommand(<eval>:695)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:628)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:199)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:386)
+[19:49:27] [Server thread/WARN]: 	... 11 more
+[19:49:27] [Server thread/WARN]: Caused by: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.arrays.IteratorAction.apply(IteratorAction.java:116)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.NativeArray.forEach(NativeArray.java:1618)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$550$\^eval\_.__onEnable#__onCommand(<eval>:649)
+[19:49:27] [Server thread/WARN]: 	... 16 more
+[19:49:27] [Server thread/WARN]: Caused by: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:454)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:406)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:402)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:155)
+[19:49:27] [Server thread/WARN]: 	at javax.script.AbstractScriptEngine.eval(Unknown Source)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$305$19902A$\^eval\_.__onEnable#engineEval(<eval>:598)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$Recompilation$551$21177ADA$\^eval\_.__onEnable#__onCommand#L:649(<eval>:650)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.NativeArray$9.forEach(NativeArray.java:1615)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.arrays.IteratorAction.apply(IteratorAction.java:110)
+[19:49:27] [Server thread/WARN]: 	... 18 more
+[19:49:27] [Server thread/WARN]: Caused by: <eval>:1 ReferenceError: "spleef" is not defined
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:319)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:291)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.objects.Global.__noSuchProperty__(Global.java:1441)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.scripts.Script$552$\^eval\_.:program(<eval>:1)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:637)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+[19:49:27] [Server thread/WARN]: 	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:449)
+[19:49:27] [Server thread/WARN]: 	... 26 more
+[19:49:27] [Server thread/INFO]: java.lang.RuntimeException: javax.script.ScriptException: ReferenceError: "spleef" is not defined in <eval> at line number 1 in <eval> at line number 695 at column number 8[m
+[19:49:27] [Server thread/INFO]: /js Javascript code[m
