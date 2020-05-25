@@ -619,7 +619,7 @@
                                     <field name="VARNAME">player</field>
                                     <value name="EXPRESSION">
                                       <block type="eventinfo" id="O9hYHjW-i-Ne|{oHQzYh">
-                                        <field name="INFORMATION">getPlayer</field>
+                                        <field name="INFORMATION">getEntity</field>
                                       </block>
                                     </value>
                                     <next>

@@ -125,9 +125,7 @@ exports.spleef  = function () {
     }
   });
   events.playerDeath( function (event) {
-    console.log ( 'player death' );
-    player=(event.getPlayer== null) ? null : event.getPlayer();
-    console.log ( player.name + ' died' );
+    player=(event.getEntity== null) ? null : event.getEntity();
     players=server.getOnlinePlayers();
     teams=[];
     for (var i=0; i<players.length;i++) {
