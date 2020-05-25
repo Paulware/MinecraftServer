@@ -126,6 +126,7 @@ exports.spleef  = function () {
   });
   events.playerDeath( function (event) {
     player=(event.getEntity== null) ? null : event.getEntity();
+    player.setGameMode(org.bukkit.GameMode.SPECTATOR);
     players=server.getOnlinePlayers();
     teams=[];
     for (var i=0; i<players.length;i++) {
@@ -154,7 +155,9 @@ exports.spleef  = function () {
         }
         teamColor=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
         if (! ((teams.indexOf ( teamColor) >= 0))){
-          teams.push (teamColor)
+          if (! ((players[i] == null ) ? false : (players[i].getGameMode().toString() == "SPECTATOR"))){
+            teams.push (teamColor)
+          }
         }
       }
     };
