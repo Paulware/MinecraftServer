@@ -7,7 +7,7 @@ exports.spleef  = function () {
   var block;
   var teamColor;
   var teams;
-  var score; 
+  var score;
   var value;
   var numTeams;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
@@ -161,6 +161,7 @@ exports.spleef  = function () {
     if (((numTeams) == 1)){
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
     }
+    console.log ("Number of teams remaining: " + numTeams);
   });
   events.playerRespawn( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
