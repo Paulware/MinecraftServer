@@ -1,0 +1,4 @@
+#ignore config file
+world
+server.properties
+logs/latest.log

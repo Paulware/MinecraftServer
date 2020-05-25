@@ -168,3 +168,17 @@
 [14:14:25] [Server thread/INFO]: Paulware[/127.0.0.1:56633] logged in with entity id 171 at ([world]-93.0, 16.0, 137.0)
 [14:24:19] [Server thread/INFO]: Paulware lost connection: Disconnected
 [14:24:19] [Server thread/INFO]: Paulware left the game
+[14:42:17] [Server thread/INFO]: Stopping the server
+[14:42:17] [Server thread/INFO]: Stopping server
+[14:42:17] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[14:42:17] [Server thread/INFO]: Saving players
+[14:42:17] [Server thread/INFO]: Saving worlds
+[14:42:17] [Server thread/INFO]: Saving chunks for level 'world'/minecraft:overworld
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[14:42:17] [Server thread/INFO]: Saving chunks for level 'world_nether'/minecraft:the_nether
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:42:17] [Server thread/INFO]: Saving chunks for level 'world_the_end'/minecraft:the_end
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:42:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
