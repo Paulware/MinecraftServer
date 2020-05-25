@@ -125,16 +125,19 @@ exports.spleef  = function () {
     }
   });
   events.playerDeath( function (event) {
+    console.log ( 'player death' );
     player=(event.getPlayer== null) ? null : event.getPlayer();
+    console.log ( player.name + ' died' );
     players=server.getOnlinePlayers();
     teams=[];
     for (var i=0; i<players.length;i++) {
       (function() {
         if (players[i] != null ) {
-           players[i].sendMessage (players[i].name + " died");
+           players[i].sendMessage (player.name + " died");
         }
        })();
       if (((players[i]) != (player))){
+        console.log (players[i].name + " != " + player.name);
         score=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_score_").length == 0)?null:players[i].getMetadata("_score_")[0].value();
         (function () {
           var value = ( score==null)?0:score;
