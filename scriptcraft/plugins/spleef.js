@@ -118,7 +118,7 @@ exports.spleef  = function () {
       }
       if (! ((exports.teams.indexOf ( teamColor) >= 0))){
         exports.teams.push(teamColor)
-        if ((len(exports.teams) > 1)){
+        if ((exports.teams.length > 1)){
           exports.gameStarted=true;
         }
       }
@@ -157,12 +157,9 @@ exports.spleef  = function () {
         }
       }
     };
-    numTeams=len(teams);
+    numTeams=teams.length;
     if (((numTeams) == 1)){
-      if (exports.gameStarted){
-        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
-        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a game over " + teams[0] + " wins!");
-      }
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
     }
   });
   events.playerRespawn( function (event) {
