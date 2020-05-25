@@ -82,7 +82,7 @@ exports.spleef  = function () {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
     if ((((block==null)?null:block.getType()) == (org.bukkit.Material.OAK_SIGN))){
-      teamColor=(block==null)?null: (block.state.getLine == null)?null:block.state.getLine(1);
+      teamColor=((block==null)?null: (block.state.getLine == null)?null:block.state.getLine(1)).toUpperCase();
       if ((["ORANGE", "RED", "BLUE", "WHITE"].indexOf ( teamColor) >= 0)){
         if ((((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value()) == (null))){
           fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,teamColor);
