@@ -7,7 +7,7 @@ exports.spleef  = function () {
   var block;
   var teamColor;
   var teams;
-  var score;
+  var score; 
   var value;
   var numTeams;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
