@@ -9,7 +9,7 @@ exports.spleef  = function () {
   var teams;
   var score;
   var value;
-  var numTeams;
+  var winner;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
   exports.gameId=null;
   exports.teams=[];
@@ -161,11 +161,14 @@ exports.spleef  = function () {
         }
       }
     };
-    numTeams=teams.length;
-    if (((numTeams) == 1)){
+    if ((exports.gameStarted) && (teams.length == 1)){
+      winner=teams[0];
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
+      exports.gameStarted=false;
+      exports.gameId=null;
+      exports.teams=[];
     }
-    console.log ("Number of teams remaining: " + numTeams);
   });
   events.playerRespawn( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
