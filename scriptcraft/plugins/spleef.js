@@ -39,6 +39,7 @@ exports.spleef  = function () {
         objective.getScore(players[playersIndex]).setScore(0);
         players[playersIndex].setScoreboard (exports.board);
       }
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "fill -81 8 126 -90 8 135 snow_block");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setworldspawn -73 29 80");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setspawn -73 29 80");
     }
@@ -162,15 +163,12 @@ exports.spleef  = function () {
       }
     };
     if ((exports.gameStarted) && (teams.length == 1)){
-      
       winner=teams[0];
-      console.log ( 'winner: ' + winner );
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + winner + " has won!" );
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
       exports.gameStarted=false;
       exports.gameId=null;
       exports.teams=[];
-      console.log ( 'Done resetting game yo' );
     }
   });
   events.playerRespawn( function (event) {

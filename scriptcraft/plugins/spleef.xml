@@ -74,11 +74,16 @@
                                                       </block>
                                                     </value>
                                                     <next>
-                                                      <block type="servercommand" id="4!($JnEUw!+pGn@bw8^T">
-                                                        <field name="COMMAND">setworldspawn -73 29 80</field>
+                                                      <block type="servercommand" id="YVkxU7rz?Y,JDB#ix=c8">
+                                                        <field name="COMMAND">fill -81 8 126 -90 8 135 snow_block</field>
                                                         <next>
-                                                          <block type="servercommand" id="f!8I+m0wtmMiCax06Ze6">
-                                                            <field name="COMMAND">setspawn -73 29 80</field>
+                                                          <block type="servercommand" id="4!($JnEUw!+pGn@bw8^T">
+                                                            <field name="COMMAND">setworldspawn -73 29 80</field>
+                                                            <next>
+                                                              <block type="servercommand" id="f!8I+m0wtmMiCax06Ze6">
+                                                                <field name="COMMAND">setspawn -73 29 80</field>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
