@@ -8,6 +8,8 @@ exports.spleef  = function () {
   var teamColor;
   var color;
   var _player;
+  var attacker;
+  var defender;
   var teams;
   var score;
   var value;
@@ -149,6 +151,18 @@ exports.spleef  = function () {
           exports.gameStarted=true;
         }
       }
+    }
+  });
+  events.entityDamage( function (event) {
+    attacker=(event.getDamager== null) ? null : event.getDamager();
+    defender=(event.getEntity== null) ? null : event.getEntity();
+    if ((function() {   var value1 = (attacker== null)? null : (attacker.getMetadata == null)?null:(attacker.getMetadata("_team_").length == 0)?null:attacker.getMetadata("_team_")[0].value();  var value2 = (player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();  var s = (value1 == value2);  return s; })()){
+      (function() {
+        if (attacker != null ) {
+           attacker.sendMessage ("Ouch, we are on the same Team!");
+        }
+       })();
+      event.cancelled = true;
     }
   });
   events.playerDeath( function (event) {
