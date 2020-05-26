@@ -162,12 +162,15 @@ exports.spleef  = function () {
       }
     };
     if ((exports.gameStarted) && (teams.length == 1)){
+      
       winner=teams[0];
+      console.log ( 'winner: ' + winner );
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + winner + " has won!" );
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
       exports.gameStarted=false;
       exports.gameId=null;
       exports.teams=[];
+      console.log ( 'Done resetting game yo' );
     }
   });
   events.playerRespawn( function (event) {

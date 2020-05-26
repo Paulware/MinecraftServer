@@ -838,15 +838,15 @@
                                                               </block>
                                                             </value>
                                                             <next>
-                                                              <block type="servercommand" id="yw2$U%}Kv12+[d-Z6(ES">
-                                                                <field name="COMMAND">"kick @a Team " + winner + " has won"</field>
+                                                              <block type="allplayersmessage" id="Cd@:2qG|NuVuCsqj9%eY">
+                                                                <value name="MESSAGE">
+                                                                  <block type="varname" id="uc0oj8}t./JG:2UXx^Pq">
+                                                                    <field name="VARNAME">"Team " + teams[0] + " has won!" </field>
+                                                                  </block>
+                                                                </value>
                                                                 <next>
-                                                                  <block type="allplayersmessage" id="Cd@:2qG|NuVuCsqj9%eY">
-                                                                    <value name="MESSAGE">
-                                                                      <block type="varname" id="uc0oj8}t./JG:2UXx^Pq">
-                                                                        <field name="VARNAME">"Team " + teams[0] + " has won!" </field>
-                                                                      </block>
-                                                                    </value>
+                                                                  <block type="servercommand" id="yw2$U%}Kv12+[d-Z6(ES">
+                                                                    <field name="COMMAND">"kick @a Team " + winner + " has won"</field>
                                                                     <next>
                                                                       <block type="setvariable" id="cdlt]T`1=9|*ZNjClOa=">
                                                                         <field name="VARNAME">exports.gameStarted</field>
