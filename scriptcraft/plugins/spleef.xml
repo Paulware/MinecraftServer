@@ -419,6 +419,20 @@
                                                         </value>
                                                       </block>
                                                     </statement>
+                                                    <next>
+                                                      <block type="armorset" id="xMOntaE,MZ2U%l_7W$;Z">
+                                                        <value name="COLOR">
+                                                          <block type="varname" id="!~4wlT;({kGgu8W#NG/x">
+                                                            <field name="VARNAME">teamColor</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="PLAYER">
+                                                          <block type="varname" id="s%?R;oLg-t,w(-V(c8?^">
+                                                            <field name="VARNAME">player</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </next>
                                                   </block>
                                                 </statement>
                                                 <next>

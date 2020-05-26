@@ -6,9 +6,12 @@ exports.spleef  = function () {
   var gameId;
   var block;
   var teamColor;
+  var color;
+  var _player;
   var teams;
   var score;
   var value;
+  var elapsedTime;
   var winner;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
   exports.gameId=null;
@@ -96,6 +99,29 @@ exports.spleef  = function () {
         else {
           teamColor=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
         }
+        eval ( "color = org.bukkit.Color." + teamColor);
+        _player = player;
+        var items = require ('items');
+        var helmet = items.leatherHelmet(1);
+        var helmetMeta = helmet.itemMeta;
+        helmetMeta.color = color;
+        helmet.itemMeta = helmetMeta;
+        _player.equipment.helmet = helmet;
+        var boots = items.leatherBoots(1);
+        var bootsMeta = boots.itemMeta;
+        bootsMeta.color = color;
+        boots.itemMeta = bootsMeta;
+        _player.equipment.boots = boots;
+        var chest = items.leatherChestplate(1);
+        var chestMeta = chest.itemMeta;
+        chestMeta.color = color;
+        chest.itemMeta = chestMeta;
+        _player.equipment.chestplate = chest;
+        var legs = items.leatherLeggings(1);
+        var legsMeta = legs.itemMeta;
+        legsMeta.color = color;
+        legs.itemMeta = legsMeta;
+        _player.equipment.leggings = legs;
       }
       if (((teamColor) == ("ORANGE"))){
         setTimeout (function () {
@@ -162,13 +188,16 @@ exports.spleef  = function () {
         }
       }
     };
-    if ((exports.gameStarted) && (teams.length == 1)){
-      winner=teams[0];
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + teams[0] + " has won!" );
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
-      exports.gameStarted=false;
-      exports.gameId=null;
-      exports.teams=[];
+    elapsedTime=(new Date().getTime()) - (exports.gameId);
+    if (((elapsedTime) > 180)){
+      if ((teams.length == 1)){
+        winner=teams[0];
+        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + winner + " has won!" );
+        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
+        exports.gameStarted=false;
+        exports.gameId=null;
+        exports.teams=[];
+      }
     }
   });
   events.playerRespawn( function (event) {
