@@ -11,19 +11,18 @@ exports.spleef  = function () {
   var attacker;
   var defender;
   var teams;
+  var deadColor;
   var score;
   var value;
   var elapsedTime;
   var winner;
+  var projectile;
+  var blocks;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
   exports.gameId=null;
-  exports.teams=[];
-  exports.gameStarted=null;
   events.playerJoin( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     if (((exports.gameId) == (null))){
-      console.log ("First pass for spleef server");
-      exports.gameId=new Date().getTime();
       var manager = org.bukkit.Bukkit.getScoreboardManager();
       exports.board = manager.getNewScoreboard();
       var objective = exports.board.registerNewObjective("objective1", "HEALTH", "Scoreboard");
@@ -47,6 +46,9 @@ exports.spleef  = function () {
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "fill -81 8 126 -90 8 135 snow_block");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setworldspawn -73 29 80");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setspawn -73 29 80");
+      exports.teams=[];
+      console.log ("First pass for spleef server");
+      exports.gameId=new Date().getTime();
     }
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
     if (((gameId) != (exports.gameId))){
@@ -145,12 +147,6 @@ exports.spleef  = function () {
           player.teleport(new org.bukkit.Location(server.worlds[0], -78, 16, 123), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
         },2000);
       }
-      if (! ((exports.teams.indexOf ( teamColor) >= 0))){
-        exports.teams.push(teamColor)
-        if ((exports.teams.length > 1)){
-          exports.gameStarted=true;
-        }
-      }
     }
   });
   events.entityDamage( function (event) {
@@ -170,6 +166,7 @@ exports.spleef  = function () {
     player.setGameMode(org.bukkit.GameMode.SPECTATOR);
     players=server.getOnlinePlayers();
     teams=[];
+    deadColor=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
     for (var i=0; i<players.length;i++) {
       (function() {
         if (players[i] != null ) {
@@ -177,24 +174,25 @@ exports.spleef  = function () {
         }
        })();
       if (((players[i]) != (player))){
-        console.log (players[i].name + " != " + player.name);
-        score=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_score_").length == 0)?null:players[i].getMetadata("_score_")[0].value();
-        (function () {
-          var value = ( score==null)?0:score;
-          score= value+1;
-        })();
-        fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,score);
-        if (players[i] != null) {
-          if (players[i].setMetadata != null ) {
-            players[i].setMetadata ("_score_", fd );
+        teamColor=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
+        if (((deadColor) != (teamColor))){
+          score=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_score_").length == 0)?null:players[i].getMetadata("_score_")[0].value();
+          (function () {
+            var value = ( score==null)?0:score;
+            score= value+1;
+          })();
+          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,score);
+          if (players[i] != null) {
+            if (players[i].setMetadata != null ) {
+              players[i].setMetadata ("_score_", fd );
+            }
+          }
+          if (player != null) {
+            objective = exports.board.getObjective (org.bukkit.scoreboard.DisplaySlot.SIDEBAR);
+            objective.getScore(players[i]).setScore(score);
+            players[i].setScoreboard (exports.board);
           }
         }
-        if (player != null) {
-          objective = exports.board.getObjective (org.bukkit.scoreboard.DisplaySlot.SIDEBAR);
-          objective.getScore(players[i]).setScore(score);
-          players[i].setScoreboard (exports.board);
-        }
-        teamColor=(players[i]== null)? null : (players[i].getMetadata == null)?null:(players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
         if (! ((teams.indexOf ( teamColor) >= 0))){
           if (! ((players[i] == null ) ? false : (players[i].getGameMode().toString() == "SPECTATOR"))){
             teams.push (teamColor)
@@ -204,13 +202,23 @@ exports.spleef  = function () {
     };
     elapsedTime=(new Date().getTime()) - (exports.gameId);
     if (((elapsedTime) > 180)){
-      if ((teams.length == 1)){
+      teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+         for (var i=0; i<_players.length;i++) {
+            _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
+            if (! ((_teams.indexOf (_teamColor) >= 0))){
+               if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() == "SPECTATOR"))){
+                  _teams.push (_teamColor);
+               }
+            }
+         }
+         console.log ( "Active teams: " + _teams );
+         return _teams;
+       })();
+      if (((teams.length) == 1)){
         winner=teams[0];
         org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + winner + " has won!" );
         org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
-        exports.gameStarted=false;
         exports.gameId=null;
-        exports.teams=[];
       }
     }
   });
@@ -249,6 +257,24 @@ exports.spleef  = function () {
           player.teleport(new org.bukkit.Location(server.worlds[0], -78, 16, 123), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
         },2000);
       }
+    }
+  });
+  events.projectileHit( function (event) {
+    projectile=(event.getEntity== null) ? null : event.getEntity();
+    block=(event.getHitBlock== null) ? null : event.getHitBlock();
+    if (((projectile.getType()) == (org.bukkit.entity.EntityType.SNOWBALL))){
+      blocks=(function() {   var _blocks = [];
+        var _blockType;
+        var _loc;
+        for (var _x=(block.location).x-0;_x<=(block.location).x+0;_x++) {    for (var _y=(block.location).y-0;_y<=(block.location).y+0;_y++) {      for (var _z=(block.location).z-0;_z<=(block.location).z+0;_z++) {         _loc = new org.bukkit.Location(server.worlds[0], _x,_y,_z);         _blockType =  server.worlds[0].getBlockAt(_loc).getType();
+               if (_blockType == (org.bukkit.Material.SNOW_BLOCK)) { _blocks.push (server.worlds[0].getBlockAt(_loc)); }
+        }}}
+        console.log ( "found" + _blocks.length + " blocks " );
+        return _blocks;
+       })();
+      for (var i=0; i<blocks.length;i++) {
+        blocks[i].setType(org.bukkit.Material.AIR);
+      };
     }
   });
   events.blockBreak( function (event) {
