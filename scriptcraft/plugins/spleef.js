@@ -23,6 +23,28 @@ exports.spleef  = function () {
   events.playerJoin( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     if (((exports.gameId) == (null))){
+      (function () {var _world;var _chunks;var _chunk;var _blocks;var _blockType;var _inventory;
+      _world=server.worlds[0];_chunks=_world.getLoadedChunks();
+      for (var _chunkIndex=0; _chunkIndex<_chunks.length;_chunkIndex++) {_chunk=_chunks[_chunkIndex];_blocks=_chunk.getTileEntities();for (var _blockIndex=0; _blockIndex<_blocks.length;_blockIndex++) {
+      _blockType=(_blocks[_blockIndex]==null)?null:_blocks[_blockIndex].getType();
+      if (_blockType == org.bukkit.Material.CHEST){
+      _inventory=_blocks[_blockIndex].getBlockInventory();_inventory.clear();
+      console.log ( "add goodies");
+      for (var _goodieIndex=0;_goodieIndex<[
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,32),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_SHOVEL,5),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOW_BLOCK,128),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,128),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16)
+      ].length;_goodieIndex++) {
+      if ((parseInt (Math.random () * (100-1)) + 1) > 50){_inventory.addItem ([
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,32),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_SHOVEL,5),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOW_BLOCK,128),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,128),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16)
+      ][_goodieIndex]);
+      }}}}}})();
       var manager = org.bukkit.Bukkit.getScoreboardManager();
       exports.board = manager.getNewScoreboard();
       var objective = exports.board.registerNewObjective("objective1", "HEALTH", "Scoreboard");
@@ -82,8 +104,6 @@ exports.spleef  = function () {
       player.setGameMode(org.bukkit.GameMode.SURVIVAL);
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "effect give " + player.name + " instant_health 20");
       player.getInventory().clear();
-      player.getInventory().setItem (0,new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOW_BLOCK,16) );
-      player.getInventory().setItem (1,new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_SHOVEL,1) );
     }
   });
   events.playerInteract( function (event) {

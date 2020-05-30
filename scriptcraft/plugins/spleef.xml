@@ -37,47 +37,106 @@
                           </block>
                         </value>
                         <statement name="DO0">
-                          <block type="getnewboard" id="$CL*kMwR~0)U$5Kj/_ql">
-                            <next>
-                              <block type="scoreboardtitle" id="cB7l!Pe#q*x)a;jXLF7y">
-                                <value name="TITLE">
-                                  <block type="text" id="f}osk,uuV%{0$fO5F}.l">
-                                    <field name="TEXT">Welcome to Spleef yo</field>
+                          <block type="randomizechests" id="#Vs`*?TCJGM*3GmXBsvC">
+                            <value name="GOODIES">
+                              <block type="lists_create_with" id="L22pJ)yrS1dgTY;{Zu4@">
+                                <mutation items="5"></mutation>
+                                <value name="ADD0">
+                                  <block type="itemstack" id="=F^UBk8#wAak8J!Er!/G">
+                                    <field name="COUNT">32</field>
+                                    <value name="ITEM">
+                                      <block type="materialtype" id="f#pZpxIDd_UE-hYAt}E`">
+                                        <field name="MATERIAL">SNOWBALL</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
+                                <value name="ADD1">
+                                  <block type="itemstack" id="Jlqlk!qUO5Lnf=}Jp2Ly">
+                                    <field name="COUNT">5</field>
+                                    <value name="ITEM">
+                                      <block type="materialtype" id="B;hGgpl4[`,Ebw5s5(~t">
+                                        <field name="MATERIAL">DIAMOND_SHOVEL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD2">
+                                  <block type="itemstack" id="d(||mHz6a?}.3o7igt^A">
+                                    <field name="COUNT">128</field>
+                                    <value name="ITEM">
+                                      <block type="materialtype" id="eQi8`Am,Q0RmN1A4!y-w">
+                                        <field name="MATERIAL">SNOW_BLOCK</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD3">
+                                  <block type="itemstack" id="UF6,/XiFT7+d-dt!@ms[">
+                                    <field name="COUNT">128</field>
+                                    <value name="ITEM">
+                                      <block type="materialtype" id="@N;+L]7=+!]EDEX37W6X">
+                                        <field name="MATERIAL">ARROW</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD4">
+                                  <block type="itemstack" id="7whsiV_xLE+xi7eX$91n">
+                                    <field name="COUNT">16</field>
+                                    <value name="ITEM">
+                                      <block type="materialtype" id="*|3UB.0nY7x7R,^mwv*L">
+                                        <field name="MATERIAL">CROSSBOW</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="getnewboard" id="$CL*kMwR~0)U$5Kj/_ql">
                                 <next>
-                                  <block type="allplayerssetscore" id="V]Rs+T[1=U:R?!,R}Sdg">
-                                    <value name="SCORE">
-                                      <block type="math_number" id="8ET55v~spt;ts~5]~HJP">
-                                        <field name="NUM">0</field>
+                                  <block type="scoreboardtitle" id="cB7l!Pe#q*x)a;jXLF7y">
+                                    <value name="TITLE">
+                                      <block type="text" id="f}osk,uuV%{0$fO5F}.l">
+                                        <field name="TEXT">Welcome to Spleef yo</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="servercommand" id="YVkxU7rz?Y,JDB#ix=c8">
-                                        <field name="COMMAND">fill -81 8 126 -90 8 135 snow_block</field>
+                                      <block type="allplayerssetscore" id="V]Rs+T[1=U:R?!,R}Sdg">
+                                        <value name="SCORE">
+                                          <block type="math_number" id="8ET55v~spt;ts~5]~HJP">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
                                         <next>
-                                          <block type="servercommand" id="4!($JnEUw!+pGn@bw8^T">
-                                            <field name="COMMAND">setworldspawn -73 29 80</field>
+                                          <block type="servercommand" id="YVkxU7rz?Y,JDB#ix=c8">
+                                            <field name="COMMAND">fill -81 8 126 -90 8 135 snow_block</field>
                                             <next>
-                                              <block type="servercommand" id="f!8I+m0wtmMiCax06Ze6">
-                                                <field name="COMMAND">setspawn -73 29 80</field>
+                                              <block type="servercommand" id="4!($JnEUw!+pGn@bw8^T">
+                                                <field name="COMMAND">setworldspawn -73 29 80</field>
                                                 <next>
-                                                  <block type="setvariable" id="Tbt|n}^q,X$T-whz5=Ts">
-                                                    <field name="VARNAME">exports.teams</field>
-                                                    <field name="EXPRESSION">[]</field>
+                                                  <block type="servercommand" id="f!8I+m0wtmMiCax06Ze6">
+                                                    <field name="COMMAND">setspawn -73 29 80</field>
                                                     <next>
-                                                      <block type="consolelog" id="]dl[c;.#*kk7|+8#,I]C">
-                                                        <value name="NAME">
-                                                          <block type="varname" id="W=FI@cu5[Ea$DgDEks;4">
-                                                            <field name="VARNAME">"First pass for spleef server"</field>
-                                                          </block>
-                                                        </value>
+                                                      <block type="setvariable" id="Tbt|n}^q,X$T-whz5=Ts">
+                                                        <field name="VARNAME">exports.teams</field>
+                                                        <field name="EXPRESSION">[]</field>
                                                         <next>
-                                                          <block type="setvariablevalue" id="D[DYOd8BT?KKN``k,l{F">
-                                                            <field name="VARNAME">exports.gameId</field>
-                                                            <value name="EXPRESSION">
-                                                              <block type="millis" id="-eUR/kdZsA_F7gKect%s"></block>
+                                                          <block type="consolelog" id="]dl[c;.#*kk7|+8#,I]C">
+                                                            <value name="NAME">
+                                                              <block type="varname" id="W=FI@cu5[Ea$DgDEks;4">
+                                                                <field name="VARNAME">"First pass for spleef server"</field>
+                                                              </block>
                                                             </value>
+                                                            <next>
+                                                              <block type="setvariablevalue" id="D[DYOd8BT?KKN``k,l{F">
+                                                                <field name="VARNAME">exports.gameId</field>
+                                                                <value name="EXPRESSION">
+                                                                  <block type="millis" id="-eUR/kdZsA_F7gKect%s"></block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
@@ -219,46 +278,6 @@
                                                                             <field name="VARNAME">player</field>
                                                                           </block>
                                                                         </value>
-                                                                        <next>
-                                                                          <block type="sethotbar" id="th*7=-_mP8}5z(E8!6uu">
-                                                                            <field name="SLOT">1</field>
-                                                                            <value name="PLAYER">
-                                                                              <block type="varname" id="}M_i{AQkDLmORye)dmci">
-                                                                                <field name="VARNAME">player</field>
-                                                                              </block>
-                                                                            </value>
-                                                                            <value name="STACK">
-                                                                              <block type="itemstack" id="fdNA=5g-?G7*,HygL?l-">
-                                                                                <field name="COUNT">16</field>
-                                                                                <value name="ITEM">
-                                                                                  <block type="blocktype" id="vVQD74AdH@r:hc^RhSi^">
-                                                                                    <field name="BLOCKTYPE">SNOW_BLOCK</field>
-                                                                                  </block>
-                                                                                </value>
-                                                                              </block>
-                                                                            </value>
-                                                                            <next>
-                                                                              <block type="sethotbar" id="!kAr!9{X?C0EjVcR#7VH">
-                                                                                <field name="SLOT">2</field>
-                                                                                <value name="PLAYER">
-                                                                                  <block type="varname" id="!4_giApq962o@BdrY|n8">
-                                                                                    <field name="VARNAME">player</field>
-                                                                                  </block>
-                                                                                </value>
-                                                                                <value name="STACK">
-                                                                                  <block type="itemstack" id="L+C~_4HgYf0+K,l#5G*{">
-                                                                                    <field name="COUNT">1</field>
-                                                                                    <value name="ITEM">
-                                                                                      <block type="materialtype" id="Cebk+x`!avGO07cRQ4xx">
-                                                                                        <field name="MATERIAL">DIAMOND_SHOVEL</field>
-                                                                                      </block>
-                                                                                    </value>
-                                                                                  </block>
-                                                                                </value>
-                                                                              </block>
-                                                                            </next>
-                                                                          </block>
-                                                                        </next>
                                                                       </block>
                                                                     </next>
                                                                   </block>
