@@ -182,9 +182,11 @@ exports.spleef  = function () {
       teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
          for (var i=0; i<_players.length;i++) {
             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
-            if (! ((_teams.indexOf (_teamColor) >= 0))){
-               if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() == "SPECTATOR"))){
-                  _teams.push (_teamColor);
+            if (_teamColor != null) {
+               if (! ((_teams.indexOf (_teamColor) >= 0))){
+                  if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() == "SPECTATOR"))){
+                     _teams.push (_teamColor);
+                  }
                }
             }
          }
@@ -253,9 +255,11 @@ exports.spleef  = function () {
       teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
          for (var i=0; i<_players.length;i++) {
             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
-            if (! ((_teams.indexOf (_teamColor) >= 0))){
-               if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() == "SPECTATOR"))){
-                  _teams.push (_teamColor);
+            if (_teamColor != null) {
+               if (! ((_teams.indexOf (_teamColor) >= 0))){
+                  if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() == "SPECTATOR"))){
+                     _teams.push (_teamColor);
+                  }
                }
             }
          }
