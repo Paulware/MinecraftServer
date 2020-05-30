@@ -10,8 +10,6 @@ exports.spleef  = function () {
   var _player;
   var attacker;
   var defender;
-  var teamAttacker;
-  var teamDefender;
   var teams;
   var deadColor;
   var score;
@@ -176,10 +174,7 @@ exports.spleef  = function () {
   events.entityDamage( function (event) {
     attacker=(event.getDamager== null) ? null : event.getDamager();
     defender=(event.getEntity== null) ? null : event.getEntity();
-    teamAttacker=(attacker== null)? null : (attacker.getMetadata == null)?null:(attacker.getMetadata("_team_").length == 0)?null:attacker.getMetadata("_team_")[0].value();
-    teamDefender=(defender== null)? null : (defender.getMetadata == null)?null:(defender.getMetadata("_team_").length == 0)?null:defender.getMetadata("_team_")[0].value();
-    console.log ('attacker: ' + teamAttacker + ', defender: ' + teamDefender);
-    if (((teamAttacker) == (teamDefender))){
+    if ((function() {   var value1 = (attacker== null)? null : (attacker.getMetadata == null)?null:(attacker.getMetadata("_team_").length == 0)?null:attacker.getMetadata("_team_")[0].value();  var value2 = (defender== null)? null : (defender.getMetadata == null)?null:(defender.getMetadata("_team_").length == 0)?null:defender.getMetadata("_team_")[0].value();  var s = (value1 == value2);  return s; })()){
       (function() {
         if (attacker != null ) {
            attacker.sendMessage ("Ouch, we are on the same Team!");
