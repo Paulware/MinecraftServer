@@ -35,14 +35,16 @@ exports.spleef  = function () {
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_SHOVEL,5),
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOW_BLOCK,128),
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,128),
-        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16)
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.GOLDEN_APPLE,5)
       ].length;_goodieIndex++) {
       if ((parseInt (Math.random () * (100-1)) + 1) > 50){_inventory.addItem ([
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,32),
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_SHOVEL,5),
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOW_BLOCK,128),
         new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,128),
-        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16)
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.CROSSBOW,16),
+        new org.bukkit.inventory.ItemStack (org.bukkit.Material.GOLDEN_APPLE,5)
       ][_goodieIndex]);
       }}}}}})();
       var manager = org.bukkit.Bukkit.getScoreboardManager();
@@ -221,7 +223,8 @@ exports.spleef  = function () {
       }
     };
     elapsedTime=(new Date().getTime()) - (exports.gameId);
-    if (((elapsedTime) > 180)){
+    console.log ("elapsedTime: " + elapsedTime);
+    if (((elapsedTime) > 180000)){
       teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
          for (var i=0; i<_players.length;i++) {
             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
@@ -234,7 +237,7 @@ exports.spleef  = function () {
          console.log ( "Active teams: " + _teams );
          return _teams;
        })();
-      if (((teams.length) == 1)){
+      if ((0 == 1)){
         winner=teams[0];
         org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team " + winner + " has won!" );
         org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a Team " + winner + " has won");
