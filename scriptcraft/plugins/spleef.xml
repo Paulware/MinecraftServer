@@ -632,7 +632,7 @@
                                         </value>
                                         <value name="PLAYER2">
                                           <block type="varname" id="`tLPHU+Yufy7uaW5v{XL">
-                                            <field name="VARNAME">player</field>
+                                            <field name="VARNAME">defender</field>
                                           </block>
                                         </value>
                                       </block>
