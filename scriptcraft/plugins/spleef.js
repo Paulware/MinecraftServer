@@ -1,27 +1,5 @@
-exports.spleef  = function () {
-  //Instantiations;
-  var player;
-  var objective;
-  var players;
-  var gameId;
-  var block;
-  var teamColor;
-  var color;
-  var _player;
-  var teams;
-  var attacker;
-  var defender;
-  var deadColor;
-  var score;
-  var value;
-  var elapsedTime;
-  var winner;
-  var projectile;
-  var blocks;
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "kick @a restarting server");
-  exports.gameId=null;
+//Code that runs automatically
   events.playerJoin( function (event) {
-    player=(event.getPlayer== null) ? null : event.getPlayer();
     if (((exports.gameId) == (null))){
       (function () {var _world;var _chunks;var _chunk;var _blocks;var _blockType;var _inventory;
       _world=server.worlds[0];_chunks=_world.getLoadedChunks();
@@ -63,12 +41,6 @@ exports.spleef  = function () {
         objective.getScore(players[playerIndex]).setScore(score);
         players[playerIndex].setScoreboard (exports.board);
       };
-      objective = exports.board.getObjective (org.bukkit.scoreboard.DisplaySlot.SIDEBAR);
-      players = server.getOnlinePlayers();
-      for (var playersIndex=0; playersIndex<players.length; playersIndex++) {
-        objective.getScore(players[playersIndex]).setScore(0);
-        players[playersIndex].setScoreboard (exports.board);
-      }
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "fill -81 8 126 -90 8 135 snow_block");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setworldspawn -73 29 80");
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setspawn -73 29 80");
@@ -77,6 +49,7 @@ exports.spleef  = function () {
       console.log ("First pass for spleef server");
       exports.gameId=new Date().getTime();
     }
+    player=(event.getPlayer== null) ? null : event.getPlayer();
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
     if (((gameId) != (exports.gameId))){
       console.log ("First pass for player in this game " + player.name);
@@ -337,4 +310,3 @@ exports.spleef  = function () {
       event.cancelled = true;
     }
   });
-};
