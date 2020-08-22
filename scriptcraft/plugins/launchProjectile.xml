@@ -1,0 +1,99 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="scriptcraftfunction" id="apV;0.W9zs9OKl@[q`Kl" x="-162" y="63">
+    <field name="nameOfFunction">test</field>
+    <statement name="FUNCTIONCODE">
+      <block type="eventlistener" id="d?A_ZNTGi6.RvYu,h?0L">
+        <field name="LISTENERTYPE">playerInteract</field>
+        <statement name="LISTENERCODE">
+          <block type="setvariablevalue" id="nQ~=OHPimx)UQ@s=CBNF">
+            <field name="VARNAME">player</field>
+            <value name="EXPRESSION">
+              <block type="eventinfo" id="YektVNP|NRL_]S@a75Uw">
+                <field name="INFORMATION">getPlayer</field>
+              </block>
+            </value>
+            <next>
+              <block type="setvariablevalue" id="[=rxSL{Q(v!FeX)Th%Bd">
+                <field name="VARNAME">block</field>
+                <value name="EXPRESSION">
+                  <block type="lookingat" id="{#!VM+4O%v}5e4*%zagk">
+                    <value name="PLAYER">
+                      <block type="varname" id="(u0?QcHrj%J$RceH|Q.d">
+                        <field name="VARNAME">player</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="consolelog" id="sqHM,%z-F{u,%cK[kM5P">
+                    <value name="NAME">
+                      <block type="getblocktype" id=":r-p:=LMjrj]DOL:|~r-">
+                        <value name="BLOCK">
+                          <block type="varname" id="x0=*BPXK8?-WDuB,5vrI">
+                            <field name="VARNAME">block</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="oqbIycej_p:)Q*A{RuC~">
+                        <value name="IF0">
+                          <block type="logic_compare" id=":8YPizwGUV^HI*p_v:[%">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="elapsedtime" id="3fOgD`1tw@{~u+nbOm3F">
+                                <value name="TIMERNAME">
+                                  <block type="varname" id="17w?PKF?ExN~cyjTmvY#">
+                                    <field name="VARNAME">"timerName"</field>
+                                  </block>
+                                </value>
+                                <value name="PLAYER">
+                                  <block type="varname" id="kJr;fpwg68IGd$Htr54)">
+                                    <field name="VARNAME">player</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="H/sQdmO-JiTXFqB9vYL1">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="starttimer" id="77Flz]OPMJqxzc$__S33">
+                            <field name="TIMERNAME">"timerName"</field>
+                            <value name="PLAYER">
+                              <block type="varname" id="2!fVgWF,|E0C|gbxzgMC">
+                                <field name="VARNAME">player</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="launchprojectile" id="0K?u##2_b^il]|`8j@x9">
+                                <value name="ENTITY">
+                                  <block type="varname" id="0qE0|JY!Kxi,:%R-F.R2">
+                                    <field name="VARNAME">player</field>
+                                  </block>
+                                </value>
+                                <value name="PROJECTILE">
+                                  <block type="projectileentity" id="]ki1Kt-G`NSkI@N_+{l.">
+                                    <field name="PROJECTILE">WITHER_SKULL</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
