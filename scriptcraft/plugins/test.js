@@ -235,31 +235,43 @@ exports.test = function () {
       else {
         index=(name).indexOf((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()) + 1;
         if (((index) > 0)){
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("Welcome " + player.name);
-            }
-           })();
-          exports.door=block;
-          setTimeout (function () {
-            (function () {
-               if ((exports.door== null)?null:exports.door.location!= null) {
-                 var _block=server.worlds[0].getBlockAt((exports.door== null)?null:exports.door.location);
-                 var _myString = _block.toString();
-                 var _isTop = _myString.indexOf ( "half=upper") > -1;
-                 console.log ( "closedoor Is top: " + _isTop );
-                 if (_isTop) {
-                    var _loc=(function() { var _x = (exports.door== null)?null:exports.door.location.x;var _y = (exports.door== null)?null:exports.door.location.y+-1;var _z = (exports.door== null)?null:exports.door.location.z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
-                    _block = server.worlds[0].getBlockAt ( _loc );
+          if (exports.doorIsOpen){
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("Waiting for door to close...");
+              }
+             })();
+            event.cancelled = true;
+          }
+          else {
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("Welcome " + player.name);
+              }
+             })();
+            exports.door=block;
+            setTimeout (function () {
+              (function () {
+                 if ((exports.door== null)?null:exports.door.location!= null) {
+                   var _block=server.worlds[0].getBlockAt((exports.door== null)?null:exports.door.location);
+                   var _myString = _block.toString();
+                   var _isTop = _myString.indexOf ( "half=upper") > -1;
+                   console.log ( "closedoor Is top: " + _isTop );
+                   if (_isTop) {
+                      var _loc=(function() { var _x = (exports.door== null)?null:exports.door.location.x;var _y = (exports.door== null)?null:exports.door.location.y+-1;var _z = (exports.door== null)?null:exports.door.location.z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
+                      _block = server.worlds[0].getBlockAt ( _loc );
+                   }
+                   var _state = _block.getState();
+                   var _info  = _state.getData();
+                   _info.setOpen (false);
+                   _state.setData (_info);
+                   _state.update();
                  }
-                 var _state = _block.getState();
-                 var _info  = _state.getData();
-                 _info.setOpen (false);
-                 _state.setData (_info);
-                 _state.update();
-               }
-            })();
-          },3000);
+              })();
+              exports.doorIsOpen=false;
+            },2000);
+            exports.doorIsOpen=true;
+          }
         }
         else {
           (function() {
