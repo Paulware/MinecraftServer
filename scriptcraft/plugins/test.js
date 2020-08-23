@@ -95,17 +95,13 @@ exports.makeRecipes = function () {
 exports.test = function () {
   //Instantiations;
   var player;
-  var block;
-  var blockType;
-  var count;
   var meta;
   var stack;
-  var index;
-  var inhand;
-  var name;
   var chestplate;
+  var name;
   var boots;
   var blocks;
+  var blockType;
   var entity;
   var projectile;
   var shooter;
@@ -114,6 +110,10 @@ exports.test = function () {
   var message;
   var words;
   var command;
+  var index;
+  var block;
+  var count;
+  var inhand;
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamemode survival @a");
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule keepinventory true");
   org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule doweathercycle false");
@@ -143,177 +143,52 @@ exports.test = function () {
     count = count + 1;
   }
   console.log ("Running test function");
-  events.playerInteract( function (event) {
-    player=(event.getPlayer== null) ? null : event.getPlayer();
-    block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
-    blockType=(block==null)?null:block.getType();
-    if (( parseInt((block== null)?null:block.location.x) !=600) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=488) ? false : true){
-      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.BOW,1));
-      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64));
-    }
-    if (( parseInt((block== null)?null:block.location.x) !=594) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=484) ? false : true){
-      count=(function () {
-         var _sum=0;
-         var _index;
-         var _stack;
-         var _stackType;
-         var _inventory = player.getInventory().getContents();
-         var _count = 0;
-         for (var _i=0; _i<_inventory.length; _i++)  {
-            _stack = _inventory[_i];
-            _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
-            // console.log ( _i + "): " + _stackType );
-            if (_stackType == org.bukkit.Material.EMERALD ){
-               _count = _count + _stack.getAmount();
-            }
-            if (_i == 8) { break; }
-         }
-         console.log ( "Got a hotbar quantity of:" + _count + " org.bukkit.Material.EMERALD" );
-         return _count;})();
-      if ((((function () {
-         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("inviso").length == 0)?0:player.getMetadata("inviso")[0].value();
-         var _elapsedTime = (new Date().getTime()) - _startTime;
-         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
-         return _elapsedTime;
-      }())) > 2000)){
-        if (((count) >= 8)){
-          if (player != null) { player.getInventory().addItem ((function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_HELMET,1);  var m = s.getItemMeta();  m.setDisplayName ("INVISO");  s.setItemMeta(m);  return s; })()); }
-          (function () {
-             var _sum=0;
-             var _index;
-             var _stack;
-             var _stackType;
-             var _inventory = player.getInventory().getContents();
-             var _remaining = 8;
-             var _count;
-             var _newStack;
-             for (var _i=0; _i<8; _i++)  {
-                _stack = _inventory[_i];
-                _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
-                if (_stackType == org.bukkit.Material.EMERALD ){
-                   if (_remaining == 0) break;
-                   _count = _stack.getAmount();
-                   if (_count >= _remaining) {
-                      _count = _count - _remaining;
-                      _remaining = 0;
-                   } else {
-                      _remaining = _remaining - _count;
-                      _count = 0;
-                   }
-                   _newStack = new org.bukkit.inventory.ItemStack (org.bukkit.Material.EMERALD,_count);
-                   player.getInventory().setItem (_i,_newStack);
-                }
-             }
-          })();
-          (function () {
-            fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
-            if (player != null) {
-              if (player.setMetadata != null ) {
-                 player.setMetadata ("inviso", fd );
-              }
-            }
-          }());
-        }
-        else {
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("8 emeralds required to purchase");
-            }
-           })();
-        }
-      }
-    }
-    index=((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()).indexOf("DOOR") + 1;
-    if (((index) > 0)){
-      inhand=(player== null) ? null : ( player.getItemInHand == null) ? null : player.getItemInHand();
-      name=(function() {   var _value = (inhand== null) ? null : (inhand.getItemMeta == null) ? null : (inhand.getItemMeta() == null)?null:inhand.getItemMeta().getDisplayName();
-        console.log ( 'Custom name: [' + _value + ']');
-        return _value; })();
-      if (((name) == (null))){
-        event.cancelled = true;
-      }
-      else {
-        index=(name).indexOf((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()) + 1;
-        if (((index) > 0)){
-          if (exports.doorIsOpen){
-            (function() {
-              if (player != null ) {
-                 player.sendMessage ("Waiting for door to close...");
-              }
-             })();
-            event.cancelled = true;
-          }
-          else {
-            (function() {
-              if (player != null ) {
-                 player.sendMessage ("Welcome " + player.name);
-              }
-             })();
-            exports.door=block;
-            setTimeout (function () {
-              (function () {
-                 if ((exports.door== null)?null:exports.door.location!= null) {
-                   var _block=server.worlds[0].getBlockAt((exports.door== null)?null:exports.door.location);
-                   var _myString = _block.toString();
-                   var _isTop = _myString.indexOf ( "half=upper") > -1;
-                   console.log ( "closedoor Is top: " + _isTop );
-                   if (_isTop) {
-                      var _loc=(function() { var _x = (exports.door== null)?null:exports.door.location.x;var _y = (exports.door== null)?null:exports.door.location.y+-1;var _z = (exports.door== null)?null:exports.door.location.z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
-                      _block = server.worlds[0].getBlockAt ( _loc );
-                   }
-                   var _state = _block.getState();
-                   var _info  = _state.getData();
-                   _info.setOpen (false);
-                   _state.setData (_info);
-                   _state.update();
-                 }
-              })();
-              exports.doorIsOpen=false;
-            },2000);
-            exports.doorIsOpen=true;
-          }
-        }
-        else {
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("You need an KEY for a " + blockType);
-            }
-           })();
-          event.cancelled = true;
-        }
-      }
-    }
-  });
-  server.worlds[0].dropItem (new org.bukkit.Location(server.worlds[0], 592, 20, 482),(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_CHESTPLATE,1);  var m = s.getItemMeta();  m.setDisplayName ("INVINCIBILITY");  s.setItemMeta(m);  return s; })());
   events.playerMove( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     if (( parseInt((player== null)?null:player.location.x) !=604) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=486) ? false : true){
-      (function() {
-        if (player != null ) {
-           player.sendMessage ("You have earned a Jungle Door Key");
-        }
-       })();
-      server.worlds[0].dropItem (player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("JUNGLE_DOOR KEY");  s.setItemMeta(m);  return s; })());
+      if ((((function () {
+         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("jungleKey").length == 0)?0:player.getMetadata("jungleKey")[0].value();
+         var _elapsedTime = (new Date().getTime()) - _startTime;
+         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
+         return _elapsedTime;
+      }())) > 3000)){
+        (function() {
+          if (player != null ) {
+             player.sendMessage ("You have earned a Jungle Door Key");
+          }
+         })();
+        server.worlds[0].dropItem ((player== null)?null:player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("JUNGLE_DOOR KEY");  s.setItemMeta(m);  return s; })());
+        (function () {
+          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
+          if (player != null) {
+            if (player.setMetadata != null ) {
+               player.setMetadata ("jungleKey", fd );
+            }
+          }
+        }());
+      }
     }
     if (( parseInt((player== null)?null:player.location.x) !=624) ? false :( parseInt((player== null)?null:player.location.y) !=19) ? false :( parseInt((player== null)?null:player.location.z) !=485) ? false : true){
-      player.getInventory().setBoots(null);
-      console.log ( 'Boots removed for player: ' + player.name );
-      player.getInventory().setChestplate(null);
-      console.log ( 'Chestplate removed for player: ' + player.name );
+      if ((((function () {
+         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("birchKey").length == 0)?0:player.getMetadata("birchKey")[0].value();
+         var _elapsedTime = (new Date().getTime()) - _startTime;
+         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
+         return _elapsedTime;
+      }())) > 10000)){
+        server.worlds[0].dropItem (new org.bukkit.Location(server.worlds[0], 621, 20, 490),(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("BIRCH_DOOR KEY");  s.setItemMeta(m);  return s; })());
+      }
       player.getInventory().setHelmet(null);
-      console.log ( 'Helmet removed for player: ' + player.name );
       player.getInventory().setLeggings(null);
-      console.log ( 'Leggings removed for player: ' + player.name );
+      player.getInventory().setChestplate(null);
+      player.getInventory().setBoots(null);
+      console.log ( 'All armor removed for player: ' + player.name );
     }
     if (( parseInt((player== null)?null:player.location.x) !=591) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=491) ? false : true){
-      player.getInventory().setBoots(null);
-      console.log ( 'Boots removed for player: ' + player.name );
-      player.getInventory().setChestplate(null);
-      console.log ( 'Chestplate removed for player: ' + player.name );
       player.getInventory().setHelmet(null);
-      console.log ( 'Helmet removed for player: ' + player.name );
       player.getInventory().setLeggings(null);
-      console.log ( 'Leggings removed for player: ' + player.name );
+      player.getInventory().setChestplate(null);
+      player.getInventory().setBoots(null);
+      console.log ( 'All armor removed for player: ' + player.name );
     }
     if (! ((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_teleported_").length == 0)?null:player.getMetadata("_teleported_")[0].value())){
       fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,true);
@@ -371,17 +246,13 @@ exports.test = function () {
     if (( parseInt((player== null)?null:player.location.x) !=613) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=486) ? false : true){
         //Instantiations;
         var player;
-        var block;
-        var blockType;
-        var count;
         var meta;
         var stack;
-        var index;
-        var inhand;
-        var name;
         var chestplate;
+        var name;
         var boots;
         var blocks;
+        var blockType;
       // spawn org.bukkit.entity.EntityType.ZOMBIE
       var location = new org.bukkit.Location(server.worlds[0], 619, 20, 488);
       var entity = server.worlds[0].spawnEntity(location,org.bukkit.entity.EntityType.ZOMBIE);
@@ -527,5 +398,146 @@ exports.test = function () {
        })();
     }
     event.cancelled = true;
+  });
+  events.playerInteract( function (event) {
+    player=(event.getPlayer== null) ? null : event.getPlayer();
+    block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
+    blockType=(block==null)?null:block.getType();
+    if (( parseInt((block== null)?null:block.location.x) !=600) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=488) ? false : true){
+      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.BOW,1));
+      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64));
+    }
+    if (( parseInt((block== null)?null:block.location.x) !=594) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=484) ? false : true){
+      count=(function () {
+         var _sum=0;
+         var _index;
+         var _stack;
+         var _stackType;
+         var _inventory = player.getInventory().getContents();
+         var _count = 0;
+         for (var _i=0; _i<_inventory.length; _i++)  {
+            _stack = _inventory[_i];
+            _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
+            // console.log ( _i + "): " + _stackType );
+            if (_stackType == org.bukkit.Material.EMERALD ){
+               _count = _count + _stack.getAmount();
+            }
+            if (_i == 8) { break; }
+         }
+         console.log ( "Got a hotbar quantity of:" + _count + " org.bukkit.Material.EMERALD" );
+         return _count;})();
+      if ((((function () {
+         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("inviso").length == 0)?0:player.getMetadata("inviso")[0].value();
+         var _elapsedTime = (new Date().getTime()) - _startTime;
+         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
+         return _elapsedTime;
+      }())) > 2000)){
+        if (((count) >= 8)){
+          if (player != null) { player.getInventory().addItem ((function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_HELMET,1);  var m = s.getItemMeta();  m.setDisplayName ("INVISO");  s.setItemMeta(m);  return s; })()); }
+          (function () {
+             var _sum=0;
+             var _index;
+             var _stack;
+             var _stackType;
+             var _inventory = player.getInventory().getContents();
+             var _remaining = 8;
+             var _count;
+             var _newStack;
+             for (var _i=0; _i<8; _i++)  {
+                _stack = _inventory[_i];
+                _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
+                if (_stackType == org.bukkit.Material.EMERALD ){
+                   if (_remaining == 0) break;
+                   _count = _stack.getAmount();
+                   if (_count >= _remaining) {
+                      _count = _count - _remaining;
+                      _remaining = 0;
+                   } else {
+                      _remaining = _remaining - _count;
+                      _count = 0;
+                   }
+                   _newStack = new org.bukkit.inventory.ItemStack (org.bukkit.Material.EMERALD,_count);
+                   player.getInventory().setItem (_i,_newStack);
+                }
+             }
+          })();
+          (function () {
+            fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
+            if (player != null) {
+              if (player.setMetadata != null ) {
+                 player.setMetadata ("inviso", fd );
+              }
+            }
+          }());
+        }
+        else {
+          (function() {
+            if (player != null ) {
+               player.sendMessage ("8 emeralds required to purchase");
+            }
+           })();
+        }
+      }
+    }
+    index=((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()).indexOf("DOOR") + 1;
+    if (((index) > 0)){
+      inhand=(player== null) ? null : ( player.getItemInHand == null) ? null : player.getItemInHand();
+      name=(function() {   var _value = (inhand== null) ? null : (inhand.getItemMeta == null) ? null : (inhand.getItemMeta() == null)?null:inhand.getItemMeta().getDisplayName();
+        console.log ( 'Custom name: [' + _value + ']');
+        return _value; })();
+      if (((name) == (null))){
+        event.cancelled = true;
+      }
+      else {
+        index=(name).indexOf((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()) + 1;
+        if (((index) > 0)){
+          if (exports.doorIsOpen){
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("Waiting for door to close...");
+              }
+             })();
+            event.cancelled = true;
+          }
+          else {
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("Welcome " + player.name);
+              }
+             })();
+            exports.door=block;
+            setTimeout (function () {
+              (function () {
+                 if ((exports.door== null)?null:exports.door.location!= null) {
+                   var _block=server.worlds[0].getBlockAt((exports.door== null)?null:exports.door.location);
+                   var _myString = _block.toString();
+                   var _isTop = _myString.indexOf ( "half=upper") > -1;
+                   console.log ( "closedoor Is top: " + _isTop );
+                   if (_isTop) {
+                      var _loc=(function() { var _x = (exports.door== null)?null:exports.door.location.x;var _y = (exports.door== null)?null:exports.door.location.y+-1;var _z = (exports.door== null)?null:exports.door.location.z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
+                      _block = server.worlds[0].getBlockAt ( _loc );
+                   }
+                   var _state = _block.getState();
+                   var _info  = _state.getData();
+                   _info.setOpen (false);
+                   _state.setData (_info);
+                   _state.update();
+                 }
+              })();
+              exports.doorIsOpen=false;
+            },2000);
+            exports.doorIsOpen=true;
+          }
+        }
+        else {
+          (function() {
+            if (player != null ) {
+               player.sendMessage ("You need an KEY for a " + blockType);
+            }
+           })();
+          event.cancelled = true;
+        }
+      }
+    }
   });
 };
