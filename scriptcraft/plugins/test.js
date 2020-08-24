@@ -1,4 +1,3 @@
-//expression
   events.playerJoin( function (event) {
     console.log ("Player join completed");
     player=(event.getPlayer== null) ? null : event.getPlayer();
@@ -18,6 +17,19 @@
         player.setMetadata ("_teleported_", fd );
       }
     }
+  });
+  events.serverLoad( function (event) {
+    console.log ("Server reload completed");
+    test();
+    for (var _elementIndex=0; _elementIndex <server.getOnlinePlayers().length;_elementIndex++) {
+      player = server.getOnlinePlayers()[_elementIndex];
+      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,false);
+      if (player != null) {
+        if (player.setMetadata != null ) {
+          player.setMetadata ("_teleported_", fd );
+        }
+      }
+    };
   });
 
 
@@ -78,12 +90,6 @@ exports.makeRecipes = function () {
   recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
   server.addRecipe(recipe);
 };
-
-//expression
-  events.serverLoad( function (event) {
-    console.log ("Server Has Reloaded");
-  });
-
 
 exports.test = function () {
   //Instantiations;
