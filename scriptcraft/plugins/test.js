@@ -33,22 +33,6 @@
   });
 
 
-exports.render  = function (mapView, mapCanvas, player) {
-  //Instantiations;
-  var mapId;
-  var filename;
-  var title;
-  mapId=mapView.getId();
-  filename='scriptcraft/plugins/images/' + mapId + '.jpg';
-  if (new java.io.File (filename).exists()){
-    mapCanvas.drawImage (0,0,org.bukkit.map.MapPalette.resizeImage (new javax.swing.ImageIcon(filename).getImage()) );
-  }
-  else {
-    title='scriptcraft/plugins/\nimages/' + mapId + '.jpg\n\nDoes not exist yet';
-    mapCanvas.drawText ( 10,10,org.bukkit.map.MinecraftFont.Font, title);
-  }
-};
-
 exports.makeRecipes = function () {
   //Instantiations;
   var meta;
@@ -89,6 +73,22 @@ exports.makeRecipes = function () {
   recipe.setIngredient('O',org.bukkit.Material.SPRUCE_PLANKS);
   recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
   server.addRecipe(recipe);
+};
+
+exports.render  = function (mapView, mapCanvas, player) {
+  //Instantiations;
+  var mapId;
+  var filename;
+  var title;
+  mapId=mapView.getId();
+  filename='scriptcraft/plugins/images/' + mapId + '.jpg';
+  if (new java.io.File (filename).exists()){
+    mapCanvas.drawImage (0,0,org.bukkit.map.MapPalette.resizeImage (new javax.swing.ImageIcon(filename).getImage()) );
+  }
+  else {
+    title='scriptcraft/plugins/\nimages/' + mapId + '.jpg\n\nDoes not exist yet';
+    mapCanvas.drawText ( 10,10,org.bukkit.map.MinecraftFont.Font, title);
+  }
 };
 
 exports.test = function () {
@@ -357,6 +357,7 @@ exports.test = function () {
     }
   });
   events.blockBreak( function (event) {
+    event.cancelled = true;
   });
   events.playerCommandPreprocess( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
