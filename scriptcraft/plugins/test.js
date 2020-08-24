@@ -19,19 +19,6 @@
       }
     }
   });
-  events.serverLoad( function (event) {
-    console.log ("Server reload completed");
-    test();
-    for (var _elementIndex=0; _elementIndex <server.getOnlinePlayers().length;_elementIndex++) {
-      player = server.getOnlinePlayers()[_elementIndex];
-      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,false);
-      if (player != null) {
-        if (player.setMetadata != null ) {
-          player.setMetadata ("_teleported_", fd );
-        }
-      }
-    };
-  });
 
 
 exports.render  = function (mapView, mapCanvas, player) {
@@ -91,6 +78,12 @@ exports.makeRecipes = function () {
   recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
   server.addRecipe(recipe);
 };
+
+//expression
+  events.serverLoad( function (event) {
+    console.log ("Server Has Reloaded");
+  });
+
 
 exports.test = function () {
   //Instantiations;
