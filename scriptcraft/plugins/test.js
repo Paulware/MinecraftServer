@@ -1,329 +1,297 @@
-  events.playerJoin( function (event) {
-    console.log ("Player join completed");
+exports.setData = function () {
+  exports.lobby={  x:410,y:20,z:649};
+  exports.teamLobby={  x:425,y:20,z:650};
+  exports.beds={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
+  exports.spawnPoint={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
+  exports.spawnPoints=[
+    new org.bukkit.Location(server.worlds[0], exports.spawnPoint["red"].x, exports.spawnPoint["red"].y, exports.spawnPoint["red"].z),
+    new org.bukkit.Location(server.worlds[0], exports.spawnPoint["blue"].x, exports.spawnPoint["blue"].y, exports.spawnPoint["blue"].z),
+    new org.bukkit.Location(server.worlds[0], exports.teamLobby.x, exports.teamLobby.y, exports.teamLobby.z),
+    new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z)
+  ];
+  exports.bedLocations=[
+    new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
+    new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
+  ];
+};
+
+  events.serverLoad( function (event) {
+    for (var _elementIndex=0; _elementIndex <exports.bedLocations.length;_elementIndex++) {
+      bed = exports.bedLocations[_elementIndex];
+      server.worlds[0].getBlockAt (bed).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
+    };
+    exports.gameId=new Date().getTime();
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamemode survival @a");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule keepinventory true");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule doweathercycle false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule dodaylightcycle false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule commandblockoutput false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule sendCommandFeedback false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule dodaylightcycle false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "weather clear");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "time set day");
+    console.log ("Game rules set" );
+    listeners();
+    setData();
+    spawnBeds();
+  });
+
+
+exports.listeners = function () {
+  //Instantiations;
+  var player;
+  var gameId;
+  var lobby;
+  var team;
+  var teamLobby;
+  var block;
+  var durability;
+  var chestplate;
+  var line;
+  var spawnPoint;
+  var clickType;
+  var career;
+  var newLocation;
+  var vector;
+  var firework;
+  var arrow;
+  var projectile;
+  var location;
+  var shooter;
+  var entityType;
+  var foundPoint;
+  var teams;
+  var message;
+  var list;
+  var cmd;
+  events.playerMove( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
-    fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,false);
-    if (player != null) {
-      if (player.setMetadata != null ) {
-        player.setMetadata ("_teleported_", fd );
+    gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
+    if (((exports.gameId) == ((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value()))){
+      if (! (player.getMetadata("_team_").length > 0)){
+        lobby=new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z);
+        if (function () { _inSphere = false;
+          if (Math.abs(player.location.x - lobby.x) <= 10){
+             if (Math.abs(player.location.y - lobby.y) <= 10){
+                if (Math.abs(player.location.z - lobby.z) <= 10){
+                   _inSphere = true;
+                }
+             }
+          }
+          return _inSphere;
+        }()){
+          org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "title " + player.name + " actionbar {\"text\":\"Select Team\",\"italic\":false,\"bold\":false,\"color\":\"aqua\"}");
+        }
+        else {
+          (function () { var _pitch; var _yaw; var _velocity;
+            _pitch    = player.location.getPitch();
+            _yaw      = player.location.getYaw();
+            _velocity = player.getVelocity();
+            lobby.setPitch (_pitch);
+            lobby.setYaw   (_yaw);
+            player.teleport(lobby, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.setVelocity(_velocity);
+          })();
+        }
+      }
+      else if (! (player.getMetadata("_career_").length > 0)){
+        team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
+        console.log ("got team: " + team);
+        teamLobby=new org.bukkit.Location(server.worlds[0], exports.teamLobby.x, exports.teamLobby.y, exports.teamLobby.z);
+        if (function () { _inSphere = false;
+          if (Math.abs(player.location.x - teamLobby.x) <= 10){
+             if (Math.abs(player.location.y - teamLobby.y) <= 10){
+                if (Math.abs(player.location.z - teamLobby.z) <= 10){
+                   _inSphere = true;
+                }
+             }
+          }
+          return _inSphere;
+        }()){
+          org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "title " + player.name + " actionbar {\"text\":\"Select Aircraft\",\"italic\":false,\"bold\":false,\"color\":\"aqua\"}");
+        }
+        else {
+          (function () { var _pitch; var _yaw; var _velocity;
+            _pitch    = player.location.getPitch();
+            _yaw      = player.location.getYaw();
+            _velocity = player.getVelocity();
+            teamLobby.setPitch (_pitch);
+            teamLobby.setYaw   (_yaw);
+            player.teleport(teamLobby, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.setVelocity(_velocity);
+          })();
+        }
+      }
+    }
+    else {
+      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,exports.gameId);
+      if (player != null) {
+        if (player.setMetadata != null ) {
+          player.setMetadata ("_gameid_", fd );
+        }
+      }
+      console.log ("Deleting team for player: " + player.name);
+      player.removeMetadata ("_team_", __plugin );
+      (function () { var _pitch; var _yaw; var _velocity;
+        _pitch    = player.location.getPitch();
+        _yaw      = player.location.getYaw();
+        _velocity = player.getVelocity();
+        new org.bukkit.Location(server.worlds[0], 410, 20, 649).setPitch (_pitch);
+        new org.bukkit.Location(server.worlds[0], 410, 20, 649).setYaw   (_yaw);
+        player.teleport(new org.bukkit.Location(server.worlds[0], 410, 20, 649), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+        player.setVelocity(_velocity);
+      })();
+    }
+  });
+  events.playerInteract( function (event) {
+    player=(event.getPlayer== null) ? null : event.getPlayer();
+    block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
+    durability=-1;
+    chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
+    if ((((chestplate == null ) ? null : (chestplate.getType == null) ? null : chestplate.getType()) == ("ELYTRA"))){
+      durability=chestplate.getDurability();
+    }
+    if ((((block==null)?null:block.getType()) == (org.bukkit.Material.OAK_SIGN))){
+      line=((block==null)?null: (block.state.getLine == null)?null:block.state.getLine(1)).toLowerCase();
+      if (! (player.getMetadata("_team_").length > 0)){
+        if (([
+          "red",
+          "blue"
+        ].indexOf ( line) >= 0)){
+          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,line);
+          if (player != null) {
+            if (player.setMetadata != null ) {
+              player.setMetadata ("_team_", fd );
+            }
+          }
+          player.removeMetadata ("_career_", __plugin );
+        }
+      }
+      else if (! (player.getMetadata("_career_").length > 0)){
+        team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
+        if (([
+          "fighter",
+          "bomber"
+        ].indexOf ( line) >= 0)){
+          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,line);
+          if (player != null) {
+            if (player.setMetadata != null ) {
+              player.setMetadata ("_career_", fd );
+            }
+          }
+          spawnPoint=new org.bukkit.Location(server.worlds[0], exports.spawnPoint[team].x, exports.spawnPoint[team].y, exports.spawnPoint[team].z);
+          (function () { var _pitch; var _yaw; var _velocity;
+            _pitch    = player.location.getPitch();
+            _yaw      = player.location.getYaw();
+            _velocity = player.getVelocity();
+            spawnPoint.setPitch (_pitch);
+            spawnPoint.setYaw   (_yaw);
+            player.teleport(spawnPoint, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.setVelocity(_velocity);
+          })();
+          console.log ("bomber");
+        }
+      }
+    }
+    clickType=(event.getAction== null) ? null : event.getAction();
+    if (player.getMetadata("_career_").length > 0){
+      career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
+      chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
+      if (((clickType) == (org.bukkit.event.block.Action.LEFT_CLICK_AIR))){
+        console.log ("Got a left click in air" );
+        if (player.isOnGround()){
+          if ((((chestplate == null ) ? null : (chestplate.getType == null) ? null : chestplate.getType()) == ("ELYTRA"))){
+            if (((durability) < (400))){
+              newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+              (function () { var _pitch; var _yaw; var _velocity;
+                _pitch    = player.location.getPitch();
+                _yaw      = player.location.getYaw();
+                _velocity = player.getVelocity();
+                newLocation.setPitch (_pitch);
+                newLocation.setYaw   (_yaw);
+                player.teleport(newLocation, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+                player.setVelocity(_velocity);
+              })();
+              player.addPotionEffect(new org.bukkit.potion.PotionEffect (org.bukkit.potion.PotionEffectType.SLOW_FALLING,200, 1));
+            }
+          }
+        }
+        else {
+          if (((career) == ("bomber"))){
+            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+            (function () { var _pitch; var _yaw; var _velocity;
+              _pitch    = player.location.getPitch();
+              _yaw      = player.location.getYaw();
+              _velocity = player.getVelocity();
+              newLocation.setPitch (_pitch);
+              newLocation.setYaw   (_yaw);
+              player.teleport(newLocation, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+              player.setVelocity(_velocity);
+            })();
+          }
+          else if (((career) == ("fighter"))){
+            vector=player.getVelocity();
+            vector=vector.multiply (2);
+            player.setVelocity(vector);
+          }
+        }
+      }
+      else if (((clickType) == (org.bukkit.event.block.Action.RIGHT_CLICK_AIR))){
+        if (player.isOnGround()){
+          if (((durability) >= 400)){
+            console.log ("infantry firing");
+            firework=server.worlds[0].spawnEntity((player== null)?null:player.location,org.bukkit.entity.EntityType.FIREWORK);
+            vector=(player== null)?null:player.location.getDirection().normalize().multiply (1.5);
+            var _meta = org.bukkit.Bukkit.getItemFactory().getItemMeta(org.bukkit.Material.FIREWORK_ROCKET);
+            _meta.setPower(0);
+            _meta.addEffect(org.bukkit.FireworkEffect.builder()
+                               .withColor(org.bukkit.Color.AQUA)
+                               .withFade(org.bukkit.Color.ORANGE)
+                               .with(org.bukkit.FireworkEffect.Type.BALL_LARGE)
+                               .trail(false)
+                               .flicker(true)
+                               .build());
+            firework.setFireworkMeta(_meta);
+            firework.setVelocity(vector);
+          }
+        }
+        else {
+          career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
+          if (((career) == ("fighter"))){
+            vector=(player== null)?null:player.location.getDirection().normalize();
+            for (var i=0; i<10; i++) {
+              arrow=s;
+            }
+          }
+          else if (((career) == ("bomber"))){
+            if (! (player.isOnGround())){
+              projectile=server.worlds[0].spawnEntity(player.location,org.bukkit.entity.EntityType.SNOWBALL);
+              player.launchProjectile(projectile.getClass());
+            }
+          }
+        }
       }
     }
   });
   events.playerRespawn( function (event) {
-    console.log ("Player respawn completed");
     player=(event.getPlayer== null) ? null : event.getPlayer();
-    fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,false);
-    if (player != null) {
-      if (player.setMetadata != null ) {
-        player.setMetadata ("_teleported_", fd );
+    player.removeMetadata ("_career_", __plugin );
+    team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
+    if (([
+      "red",
+      "blue"
+    ].indexOf ( team) >= 0)){
+      location=new org.bukkit.Location(server.worlds[0], exports.beds[team].x, exports.beds[team].y, exports.beds[team].z);
+      block=(server.worlds[0].getBlockAt (location)==null)?null:server.worlds[0].getBlockAt (location).getType();
+      console.log ("Block at bed location: [" + block + "]");
+      if (((block) != ("BED"))){
+        player.setGameMode(org.bukkit.GameMode.SPECTATOR);
       }
     }
   });
-  events.serverLoad( function (event) {
-    console.log ("Server reload completed");
-    test();
-    for (var _elementIndex=0; _elementIndex <server.getOnlinePlayers().length;_elementIndex++) {
-      player = server.getOnlinePlayers()[_elementIndex];
-      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,false);
-      if (player != null) {
-        if (player.setMetadata != null ) {
-          player.setMetadata ("_teleported_", fd );
-        }
-      }
-    };
-  });
-
-
-exports.makeRecipes = function () {
-  //Instantiations;
-  var meta;
-  var stack;
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("ACACIA_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  "," T ","   ");
-  recipe.setIngredient('O',org.bukkit.Material.ACACIA_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("DARK_OAK_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  "," T ","   ");
-  recipe.setIngredient('O',org.bukkit.Material.DARK_OAK_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("OAK_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  "," T ","   ");
-  recipe.setIngredient('O',org.bukkit.Material.OAK_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("BIRCH_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  "," T ","   ");
-  recipe.setIngredient('O',org.bukkit.Material.BIRCH_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("JUNGLE_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  "," T ","   ");
-  recipe.setIngredient('O',org.bukkit.Material.JUNGLE_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-  var result = (function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("SPRUCE_DOOR_KEY");  s.setItemMeta(m);  return s; })();
-  var recipe = new org.bukkit.inventory.ShapedRecipe(result);
-  recipe.shape("O  ","   ","  T");
-  recipe.setIngredient('O',org.bukkit.Material.SPRUCE_PLANKS);
-  recipe.setIngredient('T',org.bukkit.Material.TRIPWIRE_HOOK);
-  server.addRecipe(recipe);
-};
-
-exports.render  = function (mapView, mapCanvas, player) {
-  //Instantiations;
-  var mapId;
-  var filename;
-  var title;
-  mapId=mapView.getId();
-  filename='scriptcraft/plugins/images/' + mapId + '.jpg';
-  if (new java.io.File (filename).exists()){
-    mapCanvas.drawImage (0,0,org.bukkit.map.MapPalette.resizeImage (new javax.swing.ImageIcon(filename).getImage()) );
-  }
-  else {
-    title='scriptcraft/plugins/\nimages/' + mapId + '.jpg\n\nDoes not exist yet';
-    mapCanvas.drawText ( 10,10,org.bukkit.map.MinecraftFont.Font, title);
-  }
-};
-
-exports.test = function () {
-  //Instantiations;
-  var player;
-  var meta;
-  var stack;
-  var chestplate;
-  var name;
-  var boots;
-  var blocks;
-  var blockType;
-  var entity;
-  var projectile;
-  var shooter;
-  var helmet;
-  var attacker;
-  var message;
-  var words;
-  var command;
-  var index;
-  var block;
-  var count;
-  var inhand;
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamemode survival @a");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule keepinventory true");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule doweathercycle false");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule dodaylightcycle false");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule dodaylightcycle false");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setworldspawn 594 20 483");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "deop @a");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "weather clear");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "time set day");
-  org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "tp @a 594 20 483");
-  // Change renderer for all maps
-  var renderers;
-  var mapView;
-  var count = 1;
-  while (true) {
-    mapView = server.getMap (count);
-    if (mapView == undefined) {
-      console.log ( 'Aborting at mapId=' + count );
-      break;
-    } else {
-      renderers = mapView.getRenderers ();
-      for (var j=0; j<renderers.length; j++ ){
-        mapView.removeRenderer (renderers[j]);
-      }
-      mapView.addRenderer (render);
-    }
-    count = count + 1;
-  }
-  console.log ("Running test function");
-  events.playerMove( function (event) {
-    player=(event.getPlayer== null) ? null : event.getPlayer();
-    if (( parseInt((player== null)?null:player.location.x) !=604) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=486) ? false : true){
-      if ((((function () {
-         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("jungleKey").length == 0)?0:player.getMetadata("jungleKey")[0].value();
-         var _elapsedTime = (new Date().getTime()) - _startTime;
-         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
-         return _elapsedTime;
-      }())) > 3000)){
-        (function() {
-          if (player != null ) {
-             player.sendMessage ("You have earned a Jungle Door Key");
-          }
-         })();
-        server.worlds[0].dropItem ((player== null)?null:player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("JUNGLE_DOOR KEY");  s.setItemMeta(m);  return s; })());
-        (function () {
-          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
-          if (player != null) {
-            if (player.setMetadata != null ) {
-               player.setMetadata ("jungleKey", fd );
-            }
-          }
-        }());
-      }
-    }
-    if (( parseInt((player== null)?null:player.location.x) !=624) ? false :( parseInt((player== null)?null:player.location.y) !=19) ? false :( parseInt((player== null)?null:player.location.z) !=485) ? false : true){
-      if ((((function () {
-         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("birchKey").length == 0)?0:player.getMetadata("birchKey")[0].value();
-         var _elapsedTime = (new Date().getTime()) - _startTime;
-         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
-         return _elapsedTime;
-      }())) > 10000)){
-        server.worlds[0].dropItem (new org.bukkit.Location(server.worlds[0], 621, 20, 490),(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("BIRCH_DOOR KEY");  s.setItemMeta(m);  return s; })());
-      }
-      player.getInventory().setHelmet(null);
-      player.getInventory().setLeggings(null);
-      player.getInventory().setChestplate(null);
-      player.getInventory().setBoots(null);
-      console.log ( 'All armor removed for player: ' + player.name );
-    }
-    if (( parseInt((player== null)?null:player.location.x) !=591) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=491) ? false : true){
-      player.getInventory().setHelmet(null);
-      player.getInventory().setLeggings(null);
-      player.getInventory().setChestplate(null);
-      player.getInventory().setBoots(null);
-      console.log ( 'All armor removed for player: ' + player.name );
-    }
-    if (! ((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_teleported_").length == 0)?null:player.getMetadata("_teleported_")[0].value())){
-      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,true);
-      if (player != null) {
-        if (player.setMetadata != null ) {
-          player.setMetadata ("_teleported_", fd );
-        }
-      }
-      player.teleport(new org.bukkit.Location(server.worlds[0], 594, 20, 483), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
-    }
-    chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
-    name=(function() {   var _value = (chestplate== null) ? null : (chestplate.getItemMeta == null) ? null : (chestplate.getItemMeta() == null)?null:chestplate.getItemMeta().getDisplayName();
-      console.log ( 'Custom name: [' + _value + ']');
-      return _value; })();
-    if (((name) == ("INVINCIBILITY"))){
-      player.setNoDamageTicks (600);
-    }
-    boots=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getBoots== null) ? null : player.getInventory().getBoots();
-    name=(function() {   var _value = (boots== null) ? null : (boots.getItemMeta == null) ? null : (boots.getItemMeta() == null)?null:boots.getItemMeta().getDisplayName();
-      console.log ( 'Custom name: [' + _value + ']');
-      return _value; })();
-    if (((name) == ("ICE BOOTS"))){
-      blocks=(function() {   var _blocks = [];
-        var _blockType;
-        var _loc;
-        for (var _x=((player== null)?null:player.location).x-1;_x<=((player== null)?null:player.location).x+1;_x++) {    for (var _y=((player== null)?null:player.location).y-1;_y<=((player== null)?null:player.location).y+1;_y++) {      for (var _z=((player== null)?null:player.location).z-1;_z<=((player== null)?null:player.location).z+1;_z++) {         _loc = new org.bukkit.Location(server.worlds[0], _x,_y,_z);         _blockType =  server.worlds[0].getBlockAt(_loc).getType();
-               if (_blockType == (org.bukkit.Material.LAVA)) { _blocks.push (server.worlds[0].getBlockAt(_loc)); }
-        }}}
-        if (_blocks.length > 0) {
-           console.log ( "found" + _blocks.length + " blocks " );
-        }
-        return _blocks;
-       })();
-      for (var _elementIndex=0; _elementIndex <blocks.length;_elementIndex++) {
-        block = blocks[_elementIndex];
-        blockType=(block==null)?null:block.getType();
-        if (((blockType) == "LAVA")){
-          block.setType(org.bukkit.Material.ICE);
-        }
-      };
-    }
-    if (( parseInt((player== null)?null:player.location.x) !=589) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=488) ? false : true){
-      (function () {
-         var _x1 = parseInt ( new org.bukkit.Location(server.worlds[0], 586, 19, 489).x );
-         var _y1 = parseInt ( new org.bukkit.Location(server.worlds[0], 586, 19, 489).y );
-         var _z1 = parseInt ( new org.bukkit.Location(server.worlds[0], 586, 19, 489).z );
-         var _x2 = parseInt ( new org.bukkit.Location(server.worlds[0], 588, 18, 487).x );
-         var _y2 = parseInt ( new org.bukkit.Location(server.worlds[0], 588, 18, 487).y );
-         var _z2 = parseInt ( new org.bukkit.Location(server.worlds[0], 588, 18, 487).z );
-         var _command = "fill " + _x1 + " " + _y1 + " " + _z1 + " " + _x2 + " " + _y2 + " " + _z2 + " minecraft:lava replace";
-         console.log ( "command: " + _command );
-         org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), _command );
-      })();
-    }
-    if (( parseInt((player== null)?null:player.location.x) !=613) ? false :( parseInt((player== null)?null:player.location.y) !=20) ? false :( parseInt((player== null)?null:player.location.z) !=486) ? false : true){
-        //Instantiations;
-        var player;
-        var meta;
-        var stack;
-        var chestplate;
-        var name;
-        var boots;
-        var blocks;
-        var blockType;
-      // spawn org.bukkit.entity.EntityType.ZOMBIE
-      var location = new org.bukkit.Location(server.worlds[0], 619, 20, 488);
-      var entity = server.worlds[0].spawnEntity(location,org.bukkit.entity.EntityType.ZOMBIE);
-        server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.EMERALD,1));
-    }
-    if ((((function () {
-       var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("preciousMetal").length == 0)?0:player.getMetadata("preciousMetal")[0].value();
-       var _elapsedTime = (new Date().getTime()) - _startTime;
-       console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
-       return _elapsedTime;
-    }())) > 1500)){
-      if (( parseInt(player.location.x) !=592) ? false :( parseInt(player.location.y) !=20) ? false :( parseInt(player.location.z) !=484) ? false : true){
-        (function() {
-          if (player != null ) {
-             player.sendMessage ("You are in the doorway");
-          }
-         })();
-        server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.IRON_INGOT,1));
-        (function () {
-          fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
-          if (player != null) {
-            if (player.setMetadata != null ) {
-               player.setMetadata ("preciousMetal", fd );
-            }
-          }
-        }());
-      }
-    }
-  });
-  makeRecipes();
-  events.projectileHit( function (event) {
-    entity=(event.getEntity== null) ? null : event.getEntity();
-    console.log ("Projectile hit at: " + entity.location);
-    if ((( parseInt((entity== null)?null:entity.location.x) !=602) ? false :( parseInt((entity== null)?null:entity.location.y) !=26) ? false :( parseInt((entity== null)?null:entity.location.z) !=486) ? false : true) || (( parseInt((entity== null)?null:entity.location.x) !=603) ? false :( parseInt((entity== null)?null:entity.location.y) !=26) ? false :( parseInt((entity== null)?null:entity.location.z) !=486) ? false : true) || (( parseInt((entity== null)?null:entity.location.x) !=603) ? false :( parseInt((entity== null)?null:entity.location.y) !=27) ? false :( parseInt((entity== null)?null:entity.location.z) !=486) ? false : true)){
-      console.log ("Click on button");
-      (function () {
-         if (new org.bukkit.Location(server.worlds[0], 604, 21, 486)!= null) {
-           var _block=server.worlds[0].getBlockAt(new org.bukkit.Location(server.worlds[0], 604, 21, 486));
-           var _myString = _block.toString();
-           var _isTop = _myString.indexOf ( "half=upper") > -1;
-           console.log ( "closedoor Is top: " + _isTop );
-           if (_isTop) {
-              var _loc=(function() { var _x = new org.bukkit.Location(server.worlds[0], 604, 21, 486).x;var _y = new org.bukkit.Location(server.worlds[0], 604, 21, 486).y+-1;var _z = new org.bukkit.Location(server.worlds[0], 604, 21, 486).z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
-              _block = server.worlds[0].getBlockAt ( _loc );
-           }
-           var _state = _block.getState();
-           var _info  = _state.getData();
-           _info.setOpen (true);
-           _state.setData (_info);
-           _state.update();
-         }
-      })();
-      setTimeout (function () {
-        (function () {
-           if (new org.bukkit.Location(server.worlds[0], 604, 21, 486)!= null) {
-             var _block=server.worlds[0].getBlockAt(new org.bukkit.Location(server.worlds[0], 604, 21, 486));
-             var _myString = _block.toString();
-             var _isTop = _myString.indexOf ( "half=upper") > -1;
-             console.log ( "closedoor Is top: " + _isTop );
-             if (_isTop) {
-                var _loc=(function() { var _x = new org.bukkit.Location(server.worlds[0], 604, 21, 486).x;var _y = new org.bukkit.Location(server.worlds[0], 604, 21, 486).y+-1;var _z = new org.bukkit.Location(server.worlds[0], 604, 21, 486).z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
-                _block = server.worlds[0].getBlockAt ( _loc );
-             }
-             var _state = _block.getState();
-             var _info  = _state.getData();
-             _info.setOpen (false);
-             _state.setData (_info);
-             _state.update();
-           }
-        })();
-      },5000);
-    }
+  events.blockExplode( function (event) {
+    block=(event.getBlock== null) ? null : event.getBlock();
+    console.log ("explosion at : " + block.location);
   });
   events.projectileLaunch( function (event) {
     projectile=(event.getEntity== null) ? null : event.getEntity();
@@ -335,38 +303,68 @@ exports.test = function () {
       }
     }
   });
-  events.entityTarget( function (event) {
-    player=(event.getTarget== null) ? null : event.getTarget();
-    helmet=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getHelmet== null) ? null : player.getInventory().getHelmet();
-    name=(function() {   var _value = (helmet== null) ? null : (helmet.getItemMeta == null) ? null : (helmet.getItemMeta() == null)?null:helmet.getItemMeta().getDisplayName();
-      console.log ( 'Custom name: [' + _value + ']');
-      return _value; })();
-    if (((name) == "INVISO")){
-      event.cancelled = true;
+  events.projectileHit( function (event) {
+    projectile=(event.getEntity== null) ? null : event.getEntity();
+    shooter=(projectile== null)? null : (projectile.getMetadata == null)?null:(projectile.getMetadata("_shooter_").length == 0)?null:projectile.getMetadata("_shooter_")[0].value();
+    team=(shooter== null)? null : (shooter.getMetadata == null)?null:(shooter.getMetadata("_team_").length == 0)?null:shooter.getMetadata("_team_")[0].value();
+    entityType=projectile.getType();
+    if (((entityType) == ("SNOWBALL"))){
+      foundPoint=false;
+      for (var _elementIndex=0; _elementIndex <exports.spawnPoints.length;_elementIndex++) {
+        safeLocation = exports.spawnPoints[_elementIndex];
+        if (function () { _inSphere = false;
+          if (Math.abs(projectile.location.x - safeLocation.x) <= 15){
+             if (Math.abs(projectile.location.y - safeLocation.y) <= 15){
+                if (Math.abs(projectile.location.z - safeLocation.z) <= 15){
+                   _inSphere = true;
+                }
+             }
+          }
+          return _inSphere;
+        }()){
+          foundPoint=true;
+          break;
+        }
+      };
+      if (foundPoint){
+        (function() {
+          if (shooter != null ) {
+             shooter.sendMessage ("Sorry you cannot destroy a spawn point");
+          }
+         })();
+        event.cancelled = true;
+      }
+      else {
+        server.worlds[0].createExplosion ((projectile== null)?null:projectile.location,1);
+      }
     }
   });
-  events.entityDamage( function (event) {
-    attacker=(event.getDamager== null) ? null : event.getDamager();
-    shooter=(attacker== null)? null : (attacker.getMetadata == null)?null:(attacker.getMetadata("_shooter_").length == 0)?null:attacker.getMetadata("_shooter_")[0].value();
-    if (attacker instanceof org.bukkit.entity.Player){
-      event.cancelled = true;
+  events.playerDeath( function (event) {
+    teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+       for (var i=0; i<_players.length;i++) {
+          _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
+          if (_teamColor != null) {
+             if (! ((_teams.indexOf (_teamColor) >= 0))){
+                if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() != "SPECTATOR"))){
+                   _teams.push (_teamColor);
+                }
+             }
+          }
+       }
+       console.log ( "Active teams: " + _teams );
+       return _teams;
+     })();
+    if (((teams.length) == 1)){
+      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
     }
-    else if (shooter instanceof org.bukkit.entity.Player){
-      console.log ("No damage because arrow shot by player" );
-      event.cancelled = true;
-    }
-  });
-  events.blockBreak( function (event) {
-    event.cancelled = true;
   });
   events.playerCommandPreprocess( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     message=(event.getMessage== null) ? null : event.getMessage();
-    words=(message).split(" ");
-    command=(words)[0].toLowerCase();
-    index=(message).indexOf(" ") + 1;
-    message=(message).substring (parseInt(((index) + 1) - 1));
-    if (((command) == ("/whisper"))){
+    list=(message).split(" ");
+    cmd=(list).shift();
+    if (((cmd) == ("\t"))){
+      message=list.join(" ");
       for (var _elementIndex=0; _elementIndex <server.getOnlinePlayers().length;_elementIndex++) {
         neighbor = server.getOnlinePlayers()[_elementIndex];
         if (function () { var _near;var _players;var _distance;_near=false;
@@ -376,168 +374,32 @@ exports.test = function () {
         if(_distance <= 5){if (neighbor== _players[_i]){
         _near=true;break;}}}
         return _near;}()){
-          command="say " + neighbor.name + " \"" + message + "\"";
-          org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), command);
+          (function() {
+            if (neighbor != null ) {
+               neighbor.sendMessage (message);
+            }
+           })();
         }
       };
     }
-    else if (((command) == ("/op"))){
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), message);
-    }
-    else if (((command) == ("/keys"))){
-      server.worlds[0].dropItem (player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("JUNGLE_DOOR KEY");  s.setItemMeta(m);  return s; })());
-      server.worlds[0].dropItem (player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("BIRCH_DOOR KEY");  s.setItemMeta(m);  return s; })());
-      server.worlds[0].dropItem (player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("ACACIA_DOOR KEY");  s.setItemMeta(m);  return s; })());
-      server.worlds[0].dropItem (player.location,(function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.TRIPWIRE_HOOK,1);  var m = s.getItemMeta();  m.setDisplayName ("OAK_DOOR KEY");  s.setItemMeta(m);  return s; })());
-    }
-    else {
-      (function() {
-        if (player != null ) {
-           player.sendMessage ("Command ignored: " + command);
-        }
-       })();
-    }
-    event.cancelled = true;
   });
-  events.playerInteract( function (event) {
-    player=(event.getPlayer== null) ? null : event.getPlayer();
-    block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
-    blockType=(block==null)?null:block.getType();
-    if (( parseInt((block== null)?null:block.location.x) !=600) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=488) ? false : true){
-      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.BOW,1));
-      server.worlds[0].dropItem (player.location,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64));
-    }
-    if (( parseInt((block== null)?null:block.location.x) !=594) ? false :( parseInt((block== null)?null:block.location.y) !=21) ? false :( parseInt((block== null)?null:block.location.z) !=484) ? false : true){
-      count=(function () {
-         var _sum=0;
-         var _index;
-         var _stack;
-         var _stackType;
-         var _inventory = player.getInventory().getContents();
-         var _count = 0;
-         for (var _i=0; _i<_inventory.length; _i++)  {
-            _stack = _inventory[_i];
-            _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
-            // console.log ( _i + "): " + _stackType );
-            if (_stackType == org.bukkit.Material.EMERALD ){
-               _count = _count + _stack.getAmount();
-            }
-            if (_i == 8) { break; }
-         }
-         console.log ( "Got a hotbar quantity of:" + _count + " org.bukkit.Material.EMERALD" );
-         return _count;})();
-      if ((((function () {
-         var _startTime = (player== null)? 0 : (player.getMetadata == null)?0:(player.getMetadata("inviso").length == 0)?0:player.getMetadata("inviso")[0].value();
-         var _elapsedTime = (new Date().getTime()) - _startTime;
-         console.log ( 'Elapsed Time: ' + _elapsedTime + ' ms');
-         return _elapsedTime;
-      }())) > 2000)){
-        if (((count) >= 8)){
-          if (player != null) { player.getInventory().addItem ((function() {   var s = new org.bukkit.inventory.ItemStack (org.bukkit.Material.DIAMOND_HELMET,1);  var m = s.getItemMeta();  m.setDisplayName ("INVISO");  s.setItemMeta(m);  return s; })()); }
-          (function () {
-             var _sum=0;
-             var _index;
-             var _stack;
-             var _stackType;
-             var _inventory = player.getInventory().getContents();
-             var _remaining = 8;
-             var _count;
-             var _newStack;
-             for (var _i=0; _i<8; _i++)  {
-                _stack = _inventory[_i];
-                _stackType = (_stack == null ) ? null : (_stack.getType == null) ? null : _stack.getType();
-                if (_stackType == org.bukkit.Material.EMERALD ){
-                   if (_remaining == 0) break;
-                   _count = _stack.getAmount();
-                   if (_count >= _remaining) {
-                      _count = _count - _remaining;
-                      _remaining = 0;
-                   } else {
-                      _remaining = _remaining - _count;
-                      _count = 0;
-                   }
-                   _newStack = new org.bukkit.inventory.ItemStack (org.bukkit.Material.EMERALD,_count);
-                   player.getInventory().setItem (_i,_newStack);
-                }
-             }
-          })();
-          (function () {
-            fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,new Date().getTime());
-            if (player != null) {
-              if (player.setMetadata != null ) {
-                 player.setMetadata ("inviso", fd );
-              }
-            }
-          }());
-        }
-        else {
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("8 emeralds required to purchase");
-            }
-           })();
-        }
-      }
-    }
-    index=((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()).indexOf("DOOR") + 1;
-    if (((index) > 0)){
-      inhand=(player== null) ? null : ( player.getItemInHand == null) ? null : player.getItemInHand();
-      name=(function() {   var _value = (inhand== null) ? null : (inhand.getItemMeta == null) ? null : (inhand.getItemMeta() == null)?null:inhand.getItemMeta().getDisplayName();
-        console.log ( 'Custom name: [' + _value + ']');
-        return _value; })();
-      if (((name) == (null))){
-        event.cancelled = true;
-      }
-      else {
-        index=(name).indexOf((blockType==null)?"":(blockType.toString==null)?"":blockType.toString()) + 1;
-        if (((index) > 0)){
-          if (exports.doorIsOpen){
-            (function() {
-              if (player != null ) {
-                 player.sendMessage ("Waiting for door to close...");
-              }
-             })();
-            event.cancelled = true;
-          }
-          else {
-            (function() {
-              if (player != null ) {
-                 player.sendMessage ("Welcome " + player.name);
-              }
-             })();
-            exports.door=block;
-            setTimeout (function () {
-              (function () {
-                 if ((exports.door== null)?null:exports.door.location!= null) {
-                   var _block=server.worlds[0].getBlockAt((exports.door== null)?null:exports.door.location);
-                   var _myString = _block.toString();
-                   var _isTop = _myString.indexOf ( "half=upper") > -1;
-                   console.log ( "closedoor Is top: " + _isTop );
-                   if (_isTop) {
-                      var _loc=(function() { var _x = (exports.door== null)?null:exports.door.location.x;var _y = (exports.door== null)?null:exports.door.location.y+-1;var _z = (exports.door== null)?null:exports.door.location.z;var __loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return __loc; })();
-                      _block = server.worlds[0].getBlockAt ( _loc );
-                   }
-                   var _state = _block.getState();
-                   var _info  = _state.getData();
-                   _info.setOpen (false);
-                   _state.setData (_info);
-                   _state.update();
-                 }
-              })();
-              exports.doorIsOpen=false;
-            },2000);
-            exports.doorIsOpen=true;
-          }
-        }
-        else {
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("You need an KEY for a " + blockType);
-            }
-           })();
-          event.cancelled = true;
-        }
-      }
-    }
-  });
+};
+
+exports.spawnBeds = function () {
+  //Instantiations;
+  var location;
+  var block;
+  var data;
+  var loc;
+  var sign;
+  for (var _elementIndex=0; _elementIndex <[
+    new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
+    new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
+  ].length;_elementIndex++) {
+    location = [
+    new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
+    new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
+  ][_elementIndex];
+    server.worlds[0].getBlockAt (location).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
+  };
 };
