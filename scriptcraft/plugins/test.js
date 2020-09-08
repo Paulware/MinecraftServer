@@ -185,6 +185,7 @@ exports.listeners = function () {
             player.teleport(spawnPoint, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
             player.setVelocity(_velocity);
           })();
+          server.worlds[0].dropItem (spawnPoint,new org.bukkit.inventory.ItemStack (org.bukkit.Material.LEGACY_ELYTRA,1));
           console.log ("bomber");
         }
       }
@@ -211,8 +212,16 @@ exports.listeners = function () {
               player.addPotionEffect(new org.bukkit.potion.PotionEffect (org.bukkit.potion.PotionEffectType.SLOW_FALLING,200, 1));
             }
           }
+          else {
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("You are not wearing your Elytra");
+              }
+             })();
+          }
         }
         else {
+          console.log ("handle left click for career: " + career);
           if (((career) == ("bomber"))){
             newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             (function () { var _pitch; var _yaw; var _velocity;
@@ -254,9 +263,11 @@ exports.listeners = function () {
         else {
           career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
           if (((career) == ("fighter"))){
+            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 1;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=(player== null)?null:player.location.getDirection().normalize();
             for (var i=0; i<10; i++) {
-              arrow=s;
+              arrow=server.worlds[0].spawnArrow(newLocation,vector,1.5,12);
+              ;
             }
           }
           else if (((career) == ("bomber"))){
@@ -336,7 +347,9 @@ exports.listeners = function () {
     }
   });
   events.playerDeath( function (event) {
+    console.log ("get teams");
     teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+       console.log ( 'Number of players: ' + _players.length );
        for (var i=0; i<_players.length;i++) {
           _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
           if (_teamColor != null) {
@@ -350,6 +363,7 @@ exports.listeners = function () {
        console.log ( "Active teams: " + _teams );
        return _teams;
      })();
+    console.log ("Check length of: " + teams);
     if (((teams.length) == 1)){
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
     }

@@ -706,3 +706,1287 @@ jdk.nashorn.internal.runtime.ECMAException: TypeError: Cannot read property "len
 [17:25:27] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
 [17:25:36] [Server thread/INFO]: Saving the game (this may take a moment!)
 [17:25:36] [Server thread/INFO]: Saved the game
+[17:30:26] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:30] [Server thread/INFO]: [scriptcraft] got team: red
+[17:30:30] [Server thread/INFO]: [scriptcraft] got team: red
+[17:30:30] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:30] [Server thread/INFO]: [scriptcraft] got team: red
+[17:30:30] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:31] [Server thread/INFO]: [scriptcraft] got team: red
+[17:30:31] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:31] [Server thread/INFO]: [scriptcraft] got team: red
+[17:30:31] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:30:31] [Server thread/INFO]: [scriptcraft] bomber
+[17:30:31] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:31] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:31] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,-20.0,0.0
+[17:30:33] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:35] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:36] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,20.0,0.0
+[17:30:37] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:37] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:37] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:39] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:39] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:30:40] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:15] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:34:15] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:34:15] [Server thread/INFO]: Debug logging is disabled
+[17:34:15] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:34:15] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:34:15] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:34:15] [Server thread/INFO]: View Distance: 10
+[17:34:15] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:34:15] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:34:15] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:34:15] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:34:15] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:34:15] [Server thread/INFO]: Mob Spawn Range: 6
+[17:34:15] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:34:15] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:34:15] [Server thread/INFO]: Max TNT Explosions: 100
+[17:34:15] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:34:15] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:34:15] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:34:15] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:34:15] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:34:15] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:34:15] [Server thread/INFO]: View Distance: 10
+[17:34:15] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:34:15] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:34:15] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:34:15] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:34:15] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:34:15] [Server thread/INFO]: Mob Spawn Range: 6
+[17:34:15] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:34:15] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:34:15] [Server thread/INFO]: Max TNT Explosions: 100
+[17:34:15] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:34:15] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:34:15] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:34:15] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:34:15] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:34:15] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:34:15] [Server thread/INFO]: View Distance: 10
+[17:34:15] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:34:15] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:34:15] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:34:15] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:34:15] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:34:15] [Server thread/INFO]: Mob Spawn Range: 6
+[17:34:15] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:34:15] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:34:15] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:34:15] [Server thread/INFO]: Max TNT Explosions: 100
+[17:34:15] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:34:15] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:34:15] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:34:15] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:34:15] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:34:15] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:34:15] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:34:16] [Server thread/INFO]: Loaded 6 recipes
+[17:34:16] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:34:16] [Server thread/INFO]: Loaded 6 recipes
+[17:34:16] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:34:16] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:34:16] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:34:18] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:34:19] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:34:19] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:34:19] [Server thread/INFO]: Incorrect argument for command
+[17:34:19] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:34:19] [Server thread/INFO]: Incorrect argument for command
+[17:34:19] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:34:19] [Server thread/INFO]: Incorrect argument for command
+[17:34:19] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:34:19] [Server thread/INFO]: Incorrect argument for command
+[17:34:19] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:34:19] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:34:19] [Server thread/INFO]: Incorrect argument for command
+[17:34:19] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:34:19] [Server thread/INFO]: Set the weather to clear
+[17:34:19] [Server thread/INFO]: Set the time to 1000
+[17:34:19] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:34:19] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:34:19] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:34:22] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:34:23] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:23] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:23] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:23] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:23] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:26] [Server thread/INFO]: [scriptcraft] got team: red
+[17:34:26] [Server thread/INFO]: [scriptcraft] got team: red
+[17:34:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:26] [Server thread/INFO]: [scriptcraft] got team: red
+[17:34:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:27] [Server thread/INFO]: [scriptcraft] got team: red
+[17:34:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:34:27] [Server thread/INFO]: [scriptcraft] bomber
+[17:34:27] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:27] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:28] [Server thread/WARN]: MasiRichards moved too quickly! -64.0,-0.07683250302076061,379.0
+[17:34:39] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:54] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:56] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:56] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:34:57] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:57] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:34:57] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:57] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:34:57] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:34:57] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:34:58] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: ReferenceError: "s" is not defined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:319) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:291) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.objects.Global.__noSuchProperty__(Global.java:1442) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$1696$6914AA$\^eval\_.L:1#listeners#L:143(<eval>:269) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$1476$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:429) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:396) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:392) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PlayerConnection.a(PlayerConnection.java:1277) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PacketPlayInBlockPlace.a(PacketPlayInBlockPlace.java:28) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PacketPlayInBlockPlace.a(PacketPlayInBlockPlace.java:1) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.TickTask.run(SourceFile:18) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeTask(SourceFile:144) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeNext(SourceFile:118) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.aX(MinecraftServer.java:910) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.executeNext(MinecraftServer.java:903) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.awaitTasks(SourceFile:127) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.sleepForTick(MinecraftServer.java:887) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:820) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:34:58] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: ReferenceError: "s" is not defined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:319) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:291) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.objects.Global.__noSuchProperty__(Global.java:1442) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$1696$6914AA$\^eval\_.L:1#listeners#L:143(<eval>:269) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$1476$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:429) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:396) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:392) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PlayerConnection.a(PlayerConnection.java:1277) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PacketPlayInBlockPlace.a(PacketPlayInBlockPlace.java:28) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PacketPlayInBlockPlace.a(PacketPlayInBlockPlace.java:1) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PlayerConnectionUtils.lambda$0(PlayerConnectionUtils.java:19) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.TickTask.run(SourceFile:18) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeTask(SourceFile:144) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandlerReentrant.executeTask(SourceFile:23) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.executeNext(SourceFile:118) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.aX(MinecraftServer.java:910) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.executeNext(MinecraftServer.java:903) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.IAsyncTaskHandler.awaitTasks(SourceFile:127) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.sleepForTick(MinecraftServer.java:887) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:820) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:39:48] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:39:48] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:39:48] [Server thread/INFO]: Debug logging is disabled
+[17:39:48] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:39:48] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:39:48] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:39:48] [Server thread/INFO]: View Distance: 10
+[17:39:48] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:39:48] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:39:48] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:39:48] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:39:48] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:39:48] [Server thread/INFO]: Mob Spawn Range: 6
+[17:39:48] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:39:48] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:39:48] [Server thread/INFO]: Max TNT Explosions: 100
+[17:39:48] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:39:48] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:39:48] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:39:48] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:39:48] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:39:48] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:39:48] [Server thread/INFO]: View Distance: 10
+[17:39:48] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:39:48] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:39:48] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:39:48] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:39:48] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:39:48] [Server thread/INFO]: Mob Spawn Range: 6
+[17:39:48] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:39:48] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:39:48] [Server thread/INFO]: Max TNT Explosions: 100
+[17:39:48] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:39:48] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:39:48] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:39:48] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:39:48] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:39:48] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:39:48] [Server thread/INFO]: View Distance: 10
+[17:39:48] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:39:48] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:39:48] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:39:48] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:39:48] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:39:48] [Server thread/INFO]: Mob Spawn Range: 6
+[17:39:48] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:39:48] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:39:48] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:39:48] [Server thread/INFO]: Max TNT Explosions: 100
+[17:39:48] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:39:48] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:39:48] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:39:48] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:39:48] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:39:48] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:39:48] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:39:49] [Server thread/INFO]: Loaded 6 recipes
+[17:39:49] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:39:49] [Server thread/INFO]: Loaded 6 recipes
+[17:39:49] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:39:49] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:39:49] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:39:50] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:39:51] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:39:52] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:39:52] [Server thread/INFO]: Incorrect argument for command
+[17:39:52] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:39:52] [Server thread/INFO]: Incorrect argument for command
+[17:39:52] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:39:52] [Server thread/INFO]: Incorrect argument for command
+[17:39:52] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:39:52] [Server thread/INFO]: Incorrect argument for command
+[17:39:52] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:39:52] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:39:52] [Server thread/INFO]: Incorrect argument for command
+[17:39:52] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:39:52] [Server thread/INFO]: Set the weather to clear
+[17:39:52] [Server thread/INFO]: Set the time to 1000
+[17:39:52] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:39:52] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:39:52] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:40:05] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:06] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:07] [Server thread/INFO]: [scriptcraft] got team: red
+[17:40:07] [Server thread/INFO]: [scriptcraft] got team: red
+[17:40:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:07] [Server thread/INFO]: [scriptcraft] got team: red
+[17:40:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:08] [Server thread/INFO]: [scriptcraft] got team: red
+[17:40:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:40:09] [Server thread/INFO]: [scriptcraft] bomber
+[17:40:09] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:09] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:09] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,-40.078375,0.0
+[17:40:11] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:11] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:12] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:12] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:12] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:12] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:13] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:13] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:15] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:15] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:16] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:16] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:17] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:17] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:18] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:18] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:18] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:18] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:22] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:22] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:23] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:23] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:24] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:40:24] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:40:36] [Server thread/WARN]: MasiRichards moved too quickly! 33.22925714672624,-14.301493374366657,-49.50534921619398
+[17:40:37] [Server thread/ERROR]: Could not pass event EntityDeathEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: ReferenceError: "players" is not defined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:319) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.referenceError(ECMAErrors.java:291) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.objects.Global.__noSuchProperty__(Global.java:1442) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2006$17207$\^eval\_.L:1#listeners#L:349#teams(<eval>:352) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2005$17183AA$\^eval\_.L:1#listeners#L:349(<eval>:350) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$1776$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callEntityDeathEvent(CraftEventFactory.java:708) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.d(EntityLiving.java:1365) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.die(EntityLiving.java:1322) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.damageEntity(EntityLiving.java:1169) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.a(EntityArrow.java:365) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.a(EntityArrow.java:277) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.tick(EntityArrow.java:188) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityTippedArrow.tick(EntityTippedArrow.java:87) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.entityJoinedWorld(WorldServer.java:568) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.World.a(World.java:745) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.doTick(WorldServer.java:344) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.b(MinecraftServer.java:1069) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.DedicatedServer.b(DedicatedServer.java:396) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.a(MinecraftServer.java:971) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:816) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:40:54] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 6674ms or 133 ticks behind
+[17:41:34] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 10452ms or 209 ticks behind
+[17:42:53] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:42:53] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:42:53] [Server thread/INFO]: Debug logging is disabled
+[17:42:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:42:53] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:42:53] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:42:53] [Server thread/INFO]: View Distance: 10
+[17:42:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:42:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:42:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:42:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:42:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:42:53] [Server thread/INFO]: Mob Spawn Range: 6
+[17:42:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:42:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:42:53] [Server thread/INFO]: Max TNT Explosions: 100
+[17:42:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:42:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:42:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:42:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:42:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:42:53] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:42:53] [Server thread/INFO]: View Distance: 10
+[17:42:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:42:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:42:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:42:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:42:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:42:53] [Server thread/INFO]: Mob Spawn Range: 6
+[17:42:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:42:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:42:53] [Server thread/INFO]: Max TNT Explosions: 100
+[17:42:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:42:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:42:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:42:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:42:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:42:53] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:42:53] [Server thread/INFO]: View Distance: 10
+[17:42:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:42:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:42:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:42:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:42:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:42:53] [Server thread/INFO]: Mob Spawn Range: 6
+[17:42:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:42:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:42:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:42:53] [Server thread/INFO]: Max TNT Explosions: 100
+[17:42:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:42:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:42:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:42:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:42:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:42:53] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:42:53] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:42:53] [Server thread/INFO]: Loaded 6 recipes
+[17:42:53] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:42:54] [Server thread/INFO]: Loaded 6 recipes
+[17:42:54] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:42:54] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:42:54] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:42:55] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:42:56] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:42:56] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:42:56] [Server thread/INFO]: Incorrect argument for command
+[17:42:56] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:42:56] [Server thread/INFO]: Incorrect argument for command
+[17:42:56] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:42:56] [Server thread/INFO]: Incorrect argument for command
+[17:42:56] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:42:56] [Server thread/INFO]: Incorrect argument for command
+[17:42:56] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:42:56] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:42:56] [Server thread/INFO]: Incorrect argument for command
+[17:42:56] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:42:56] [Server thread/INFO]: Set the weather to clear
+[17:42:56] [Server thread/INFO]: Set the time to 1000
+[17:42:56] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:42:56] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:42:56] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:43:03] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:04] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:05] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:05] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:05] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:05] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:05] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:07] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:08] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:09] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:09] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:09] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:10] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:10] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:10] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:10] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:10] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:10] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:10] [Server thread/INFO]: [scriptcraft] got team: red
+[17:43:10] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:11] [Server thread/INFO]: [scriptcraft] bomber
+[17:43:11] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:43:11] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:43:12] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,-40.0,0.0
+[17:43:15] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:43:15] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:43:16] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:43:16] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:43:22] [Server thread/ERROR]: Could not pass event PlayerDeathEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: TypeError: Cannot read property "0" from undefined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.Undefined.get(Undefined.java:157) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2309$17222$\^eval\_.L:1#listeners#L:350#teams(<eval>:353) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2308$17198AA$\^eval\_.L:1#listeners#L:350(<eval>:351) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2079$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerDeathEvent(CraftEventFactory.java:726) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityPlayer.die(EntityPlayer.java:520) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.damageEntity(EntityLiving.java:1169) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityHuman.damageEntity(EntityHuman.java:769) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityPlayer.damageEntity(EntityPlayer.java:675) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.a(EntityArrow.java:365) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.a(EntityArrow.java:277) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityArrow.tick(EntityArrow.java:188) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityTippedArrow.tick(EntityTippedArrow.java:87) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.entityJoinedWorld(WorldServer.java:568) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.World.a(World.java:745) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.doTick(WorldServer.java:344) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.b(MinecraftServer.java:1069) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.DedicatedServer.b(DedicatedServer.java:396) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.a(MinecraftServer.java:971) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:816) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:43:22] [Server thread/INFO]: MasiRichards was shot by Arrow
+[17:43:23] [Server thread/INFO]: [scriptcraft] Block at bed location: [RED_BED]
+[17:43:24] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:25] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:26] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:27] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:28] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:28] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:28] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:29] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:43:29] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:10] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:51:10] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:51:10] [Server thread/INFO]: Debug logging is disabled
+[17:51:10] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:51:10] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:51:10] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:51:10] [Server thread/INFO]: View Distance: 10
+[17:51:10] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:51:10] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:51:10] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:51:10] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:51:10] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:51:10] [Server thread/INFO]: Mob Spawn Range: 6
+[17:51:10] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:51:10] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:51:10] [Server thread/INFO]: Max TNT Explosions: 100
+[17:51:10] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:51:10] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:51:10] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:51:10] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:51:10] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:51:10] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:51:10] [Server thread/INFO]: View Distance: 10
+[17:51:10] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:51:10] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:51:10] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:51:10] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:51:10] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:51:10] [Server thread/INFO]: Mob Spawn Range: 6
+[17:51:10] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:51:10] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:51:10] [Server thread/INFO]: Max TNT Explosions: 100
+[17:51:10] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:51:10] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:51:10] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:51:10] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:51:10] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:51:10] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:51:10] [Server thread/INFO]: View Distance: 10
+[17:51:10] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:51:10] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:51:10] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:51:10] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:51:10] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:51:10] [Server thread/INFO]: Mob Spawn Range: 6
+[17:51:10] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:51:10] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:51:10] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:51:10] [Server thread/INFO]: Max TNT Explosions: 100
+[17:51:10] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:51:10] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:51:10] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:51:10] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:51:10] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:51:10] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:51:10] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:51:11] [Server thread/INFO]: Loaded 6 recipes
+[17:51:11] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:51:11] [Server thread/INFO]: Loaded 6 recipes
+[17:51:11] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:51:11] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:51:11] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:51:12] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:51:14] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:51:14] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:51:14] [Server thread/INFO]: Set MasiRichards's game mode to Survival Mode
+[17:51:14] [Server thread/INFO]: Incorrect argument for command
+[17:51:14] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:51:14] [Server thread/INFO]: Incorrect argument for command
+[17:51:14] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:51:14] [Server thread/INFO]: Incorrect argument for command
+[17:51:14] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:51:14] [Server thread/INFO]: Incorrect argument for command
+[17:51:14] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:51:14] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:51:14] [Server thread/INFO]: Incorrect argument for command
+[17:51:14] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:51:14] [Server thread/INFO]: Set the weather to clear
+[17:51:14] [Server thread/INFO]: Set the time to 1000
+[17:51:14] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:51:14] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:51:14] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:51:14] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:51:15] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:15] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:15] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:17] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:17] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:19] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:19] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:19] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:19] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:21] [Server thread/INFO]: [scriptcraft] got team: red
+[17:51:21] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:51:22] [Server thread/INFO]: [scriptcraft] bomber
+[17:51:22] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:51:22] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:51:23] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,-40.0,0.0
+[17:51:23] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:51:23] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:51:25] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:51:25] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:51:35] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:51:35] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:52:28] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:52:28] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:52:28] [Server thread/INFO]: Debug logging is disabled
+[17:52:28] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:52:28] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:52:28] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:52:28] [Server thread/INFO]: View Distance: 10
+[17:52:28] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:52:28] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:52:28] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:52:28] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:52:28] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:52:28] [Server thread/INFO]: Mob Spawn Range: 6
+[17:52:28] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:52:28] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:52:28] [Server thread/INFO]: Max TNT Explosions: 100
+[17:52:28] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:52:28] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:52:28] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:52:28] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:52:28] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:52:28] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:52:28] [Server thread/INFO]: View Distance: 10
+[17:52:28] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:52:28] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:52:28] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:52:28] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:52:28] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:52:28] [Server thread/INFO]: Mob Spawn Range: 6
+[17:52:28] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:52:28] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:52:28] [Server thread/INFO]: Max TNT Explosions: 100
+[17:52:28] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:52:28] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:52:28] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:52:28] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:52:28] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:52:28] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:52:28] [Server thread/INFO]: View Distance: 10
+[17:52:28] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:52:28] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:52:28] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:52:28] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:52:28] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:52:28] [Server thread/INFO]: Mob Spawn Range: 6
+[17:52:28] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:52:28] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:52:28] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:52:28] [Server thread/INFO]: Max TNT Explosions: 100
+[17:52:28] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:52:28] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:52:28] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:52:28] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:52:28] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:52:28] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:52:28] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:52:28] [Server thread/INFO]: Loaded 6 recipes
+[17:52:28] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:52:28] [Server thread/INFO]: Loaded 6 recipes
+[17:52:28] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:52:28] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:52:28] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:52:29] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:52:29] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:52:30] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:52:30] [Server thread/INFO]: Incorrect argument for command
+[17:52:30] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:52:30] [Server thread/INFO]: Incorrect argument for command
+[17:52:30] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:52:30] [Server thread/INFO]: Incorrect argument for command
+[17:52:30] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:52:30] [Server thread/INFO]: Incorrect argument for command
+[17:52:30] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:52:30] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:52:30] [Server thread/INFO]: Incorrect argument for command
+[17:52:30] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:52:30] [Server thread/INFO]: Set the weather to clear
+[17:52:30] [Server thread/INFO]: Set the time to 1000
+[17:52:30] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:52:30] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:52:30] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:52:32] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:52:33] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:33] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:33] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:33] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:52:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:52:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:52:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:52:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:52:36] [Server thread/INFO]: [scriptcraft] bomber
+[17:52:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:36] [Server thread/WARN]: MasiRichards moved too quickly! 0.0,-40.078375,0.0
+[17:52:37] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:37] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:52:38] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:38] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:52:39] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:39] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:52:48] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:48] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:52:49] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:52:49] [Server thread/INFO]: [scriptcraft] handle left click for career: fighter
+[17:53:22] [Server thread/INFO]: CONSOLE: [0;31;1mPlease note that this command is not supported and may cause issues when using some plugins.[m
+[17:53:22] [Server thread/INFO]: CONSOLE: [0;31;1mIf you encounter any issues please use the /stop command to restart your server.[m
+[17:53:22] [Server thread/INFO]: Debug logging is disabled
+[17:53:22] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:53:22] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:53:22] [Server thread/INFO]: -------- World Settings For [world] --------
+[17:53:22] [Server thread/INFO]: View Distance: 10
+[17:53:22] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:53:22] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:53:22] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:53:22] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:53:22] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:53:22] [Server thread/INFO]: Mob Spawn Range: 6
+[17:53:22] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:53:22] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:53:22] [Server thread/INFO]: Max TNT Explosions: 100
+[17:53:22] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:53:22] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:53:22] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:53:22] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:53:22] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:53:22] [Server thread/INFO]: -------- World Settings For [world_nether] --------
+[17:53:22] [Server thread/INFO]: View Distance: 10
+[17:53:22] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:53:22] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:53:22] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:53:22] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:53:22] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:53:22] [Server thread/INFO]: Mob Spawn Range: 6
+[17:53:22] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:53:22] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:53:22] [Server thread/INFO]: Max TNT Explosions: 100
+[17:53:22] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:53:22] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:53:22] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:53:22] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:53:22] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:53:22] [Server thread/INFO]: -------- World Settings For [world_the_end] --------
+[17:53:22] [Server thread/INFO]: View Distance: 10
+[17:53:22] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:53:22] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:53:22] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:53:22] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:53:22] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:53:22] [Server thread/INFO]: Mob Spawn Range: 6
+[17:53:22] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:53:22] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Beetroot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Carrot Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Potato Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Vine Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Cocoa Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Bamboo Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: SweetBerry Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Kelp Growth Modifier: 100%
+[17:53:22] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Ra 48 / Mi 16 / Tiv true
+[17:53:22] [Server thread/INFO]: Max TNT Explosions: 100
+[17:53:22] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:53:22] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:53:22] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Desert: 14357617 Igloo: 14357618 Jungle: 14357619 Swamp: 14357620 Monument: 10387313Ocean: 14357621 Shipwreck: 165745295 Slime: 987234911
+[17:53:22] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:53:22] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 1 Hopper Amount: 1
+[17:53:22] [Server thread/INFO]: [scriptcraft] Disabling scriptcraft v3.4.0-2019-01-20
+[17:53:22] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:53:23] [Server thread/INFO]: Loaded 6 recipes
+[17:53:23] [Server thread/INFO]: Reloading ResourceManager: Default, bukkit
+[17:53:23] [Server thread/INFO]: Loaded 6 recipes
+[17:53:23] [Server thread/WARN]: Plugin scriptcraft v3.4.0-2019-01-20 does not specify an api-version.
+[17:53:23] [Server thread/INFO]: [scriptcraft] Loading scriptcraft v3.4.0-2019-01-20
+[17:53:23] [Server thread/INFO]: [scriptcraft] Enabling scriptcraft v3.4.0-2019-01-20
+[17:53:24] [Server thread/INFO]: [scriptcraft] Drone using CraftEvil.setTypeIdAndData method
+[17:53:25] [Server thread/WARN]: [scriptcraft] cow-clicker minigame is not yet supported in CanaryMod or Bukkit
+[17:53:25] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:53:25] [Server thread/INFO]: Incorrect argument for command
+[17:53:25] [Server thread/INFO]: /gamerule keepinventory true<--[HERE]
+[17:53:25] [Server thread/INFO]: Incorrect argument for command
+[17:53:25] [Server thread/INFO]: /gamerule doweathercycle false<--[HERE]
+[17:53:25] [Server thread/INFO]: Incorrect argument for command
+[17:53:25] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:53:25] [Server thread/INFO]: Incorrect argument for command
+[17:53:25] [Server thread/INFO]: /gamerule commandblockoutput false<--[HERE]
+[17:53:25] [Server thread/INFO]: Gamerule sendCommandFeedback is now set to: false
+[17:53:25] [Server thread/INFO]: Incorrect argument for command
+[17:53:25] [Server thread/INFO]: /gamerule dodaylightcycle false<--[HERE]
+[17:53:25] [Server thread/INFO]: Set the weather to clear
+[17:53:25] [Server thread/INFO]: Set the time to 1000
+[17:53:25] [Server thread/INFO]: [scriptcraft] Game rules set
+[17:53:25] [Server thread/INFO]: CONSOLE: [0;32;1mReload complete.[m
+[17:53:25] [Server thread/INFO]: [scriptcraft] js-patch setTimeout() test complete
+[17:53:31] [Server thread/INFO]: [scriptcraft] Deleting team for player: MasiRichards
+[17:53:31] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:32] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:34] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:34] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:34] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:35] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:35] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:36] [Server thread/INFO]: [scriptcraft] got team: red
+[17:53:36] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:53:36] [Server thread/INFO]: [scriptcraft] bomber
+[17:53:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:36] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:38] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:38] [Server thread/INFO]: [scriptcraft] handle left click for career: bomber
+[17:53:46] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:46] [Server thread/INFO]: [scriptcraft] handle left click for career: bomber
+[17:53:47] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:47] [Server thread/INFO]: [scriptcraft] handle left click for career: bomber
+[17:53:51] [Server thread/INFO]: [scriptcraft] Got a left click in air
+[17:53:51] [Server thread/INFO]: [scriptcraft] handle left click for career: bomber
+[17:53:59] [Server thread/INFO]: [scriptcraft] Number of players: 1
+[17:53:59] [Server thread/ERROR]: Could not pass event EntityDeathEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: TypeError: Cannot read property "0" from undefined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.Undefined.get(Undefined.java:157) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$3220$17470$\^eval\_.L:1#listeners#L:351#teams(<eval>:355) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$3219$17446AA$\^eval\_.L:1#listeners#L:351(<eval>:352) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2987$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callEntityDeathEvent(CraftEventFactory.java:708) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.d(EntityLiving.java:1365) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.die(EntityLiving.java:1322) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.damageEntity(EntityLiving.java:1169) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.Explosion.a(Explosion.java:175) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.World.createExplosion(World.java:880) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.createExplosion(WorldServer.java:1228) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.World.createExplosion(World.java:870) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.CraftWorld.createExplosion(CraftWorld.java:810) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.CraftWorld.createExplosion(CraftWorld.java:805) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.CraftWorld.createExplosion(CraftWorld.java:820) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.CraftWorld.createExplosion(CraftWorld.java:815) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$3217$15941AA$\^eval\_.L:1#listeners#L:315(<eval>:347) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2987$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callProjectileHitEvent(CraftEventFactory.java:1127) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityProjectile.tick(EntityProjectile.java:112) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.entityJoinedWorld(WorldServer.java:568) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.World.a(World.java:745) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.WorldServer.doTick(WorldServer.java:344) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.b(MinecraftServer.java:1069) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.DedicatedServer.b(DedicatedServer.java:396) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.a(MinecraftServer.java:971) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:816) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:53:59] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=335.0,y=17.0,z=120.0,pitch=0.0,yaw=0.0}
+[17:54:00] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=362.0,y=17.0,z=121.0,pitch=0.0,yaw=0.0}
+[17:54:01] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=329.0,y=16.0,z=121.0,pitch=0.0,yaw=0.0}
+[17:54:01] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=280.0,y=16.0,z=116.0,pitch=0.0,yaw=0.0}
+[17:54:05] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=290.0,y=17.0,z=109.0,pitch=0.0,yaw=0.0}
+[17:54:05] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=263.0,y=16.0,z=128.0,pitch=0.0,yaw=0.0}
+[17:54:06] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=277.0,y=16.0,z=121.0,pitch=0.0,yaw=0.0}
+[17:54:07] [Server thread/INFO]: [scriptcraft] explosion at : Location{world=CraftWorld{name=world},x=270.0,y=16.0,z=125.0,pitch=0.0,yaw=0.0}
+[17:54:32] [Server thread/INFO]: [scriptcraft] Number of players: 1
+[17:54:32] [Server thread/ERROR]: Could not pass event PlayerDeathEvent to scriptcraft v3.4.0-2019-01-20
+jdk.nashorn.internal.runtime.ECMAException: TypeError: Cannot read property "0" from undefined
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.runtime.Undefined.get(Undefined.java:157) ~[nashorn.jar:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$3220$17470$\^eval\_.L:1#listeners#L:351#teams(<eval>:355) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$3219$17446AA$\^eval\_.L:1#listeners#L:351(<eval>:352) ~[?:?]
+	at jdk.nashorn.internal.scripts.Script$Recompilation$2987$877AA$\^eval\_.L:1#on#eventExecutor(<eval>:43) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$$NashornJavaAdapter.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:529) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:514) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at org.bukkit.craftbukkit.v1_14_R1.event.CraftEventFactory.callPlayerDeathEvent(CraftEventFactory.java:726) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityPlayer.die(EntityPlayer.java:520) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.damageEntity(EntityLiving.java:1169) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityHuman.damageEntity(EntityHuman.java:769) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityPlayer.damageEntity(EntityPlayer.java:675) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.entityBaseTick(EntityLiving.java:278) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.Entity.tick(Entity.java:346) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityLiving.tick(EntityLiving.java:2217) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityHuman.tick(EntityHuman.java:162) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.EntityPlayer.playerTick(EntityPlayer.java:399) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.PlayerConnection.tick(PlayerConnection.java:140) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.NetworkManager.a(NetworkManager.java:224) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.ServerConnection.c(ServerConnection.java:119) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.b(MinecraftServer.java:1092) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.DedicatedServer.b(DedicatedServer.java:396) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.a(MinecraftServer.java:971) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at net.minecraft.server.v1_14_R1.MinecraftServer.run(MinecraftServer.java:816) [spigot-1.14.4.jar:git-Spigot-9de398a-9c887d4]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+[17:54:32] [Server thread/INFO]: MasiRichards drowned
+[17:54:40] [Server thread/INFO]: [scriptcraft] Block at bed location: [RED_BED]
+[17:54:40] [Server thread/INFO]: [scriptcraft] got team: red
+[17:54:40] [Server thread/INFO]: [scriptcraft] got team: red
+[17:54:40] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:54:40] [Server thread/INFO]: [scriptcraft] got team: red
+[17:54:40] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:54:41] [Server thread/INFO]: [scriptcraft] got team: red
+[17:54:41] [Server thread/INFO]: Showing new actionbar title for MasiRichards
+[17:54:41] [Server thread/INFO]: [scriptcraft] got team: red
+[17:54:41] [Server thread/INFO]: Showing new actionbar title for MasiRichards
