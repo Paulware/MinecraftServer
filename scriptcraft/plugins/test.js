@@ -1,4 +1,3 @@
-exports.setData = function () {
   exports.lobby={  x:410,y:20,z:649};
   exports.teamLobby={  x:425,y:20,z:650};
   exports.beds={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
@@ -13,11 +12,9 @@ exports.setData = function () {
     new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
     new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
   ];
-};
-
   events.serverLoad( function (event) {
-    for (var _elementIndex=0; _elementIndex <exports.bedLocations.length;_elementIndex++) {
-      bed = exports.bedLocations[_elementIndex];
+    for (var _elementIndex=0; _elementIndex <exports.beds.length;_elementIndex++) {
+      bed = exports.beds[_elementIndex];
       server.worlds[0].getBlockAt (bed).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
     };
     exports.gameId=new Date().getTime();
@@ -32,7 +29,6 @@ exports.setData = function () {
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "time set day");
     console.log ("Game rules set" );
     listeners();
-    setData();
     spawnBeds();
   });
 
