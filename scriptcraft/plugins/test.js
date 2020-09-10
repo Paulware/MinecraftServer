@@ -60,6 +60,10 @@ exports.listeners = function () {
   var message;
   var list;
   var cmd;
+  events.playerJoin( function (event) {
+    player=(event.getPlayer== null) ? null : event.getPlayer();
+    player.setGameMode(org.bukkit.GameMode.SURVIVAL);
+  });
   events.playerMove( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
@@ -194,6 +198,7 @@ exports.listeners = function () {
     if (player.getMetadata("_career_").length > 0){
       career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
       chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
+      durability=chestplate.getDurability();
       if (((clickType) == (org.bukkit.event.block.Action.LEFT_CLICK_AIR))){
         console.log ("Got a left click in air" );
         if (player.isOnGround()){
@@ -210,6 +215,13 @@ exports.listeners = function () {
                 player.setVelocity(_velocity);
               })();
               player.addPotionEffect(new org.bukkit.potion.PotionEffect (org.bukkit.potion.PotionEffectType.SLOW_FALLING,200, 1));
+            }
+            else {
+              (function() {
+                if (player != null ) {
+                   player.sendMessage ("Your Elytra is damaged and cannot fly");
+                }
+               })();
             }
           }
           else {
@@ -263,10 +275,10 @@ exports.listeners = function () {
         else {
           career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
           if (((career) == ("fighter"))){
-            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 1;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 3;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=(player== null)?null:player.location.getDirection().normalize();
             for (var i=0; i<10; i++) {
-              arrow=server.worlds[0].spawnArrow(newLocation,vector,1.5,12);
+              arrow=server.worlds[0].spawnArrow(newLocation,vector,4,12);
               ;
             }
           }
@@ -351,7 +363,7 @@ exports.listeners = function () {
     teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
        console.log ( 'Number of players: ' + _players.length );
        for (var i=0; i<_players.length;i++) {
-          _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:players[i].getMetadata("_team_")[0].value();
+          _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
           if (_teamColor != null) {
              if (! ((_teams.indexOf (_teamColor) >= 0))){
                 if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() != "SPECTATOR"))){
