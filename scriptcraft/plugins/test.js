@@ -13,8 +13,8 @@
     new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
   ];
   events.serverLoad( function (event) {
-    for (var _elementIndex=0; _elementIndex <exports.beds.length;_elementIndex++) {
-      bed = exports.beds[_elementIndex];
+    for (var _elementIndex=0; _elementIndex <exports.bedLocations.length;_elementIndex++) {
+      bed = exports.bedLocations[_elementIndex];
       server.worlds[0].getBlockAt (bed).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
     };
     exports.gameId=new Date().getTime();
