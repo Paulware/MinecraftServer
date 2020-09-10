@@ -3,8 +3,6 @@
   exports.beds={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
   exports.spawnPoint={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
   exports.spawnPoints=[
-    new org.bukkit.Location(server.worlds[0], exports.spawnPoint["red"].x, exports.spawnPoint["red"].y, exports.spawnPoint["red"].z),
-    new org.bukkit.Location(server.worlds[0], exports.spawnPoint["blue"].x, exports.spawnPoint["blue"].y, exports.spawnPoint["blue"].z),
     new org.bukkit.Location(server.worlds[0], exports.teamLobby.x, exports.teamLobby.y, exports.teamLobby.z),
     new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z)
   ];
@@ -56,6 +54,7 @@ exports.listeners = function () {
   var shooter;
   var entityType;
   var foundPoint;
+  var safeLocation;
   var teams;
   var message;
   var list;
@@ -124,6 +123,7 @@ exports.listeners = function () {
       }
     }
     else {
+      console.log ("player gameId: " + gameId + " does not match global game id: " + exports.gameId);
       fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,exports.gameId);
       if (player != null) {
         if (player.setMetadata != null ) {
@@ -173,6 +173,7 @@ exports.listeners = function () {
           "fighter",
           "bomber"
         ].indexOf ( line) >= 0)){
+          console.log ("career: " + line);
           fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,line);
           if (player != null) {
             if (player.setMetadata != null ) {
@@ -189,10 +190,16 @@ exports.listeners = function () {
             player.teleport(spawnPoint, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
             player.setVelocity(_velocity);
           })();
-          server.worlds[0].dropItem (spawnPoint,new org.bukkit.inventory.ItemStack (org.bukkit.Material.LEGACY_ELYTRA,1));
           player.getInventory().clear();
-          player.getInventory().setItem (0,new org.bukkit.inventory.ItemStack (org.bukkit.Material.GOLDEN_APPLE,1) );
-          console.log ("career: " + line);
+          player.getInventory().setItem (0,new org.bukkit.inventory.ItemStack (org.bukkit.Material.LEGACY_ELYTRA,1) );
+          if (((line) == ("fighter"))){
+            player.getInventory().setItem (1,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64) );
+            player.getInventory().setItem (2,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64) );
+          }
+          else {
+            player.getInventory().setItem (1,new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,64) );
+            player.getInventory().setItem (2,new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,64) );
+          }
         }
       }
     }
@@ -274,6 +281,7 @@ exports.listeners = function () {
         }
         else {
           career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
+          console.log ("career: [" + career + "]");
           if (((career) == ("fighter"))){
             newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 3;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=(player== null)?null:player.location.getDirection().normalize();
@@ -283,10 +291,8 @@ exports.listeners = function () {
             }
           }
           else if (((career) == ("bomber"))){
-            if (! (player.isOnGround())){
-              projectile=server.worlds[0].spawnEntity(player.location,org.bukkit.entity.EntityType.SNOWBALL);
-              player.launchProjectile(projectile.getClass());
-            }
+            projectile=server.worlds[0].spawnEntity(player.location,org.bukkit.entity.EntityType.SNOWBALL);
+            player.launchProjectile(projectile.getClass());
           }
         }
       }
@@ -303,7 +309,13 @@ exports.listeners = function () {
       location=new org.bukkit.Location(server.worlds[0], exports.beds[team].x, exports.beds[team].y, exports.beds[team].z);
       block=(server.worlds[0].getBlockAt (location)==null)?null:server.worlds[0].getBlockAt (location).getType();
       console.log ("Block at bed location: [" + block + "]");
-      if (((block) != ("BED"))){
+      if (((block) != ("RED_BED"))){
+        console.log ("blockType: [" + block + "]");
+        (function() {
+          if (player != null ) {
+             player.sendMessage ("Your bed has been destroyed, you are now a spectator");
+          }
+         })();
         player.setGameMode(org.bukkit.GameMode.SPECTATOR);
       }
     }
@@ -326,11 +338,37 @@ exports.listeners = function () {
     projectile=(event.getEntity== null) ? null : event.getEntity();
     shooter=(projectile== null)? null : (projectile.getMetadata == null)?null:(projectile.getMetadata("_shooter_").length == 0)?null:projectile.getMetadata("_shooter_")[0].value();
     team=(shooter== null)? null : (shooter.getMetadata == null)?null:(shooter.getMetadata("_team_").length == 0)?null:shooter.getMetadata("_team_")[0].value();
-    entityType=projectile.getType();
-    if (((entityType) == ("SNOWBALL"))){
-      foundPoint=false;
-      for (var _elementIndex=0; _elementIndex <exports.spawnPoints.length;_elementIndex++) {
-        safeLocation = exports.spawnPoints[_elementIndex];
+    if (([
+      "red",
+      "blue"
+    ].indexOf ( team) >= 0)){
+      entityType=projectile.getType();
+      if (((entityType) == ("SNOWBALL"))){
+        foundPoint=false;
+        for (var _elementIndex=0; _elementIndex <exports.spawnPoints.length;_elementIndex++) {
+          safeLocation = exports.spawnPoints[_elementIndex];
+          if (function () { _inSphere = false;
+            if (Math.abs(projectile.location.x - safeLocation.x) <= 15){
+               if (Math.abs(projectile.location.y - safeLocation.y) <= 15){
+                  if (Math.abs(projectile.location.z - safeLocation.z) <= 15){
+                     _inSphere = true;
+                  }
+               }
+            }
+            return _inSphere;
+          }()){
+            foundPoint=true;
+            break;
+          }
+        };
+        if (foundPoint){
+          (function() {
+            if (shooter != null ) {
+               shooter.sendMessage ("Sorry you cannot destroy a lobby area");
+            }
+           })();
+        }
+        safeLocation=new org.bukkit.Location(server.worlds[0], exports.beds[team].x, exports.beds[team].y, exports.beds[team].z);
         if (function () { _inSphere = false;
           if (Math.abs(projectile.location.x - safeLocation.x) <= 15){
              if (Math.abs(projectile.location.y - safeLocation.y) <= 15){
@@ -341,20 +379,19 @@ exports.listeners = function () {
           }
           return _inSphere;
         }()){
+          (function() {
+            if (shooter != null ) {
+               shooter.sendMessage ("Sorry you cannot destroy your own bed");
+            }
+           })();
           foundPoint=true;
-          break;
         }
-      };
-      if (foundPoint){
-        (function() {
-          if (shooter != null ) {
-             shooter.sendMessage ("Sorry you cannot destroy a spawn point");
-          }
-         })();
-        event.cancelled = true;
-      }
-      else {
-        server.worlds[0].createExplosion ((projectile== null)?null:projectile.location,1);
+        if (foundPoint){
+          event.cancelled = true;
+        }
+        else {
+          server.worlds[0].createExplosion ((projectile== null)?null:projectile.location,1);
+        }
       }
     }
   });
