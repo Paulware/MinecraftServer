@@ -146,7 +146,7 @@ exports.listeners = function () {
   events.playerInteract( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     block=(event.getClickedBlock== null) ? null : event.getClickedBlock();
-    durability=-1;
+    durability=400;
     chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
     if ((((chestplate == null ) ? null : (chestplate.getType == null) ? null : chestplate.getType()) == ("ELYTRA"))){
       durability=chestplate.getDurability();
@@ -190,15 +190,15 @@ exports.listeners = function () {
             player.setVelocity(_velocity);
           })();
           server.worlds[0].dropItem (spawnPoint,new org.bukkit.inventory.ItemStack (org.bukkit.Material.LEGACY_ELYTRA,1));
-          console.log ("bomber");
+          player.getInventory().clear();
+          player.getInventory().setItem (0,new org.bukkit.inventory.ItemStack (org.bukkit.Material.GOLDEN_APPLE,1) );
+          console.log ("career: " + line);
         }
       }
     }
     clickType=(event.getAction== null) ? null : event.getAction();
     if (player.getMetadata("_career_").length > 0){
       career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
-      chestplate=(player==null)?null:(player.getInventory == null)?null:(player.getInventory().getChestplate== null) ? null : player.getInventory().getChestplate();
-      durability=chestplate.getDurability();
       if (((clickType) == (org.bukkit.event.block.Action.LEFT_CLICK_AIR))){
         console.log ("Got a left click in air" );
         if (player.isOnGround()){
