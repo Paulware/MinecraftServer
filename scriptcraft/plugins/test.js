@@ -111,7 +111,6 @@ exports.listeners = function () {
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
     team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
     speed=player.getVelocity().length();
-    console.log (speed);
     if (((speed) > (5))){
       console.log ("capping speed of: " + speed);
       vector=player.getVelocity().normalize();
