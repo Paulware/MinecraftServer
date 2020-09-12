@@ -88,6 +88,7 @@ exports.listeners = function () {
   var spawnPoint;
   var clickType;
   var career;
+  var speed;
   var firework;
   var projectile;
   var shooter;
@@ -108,7 +109,7 @@ exports.listeners = function () {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
     team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
-    if (((exports.gameId) == ((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value()))){
+    if (((exports.gameId) == (gameId))){
       if (! (player.getMetadata("_team_").length > 0)){
         lobby=new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z);
         if (function () { _inSphere = false;
@@ -383,8 +384,16 @@ exports.listeners = function () {
           }
           else if (((career) == ("fighter"))){
             vector=player.getVelocity();
-            vector=vector.multiply (5);
+            speed=player.getVelocity().length();
+            console.log ("Speed of player: " + speed);
+            if (((speed) < 1)){
+              vector=vector.multiply (5);
+            }
+            else if (((speed) < 2)){
+              vector=vector.multiply (2);
+            }
             player.setVelocity(vector);
+            console.log ("Final speed of player: " + player.getVelocity().length());
           }
         }
       }
@@ -413,8 +422,10 @@ exports.listeners = function () {
           career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
           console.log ("career: [" + career + "]");
           if (((career) == ("fighter"))){
-            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 3;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+            speed=player.getVelocity();
+            console.log ("current speed: " + speed );
             vector=(player== null)?null:player.location.getDirection().normalize();
+            newLocation=(function() { var _x = (player== null)?null:player.location.x + vector.getX()*4;var _y = (player== null)?null:player.location.y + vector.getY()*4;var _z = (player== null)?null:player.location.z + vector.getZ()*4;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=vector.multiply (5);
             for (var i=0; i<10; i++) {
               arrow=server.worlds[0].spawnArrow(newLocation,vector,vector.length(),12);
