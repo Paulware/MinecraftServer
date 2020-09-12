@@ -593,6 +593,15 @@ exports.listeners = function () {
       }
     }
   });
+  events.playerJoin( function (event) {
+    player=(event.getPlayer== null) ? null : event.getPlayer();
+    fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,-1);
+    if (player != null) {
+      if (player.setMetadata != null ) {
+        player.setMetadata ("_gameid_", fd );
+      }
+    }
+  });
   events.playerCommandPreprocess( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     message=(event.getMessage== null) ? null : event.getMessage();
