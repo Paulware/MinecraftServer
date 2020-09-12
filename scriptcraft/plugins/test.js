@@ -552,26 +552,28 @@ exports.listeners = function () {
   events.playerDeath( function (event) {
     console.log ("Player death event triggered");
     player=(event.getEntity== null) ? null : event.getEntity();
-    console.log ("Player: " + player.name );
-    teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
-       console.log ( 'Number of players: ' + _players.length );
-       for (var i=0; i<_players.length;i++) {
-          if ((player) != _players[i] ) {
-             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
-             if (_teamColor != null) {
-                if (_teams.indexOf (_teamColor) == -1){
-                   if (_players[i].getGameMode().toString() != "SPECTATOR"){
-                     _teams.push (_teamColor);
-                   }
-                }
-             }
-          }
-       }
-       console.log ( "Active teams: " + _teams );
-       return _teams;
-     })();
-    if (((teams.length) == 1)){
-      org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
+    if (player instanceof org.bukkit.entity.Player){
+      console.log ("Player: " + player.name );
+      teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+         console.log ( 'Number of players: ' + _players.length );
+         for (var i=0; i<_players.length;i++) {
+            if ((player) != _players[i] ) {
+               _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+               if (_teamColor != null) {
+                  if (_teams.indexOf (_teamColor) == -1){
+                     if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                       _teams.push (_teamColor);
+                     }
+                  }
+               }
+            }
+         }
+         console.log ( "Active teams: " + _teams );
+         return _teams;
+       })();
+      if (((teams.length) == 1)){
+        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
+      }
     }
   });
   events.playerCommandPreprocess( function (event) {
