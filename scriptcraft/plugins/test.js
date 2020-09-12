@@ -385,7 +385,6 @@ exports.listeners = function () {
           else if (((career) == ("fighter"))){
             vector=player.getVelocity();
             speed=player.getVelocity().length();
-            console.log ("Speed of player: " + speed);
             if (((speed) < 1)){
               vector=vector.multiply (5);
             }
@@ -551,7 +550,9 @@ exports.listeners = function () {
     }
   });
   events.playerDeath( function (event) {
+    console.log ("Player death event triggered");
     player=(event.getEntity== null) ? null : event.getEntity();
+    console.log ("Player: " + player.name );
     teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
        console.log ( 'Number of players: ' + _players.length );
        for (var i=0; i<_players.length;i++) {
