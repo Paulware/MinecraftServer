@@ -14,6 +14,7 @@
   ];
   events.serverLoad( function (event) {
     exports.gameId=new Date().getTime();
+    exports.gameStarted=false;
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamemode survival @a");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule keepinventory true");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule doweathercycle false");
@@ -71,11 +72,12 @@ exports.listeners = function () {
   var player;
   var gameId;
   var team;
+  var speed;
+  var vector;
   var lobby;
   var teamLobby;
   var location;
   var distance;
-  var vector;
   var newLocation;
   var arrow;
   var block;
@@ -84,11 +86,10 @@ exports.listeners = function () {
   var line;
   var color;
   var _player;
-  var teams;
   var spawnPoint;
+  var teams;
   var clickType;
   var career;
-  var speed;
   var firework;
   var projectile;
   var shooter;
@@ -109,6 +110,14 @@ exports.listeners = function () {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
     team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
+    speed=player.getVelocity().length();
+    console.log (speed);
+    if (((speed) > (5))){
+      console.log ("capping speed of: " + speed);
+      vector=player.getVelocity().normalize();
+      vector=vector.multiply (4);
+      player.setVelocity(vector);
+    }
     if (((exports.gameId) == (gameId))){
       if (! (player.getMetadata("_team_").length > 0)){
         lobby=new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z);
@@ -185,24 +194,29 @@ exports.listeners = function () {
       }
     }
     else {
-      console.log ("player gameId: " + gameId + " does not match global game id: " + exports.gameId);
-      fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,exports.gameId);
-      if (player != null) {
-        if (player.setMetadata != null ) {
-          player.setMetadata ("_gameid_", fd );
-        }
+      if (((gameId) == (null))){
+        console.log ("null gameId ?!");
       }
-      console.log ("Deleting team for player: " + player.name);
-      player.removeMetadata ("_team_", __plugin );
-      (function () { var _pitch; var _yaw; var _velocity;
-        _pitch    = player.location.getPitch();
-        _yaw      = player.location.getYaw();
-        _velocity = player.getVelocity();
-        new org.bukkit.Location(server.worlds[0], 410, 20, 649).setPitch (_pitch);
-        new org.bukkit.Location(server.worlds[0], 410, 20, 649).setYaw   (_yaw);
-        player.teleport(new org.bukkit.Location(server.worlds[0], 410, 20, 649), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
-        player.setVelocity(_velocity);
-      })();
+      else {
+        console.log ("player gameId: " + gameId + " does not match global game id: " + exports.gameId);
+        fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,exports.gameId);
+        if (player != null) {
+          if (player.setMetadata != null ) {
+            player.setMetadata ("_gameid_", fd );
+          }
+        }
+        console.log ("Deleting team for player: " + player.name);
+        player.removeMetadata ("_team_", __plugin );
+        (function () { var _pitch; var _yaw; var _velocity;
+          _pitch    = player.location.getPitch();
+          _yaw      = player.location.getYaw();
+          _velocity = player.getVelocity();
+          new org.bukkit.Location(server.worlds[0], 410, 20, 649).setPitch (_pitch);
+          new org.bukkit.Location(server.worlds[0], 410, 20, 649).setYaw   (_yaw);
+          player.teleport(new org.bukkit.Location(server.worlds[0], 410, 20, 649), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+          player.setVelocity(_velocity);
+        })();
+      }
     }
   });
   events.playerInteract( function (event) {
@@ -280,24 +294,6 @@ exports.listeners = function () {
           player.getInventory().setChestplate(null);
           console.log ( 'Chestplate removed for player: ' + player.name );
           player.removeMetadata ("_career_", __plugin );
-          teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
-             console.log ( 'Number of players: ' + _players.length );
-             for (var i=0; i<_players.length;i++) {
-                if (undefined != _players[i] ) {
-                   _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
-                   if (_teamColor != null) {
-                      if (_teams.indexOf (_teamColor) == -1){
-                         if (_players[i].getGameMode().toString() != "SPECTATOR"){
-                           _teams.push (_teamColor);
-                         }
-                      }
-                   }
-                }
-             }
-             console.log ( "Active teams: " + _teams );
-             return _teams;
-           })();
-          console.log ("Current number of teams: " + teams.length);
         }
       }
       else if (! (player.getMetadata("_career_").length > 0)){
@@ -330,6 +326,26 @@ exports.listeners = function () {
           else {
             player.getInventory().setItem (1,new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,64) );
             player.getInventory().setItem (2,new org.bukkit.inventory.ItemStack (org.bukkit.Material.SNOWBALL,64) );
+          }
+          teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+             console.log ( 'Number of players: ' + _players.length );
+             for (var i=0; i<_players.length;i++) {
+                if (undefined != _players[i] ) {
+                   _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+                   if (_teamColor != null) {
+                      if (_teams.indexOf (_teamColor) == -1){
+                         if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                           _teams.push (_teamColor);
+                         }
+                      }
+                   }
+                }
+             }
+             console.log ( "Active teams: " + _teams );
+             return _teams;
+           })();
+          if (((teams.length) > 1)){
+            exports.gameStarted=true;
           }
         }
       }
@@ -419,9 +435,8 @@ exports.listeners = function () {
         }
         else {
           career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
-          console.log ("career: [" + career + "]");
           if (((career) == ("fighter"))){
-            speed=player.getVelocity();
+            speed=player.getVelocity().length();
             console.log ("current speed: " + speed );
             vector=(player== null)?null:player.location.getDirection().normalize();
             newLocation=(function() { var _x = (player== null)?null:player.location.x + vector.getX()*4;var _y = (player== null)?null:player.location.y + vector.getY()*4;var _z = (player== null)?null:player.location.z + vector.getZ()*4;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
@@ -550,29 +565,31 @@ exports.listeners = function () {
     }
   });
   events.playerDeath( function (event) {
-    console.log ("Player death event triggered");
-    player=(event.getEntity== null) ? null : event.getEntity();
-    if (player instanceof org.bukkit.entity.Player){
-      console.log ("Player: " + player.name );
-      teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
-         console.log ( 'Number of players: ' + _players.length );
-         for (var i=0; i<_players.length;i++) {
-            if ((player) != _players[i] ) {
-               _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
-               if (_teamColor != null) {
-                  if (_teams.indexOf (_teamColor) == -1){
-                     if (_players[i].getGameMode().toString() != "SPECTATOR"){
-                       _teams.push (_teamColor);
-                     }
-                  }
-               }
-            }
-         }
-         console.log ( "Active teams: " + _teams );
-         return _teams;
-       })();
-      if (((teams.length) == 1)){
-        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
+    if (exports.gameStarted){
+      console.log ("Player death event triggered");
+      player=(event.getEntity== null) ? null : event.getEntity();
+      if (player instanceof org.bukkit.entity.Player){
+        console.log ("Player: " + player.name );
+        teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+           console.log ( 'Number of players: ' + _players.length );
+           for (var i=0; i<_players.length;i++) {
+              if ((player) != _players[i] ) {
+                 _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+                 if (_teamColor != null) {
+                    if (_teams.indexOf (_teamColor) == -1){
+                       if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                         _teams.push (_teamColor);
+                       }
+                    }
+                 }
+              }
+           }
+           console.log ( "Active teams: " + _teams );
+           return _teams;
+         })();
+        if (((teams.length) == 1)){
+          org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
+        }
       }
     }
   });
