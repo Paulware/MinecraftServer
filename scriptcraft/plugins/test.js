@@ -415,7 +415,7 @@ exports.listeners = function () {
           if (((career) == ("fighter"))){
             newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 3;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=(player== null)?null:player.location.getDirection().normalize();
-            vector=vector.multiply (2);
+            vector=vector.multiply (5);
             for (var i=0; i<10; i++) {
               arrow=server.worlds[0].spawnArrow(newLocation,vector,vector.length(),12);
               ;
