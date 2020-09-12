@@ -1,5 +1,7 @@
   exports.lobby={  x:410,y:20,z:649};
   exports.teamLobby={  x:425,y:20,z:650};
+  exports.blueDefenders={  "0":{  x:509,y:20,z:746}};
+  exports.redDefenders={  "0":{  x:489,y:20,z:251}};
   exports.beds={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
   exports.spawnPoint={  "blue":{  x:509,y:20,z:766},"red":{  x:489,y:20,z:271}};
   exports.spawnPoints=[
@@ -11,10 +13,6 @@
     new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
   ];
   events.serverLoad( function (event) {
-    for (var _elementIndex=0; _elementIndex <exports.bedLocations.length;_elementIndex++) {
-      bed = exports.bedLocations[_elementIndex];
-      server.worlds[0].getBlockAt (bed).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
-    };
     exports.gameId=new Date().getTime();
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamemode survival @a");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule keepinventory true");
@@ -23,42 +21,85 @@
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule commandblockoutput false");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule sendCommandFeedback false");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "gamerule dodaylightcycle false");
+    org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "setworldspawn 500 59 494");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "weather clear");
     org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "time set day");
     console.log ("Game rules set" );
     listeners();
-    spawnBeds();
+    spawnStructures();
   });
 
+
+exports.createBeacon  = function (color, location) {
+  //Instantiations;
+  var block;
+  var data;
+  var sign;
+  var newLocation;
+  server.worlds[0].getBlockAt (location).setType (org.bukkit.Material.BEACON);
+  newLocation=(function() { var _x = location.x + 0;var _y = location.y + 1;var _z = location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  if (((color) == ("red"))){
+    server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.BLUE_STAINED_GLASS);
+  }
+  else {
+    server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.RED_STAINED_GLASS);
+  }
+  newLocation=(function() { var _x = location.x + 0;var _y = location.y + -1;var _z = location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 1;var _y = location.y + -1;var _z = location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 1;var _y = location.y + -1;var _z = location.z + 1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 1;var _y = location.y + -1;var _z = location.z + -1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + -1;var _y = location.y + -1;var _z = location.z + 1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 0;var _y = location.y + -1;var _z = location.z + 1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 1;var _y = location.y + -1;var _z = location.z + 1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + -1;var _y = location.y + -1;var _z = location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + 0;var _y = location.y + -1;var _z = location.z + -1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+  newLocation=(function() { var _x = location.x + -1;var _y = location.y + -1;var _z = location.z + -1;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+  server.worlds[0].getBlockAt (newLocation).setType (org.bukkit.Material.DIAMOND_BLOCK);
+};
 
 exports.listeners = function () {
   //Instantiations;
   var player;
   var gameId;
-  var lobby;
   var team;
+  var lobby;
   var teamLobby;
+  var location;
+  var distance;
+  var vector;
+  var newLocation;
+  var arrow;
   var block;
   var durability;
   var chestplate;
   var line;
+  var color;
+  var _player;
+  var teams;
   var spawnPoint;
   var clickType;
   var career;
-  var newLocation;
-  var vector;
   var firework;
-  var arrow;
   var projectile;
-  var location;
   var shooter;
   var entityType;
   var foundPoint;
   var safeLocation;
-  var teams;
   var message;
   var list;
   var cmd;
+  var data;
+  var loc;
+  var sign;
   events.playerJoin( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     player.setGameMode(org.bukkit.GameMode.SURVIVAL);
@@ -66,6 +107,7 @@ exports.listeners = function () {
   events.playerMove( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
     gameId=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value();
+    team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
     if (((exports.gameId) == ((player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_gameid_").length == 0)?null:player.getMetadata("_gameid_")[0].value()))){
       if (! (player.getMetadata("_team_").length > 0)){
         lobby=new org.bukkit.Location(server.worlds[0], exports.lobby.x, exports.lobby.y, exports.lobby.z);
@@ -94,7 +136,6 @@ exports.listeners = function () {
         }
       }
       else if (! (player.getMetadata("_career_").length > 0)){
-        team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
         console.log ("got team: " + team);
         teamLobby=new org.bukkit.Location(server.worlds[0], exports.teamLobby.x, exports.teamLobby.y, exports.teamLobby.z);
         if (function () { _inSphere = false;
@@ -119,6 +160,26 @@ exports.listeners = function () {
             player.teleport(teamLobby, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
             player.setVelocity(_velocity);
           })();
+        }
+      }
+      else {
+        if (! ((player == null ) ? false : (player.getGameMode().toString() == "SPECTATOR"))){
+          if (((team) == ("red"))){
+            location=new org.bukkit.Location(server.worlds[0], exports.blueDefenders["0"].x, exports.blueDefenders["0"].y, exports.blueDefenders["0"].z);
+          }
+          else {
+            location=new org.bukkit.Location(server.worlds[0], exports.redDefenders["0"].x, exports.redDefenders["0"].y, exports.redDefenders["0"].z);
+          }
+          distance=(player== null)?null:player.location.distance(location);
+          if (((distance) < (60))){
+            vector=(player== null)?null:player.location.toVector().subtract(location.toVector()).normalize();
+            vector=vector.multiply (5);
+            newLocation=(function() { var _x = location.x + 0;var _y = location.y + 2;var _z = location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
+            for (var i=0; i<5; i++) {
+              arrow=server.worlds[0].spawnArrow(newLocation,vector,vector.length(),12);
+              ;
+            }
+          }
         }
       }
     }
@@ -164,7 +225,78 @@ exports.listeners = function () {
               player.setMetadata ("_team_", fd );
             }
           }
+          player.getInventory().clear();
+          if (((line) == ("red"))){
+            color = org.bukkit.Color.RED;
+            _player = player;
+            var items = require ('items');
+            var helmet = items.leatherHelmet(1);
+            var helmetMeta = helmet.itemMeta;
+            helmetMeta.color = color;
+            helmet.itemMeta = helmetMeta;
+            _player.equipment.helmet = helmet;
+            var boots = items.leatherBoots(1);
+            var bootsMeta = boots.itemMeta;
+            bootsMeta.color = color;
+            boots.itemMeta = bootsMeta;
+            _player.equipment.boots = boots;
+            var chest = items.leatherChestplate(1);
+            var chestMeta = chest.itemMeta;
+            chestMeta.color = color;
+            chest.itemMeta = chestMeta;
+            _player.equipment.chestplate = chest;
+            var legs = items.leatherLeggings(1);
+            var legsMeta = legs.itemMeta;
+            legsMeta.color = color;
+            legs.itemMeta = legsMeta;
+            _player.equipment.leggings = legs;
+          }
+          else {
+            color = org.bukkit.Color.BLUE;
+            _player = player;
+            var items = require ('items');
+            var helmet = items.leatherHelmet(1);
+            var helmetMeta = helmet.itemMeta;
+            helmetMeta.color = color;
+            helmet.itemMeta = helmetMeta;
+            _player.equipment.helmet = helmet;
+            var boots = items.leatherBoots(1);
+            var bootsMeta = boots.itemMeta;
+            bootsMeta.color = color;
+            boots.itemMeta = bootsMeta;
+            _player.equipment.boots = boots;
+            var chest = items.leatherChestplate(1);
+            var chestMeta = chest.itemMeta;
+            chestMeta.color = color;
+            chest.itemMeta = chestMeta;
+            _player.equipment.chestplate = chest;
+            var legs = items.leatherLeggings(1);
+            var legsMeta = legs.itemMeta;
+            legsMeta.color = color;
+            legs.itemMeta = legsMeta;
+            _player.equipment.leggings = legs;
+          }
+          player.getInventory().setChestplate(null);
+          console.log ( 'Chestplate removed for player: ' + player.name );
           player.removeMetadata ("_career_", __plugin );
+          teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+             console.log ( 'Number of players: ' + _players.length );
+             for (var i=0; i<_players.length;i++) {
+                if (undefined != _players[i] ) {
+                   _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+                   if (_teamColor != null) {
+                      if (_teams.indexOf (_teamColor) == -1){
+                         if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                           _teams.push (_teamColor);
+                         }
+                      }
+                   }
+                }
+             }
+             console.log ( "Active teams: " + _teams );
+             return _teams;
+           })();
+          console.log ("Current number of teams: " + teams.length);
         }
       }
       else if (! (player.getMetadata("_career_").length > 0)){
@@ -173,7 +305,6 @@ exports.listeners = function () {
           "fighter",
           "bomber"
         ].indexOf ( line) >= 0)){
-          console.log ("career: " + line);
           fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,line);
           if (player != null) {
             if (player.setMetadata != null ) {
@@ -190,7 +321,6 @@ exports.listeners = function () {
             player.teleport(spawnPoint, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
             player.setVelocity(_velocity);
           })();
-          player.getInventory().clear();
           player.getInventory().setItem (0,new org.bukkit.inventory.ItemStack (org.bukkit.Material.LEGACY_ELYTRA,1) );
           if (((line) == ("fighter"))){
             player.getInventory().setItem (1,new org.bukkit.inventory.ItemStack (org.bukkit.Material.ARROW,64) );
@@ -207,7 +337,6 @@ exports.listeners = function () {
     if (player.getMetadata("_career_").length > 0){
       career=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_career_").length == 0)?null:player.getMetadata("_career_")[0].value();
       if (((clickType) == (org.bukkit.event.block.Action.LEFT_CLICK_AIR))){
-        console.log ("Got a left click in air" );
         if (player.isOnGround()){
           if ((((chestplate == null ) ? null : (chestplate.getType == null) ? null : chestplate.getType()) == ("ELYTRA"))){
             if (((durability) < (400))){
@@ -240,7 +369,6 @@ exports.listeners = function () {
           }
         }
         else {
-          console.log ("handle left click for career: " + career);
           if (((career) == ("bomber"))){
             newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             (function () { var _pitch; var _yaw; var _velocity;
@@ -255,7 +383,7 @@ exports.listeners = function () {
           }
           else if (((career) == ("fighter"))){
             vector=player.getVelocity();
-            vector=vector.multiply (2);
+            vector=vector.multiply (5);
             player.setVelocity(vector);
           }
         }
@@ -263,20 +391,22 @@ exports.listeners = function () {
       else if (((clickType) == (org.bukkit.event.block.Action.RIGHT_CLICK_AIR))){
         if (player.isOnGround()){
           if (((durability) >= 400)){
-            console.log ("infantry firing");
-            firework=server.worlds[0].spawnEntity((player== null)?null:player.location,org.bukkit.entity.EntityType.FIREWORK);
-            vector=(player== null)?null:player.location.getDirection().normalize().multiply (1.5);
-            var _meta = org.bukkit.Bukkit.getItemFactory().getItemMeta(org.bukkit.Material.FIREWORK_ROCKET);
-            _meta.setPower(0);
-            _meta.addEffect(org.bukkit.FireworkEffect.builder()
-                               .withColor(org.bukkit.Color.AQUA)
-                               .withFade(org.bukkit.Color.ORANGE)
-                               .with(org.bukkit.FireworkEffect.Type.BALL_LARGE)
-                               .trail(false)
-                               .flicker(true)
-                               .build());
-            firework.setFireworkMeta(_meta);
-            firework.setVelocity(vector);
+            if ((((chestplate == null ) ? null : (chestplate.getType == null) ? null : chestplate.getType()) == ("ELYTRA"))){
+              console.log ("infantry firing");
+              firework=server.worlds[0].spawnEntity((player== null)?null:player.location,org.bukkit.entity.EntityType.FIREWORK);
+              vector=(player== null)?null:player.location.getDirection().normalize().multiply (1.5);
+              var _meta = org.bukkit.Bukkit.getItemFactory().getItemMeta(org.bukkit.Material.FIREWORK_ROCKET);
+              _meta.setPower(0);
+              _meta.addEffect(org.bukkit.FireworkEffect.builder()
+                                 .withColor(org.bukkit.Color.AQUA)
+                                 .withFade(org.bukkit.Color.ORANGE)
+                                 .with(org.bukkit.FireworkEffect.Type.BALL_LARGE)
+                                 .trail(false)
+                                 .flicker(true)
+                                 .build());
+              firework.setFireworkMeta(_meta);
+              firework.setVelocity(vector);
+            }
           }
         }
         else {
@@ -285,8 +415,9 @@ exports.listeners = function () {
           if (((career) == ("fighter"))){
             newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 3;var _z = (player== null)?null:player.location.z + 0;var loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return loc; })();
             vector=(player== null)?null:player.location.getDirection().normalize();
+            vector=vector.multiply (2);
             for (var i=0; i<10; i++) {
-              arrow=server.worlds[0].spawnArrow(newLocation,vector,4,12);
+              arrow=server.worlds[0].spawnArrow(newLocation,vector,vector.length(),12);
               ;
             }
           }
@@ -300,7 +431,6 @@ exports.listeners = function () {
   });
   events.playerRespawn( function (event) {
     player=(event.getPlayer== null) ? null : event.getPlayer();
-    player.removeMetadata ("_career_", __plugin );
     team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
     if (([
       "red",
@@ -317,12 +447,26 @@ exports.listeners = function () {
           }
          })();
         player.setGameMode(org.bukkit.GameMode.SPECTATOR);
+        (function () { var _pitch; var _yaw; var _velocity;
+          _pitch    = player.location.getPitch();
+          _yaw      = player.location.getYaw();
+          _velocity = player.getVelocity();
+          new org.bukkit.Location(server.worlds[0], 500, 60, 494).setPitch (_pitch);
+          new org.bukkit.Location(server.worlds[0], 500, 60, 494).setYaw   (_yaw);
+          player.teleport(new org.bukkit.Location(server.worlds[0], 500, 60, 494), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+          player.setVelocity(_velocity);
+        })();
+        setTimeout (function () {
+          player.teleport(new org.bukkit.Location(server.worlds[0], 500, 60, 494), org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+        },2000);
+      }
+      else {
+        player.removeMetadata ("_career_", __plugin );
       }
     }
   });
-  events.blockExplode( function (event) {
-    block=(event.getBlock== null) ? null : event.getBlock();
-    console.log ("explosion at : " + block.location);
+  events.blockBreak( function (event) {
+    event.cancelled = true;
   });
   events.projectileLaunch( function (event) {
     projectile=(event.getEntity== null) ? null : event.getEntity();
@@ -396,15 +540,17 @@ exports.listeners = function () {
     }
   });
   events.playerDeath( function (event) {
-    console.log ("get teams");
+    player=(event.getEntity== null) ? null : event.getEntity();
     teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
        console.log ( 'Number of players: ' + _players.length );
        for (var i=0; i<_players.length;i++) {
-          _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
-          if (_teamColor != null) {
-             if (! ((_teams.indexOf (_teamColor) >= 0))){
-                if (! ((_players[i] == null ) ? false : (_players[i].getGameMode().toString() != "SPECTATOR"))){
-                   _teams.push (_teamColor);
+          if ((player) != _players[i] ) {
+             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+             if (_teamColor != null) {
+                if (_teams.indexOf (_teamColor) == -1){
+                   if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                     _teams.push (_teamColor);
+                   }
                 }
              }
           }
@@ -412,7 +558,6 @@ exports.listeners = function () {
        console.log ( "Active teams: " + _teams );
        return _teams;
      })();
-    console.log ("Check length of: " + teams);
     if (((teams.length) == 1)){
       org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Team: " + teams[0] + " has won!");
     }
@@ -422,7 +567,7 @@ exports.listeners = function () {
     message=(event.getMessage== null) ? null : event.getMessage();
     list=(message).split(" ");
     cmd=(list).shift();
-    if (((cmd) == ("\t"))){
+    if (((cmd) == ("/t"))){
       message=list.join(" ");
       for (var _elementIndex=0; _elementIndex <server.getOnlinePlayers().length;_elementIndex++) {
         neighbor = server.getOnlinePlayers()[_elementIndex];
@@ -440,11 +585,25 @@ exports.listeners = function () {
            })();
         }
       };
+      event.cancelled = true;
+    }
+    else if (((cmd) == ("/killbeds"))){
+      for (var _elementIndex=0; _elementIndex <[
+        new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
+        new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
+      ].length;_elementIndex++) {
+        bed = [
+        new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
+        new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
+      ][_elementIndex];
+        server.worlds[0].getBlockAt (bed).setType (org.bukkit.Material.AIR);
+      };
+      event.cancelled = true;
     }
   });
 };
 
-exports.spawnBeds = function () {
+exports.spawnStructures = function () {
   //Instantiations;
   var location;
   var block;
@@ -455,10 +614,26 @@ exports.spawnBeds = function () {
     new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
     new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
   ].length;_elementIndex++) {
-    location = [
+    bed = [
     new org.bukkit.Location(server.worlds[0], exports.beds["red"].x, exports.beds["red"].y, exports.beds["red"].z),
     new org.bukkit.Location(server.worlds[0], exports.beds["blue"].x, exports.beds["blue"].y, exports.beds["blue"].z)
   ][_elementIndex];
-    server.worlds[0].getBlockAt (location).setType (org.bukkit.Material.LEGACY_BED_BLOCK);
+    console.log ( "Spawn a legacy bed yo");
+    loc = new org.bukkit.Location (server.worlds[0], parseInt(bed.x), parseInt(bed.y), parseInt(bed.z));
+    block = server.worlds[0].getBlockAt (loc);
+    block.setType (org.bukkit.Material.LEGACY_BED_BLOCK);
+    data = org.bukkit.Material.LEGACY_BED_BLOCK.createBlockData();
+    data.setPart (org.bukkit.block.data.type.Bed.Part.HEAD);
+    block.setBlockData (data);
+    loc = new org.bukkit.Location (server.worlds[0], parseInt(loc.x), parseInt(loc.y), parseInt(loc.z)+1);
+    block = server.worlds[0].getBlockAt (loc);
+    block.setType (org.bukkit.Material.LEGACY_BED_BLOCK);
+    data = org.bukkit.Material.LEGACY_BED_BLOCK.createBlockData();
+    data.setPart (org.bukkit.block.data.type.Bed.Part.FOOT);
+    block.setBlockData (data);
   };
+  location=new org.bukkit.Location(server.worlds[0], exports.redDefenders["0"].x, exports.redDefenders["0"].y, exports.redDefenders["0"].z);
+  createBeacon ("red", location);
+  location=new org.bukkit.Location(server.worlds[0], exports.blueDefenders["0"].x, exports.blueDefenders["0"].y, exports.blueDefenders["0"].z);
+  createBeacon ("blue", location);
 };
