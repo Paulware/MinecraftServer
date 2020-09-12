@@ -197,7 +197,7 @@ exports.listeners = function () {
       if (((gameId) == (null))){
         console.log ("null gameId ?!");
       }
-      else {
+      else if (((gameId) == (-1)) || ((gameId) == (exports.gameId))){
         console.log ("player gameId: " + gameId + " does not match global game id: " + exports.gameId);
         fd = new org.bukkit.metadata.FixedMetadataValue (__plugin,exports.gameId);
         if (player != null) {
