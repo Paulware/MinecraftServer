@@ -62,7 +62,7 @@ world-settings:
   default:
     verbose: true
     item-despawn-rate: 6000
-    arrow-despawn-rate: 1200
+    arrow-despawn-rate: 25
     wither-spawn-sound-radius: 0
     enable-zombie-pigmen-portal-spawns: true
     seed-village: 10387312
