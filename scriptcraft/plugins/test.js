@@ -154,6 +154,9 @@ function listeners () {
       }
     }
   });
+  events.blockBreak( function (event) {
+    event.cancelled = true;
+  });
 };
 
 // If the player moves the code does something
@@ -229,6 +232,7 @@ function PlayerDied (event) {
   var teams;
   var numTeams;
   var block;
+  var bedDestroyed;
   player=(event.getEntity== null) ? null : event.getEntity();
   team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
   if (((team) != (null))){
@@ -253,17 +257,21 @@ function PlayerDied (event) {
      })();
     numTeams=teams.length;
     console.log ("active teams: " + numTeams);
-    if (((team) == ("red"))){
+    if (((numTeams) == 1)){
       block=server.worlds[0].getBlockAt (exports.redBed);
-    }
-    else {
+      bedDestroyed=false;
+      if ((((block==null)?null:block.getType()) != (org.bukkit.Material.RED_BED))){
+        console.log ("Red Bed has been destroyed");
+        bedDestroyed=true;
+      }
       block=server.worlds[0].getBlockAt (exports.blueBed);
-    }
-    if ((((block==null)?null:block.getType()) == (org.bukkit.Material.RED_BED))){
-      console.log ("Your bed still exists" );
-    }
-    else {
-      console.log ("Your bed has been destroyed" );
+      if ((((block==null)?null:block.getType()) != (org.bukkit.Material.RED_BED))){
+        console.log ("Blue Bed has been destroyed");
+        bedDestroyed=true;
+      }
+      if (bedDestroyed){
+        org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "say @a " + "Game over, " + teams[0] + " has won!");
+      }
     }
   }
 };
