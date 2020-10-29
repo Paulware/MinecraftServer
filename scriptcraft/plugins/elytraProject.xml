@@ -665,7 +665,7 @@ Spawns structures, some more stuff and gamerules
       </block>
     </statement>
   </block>
-  <block type="scriptcraftfunction" id="hPHba8=H#s1V~#kn)(J0" x="-2063" y="-2163">
+  <block type="scriptcraftfunction" id="hPHba8=H#s1V~#kn)(J0" x="-1962" y="-2162">
     <field name="nameOfFunction">PlayerMoved(event)</field>
     <comment pinned="false" h="80" w="160">If the player moves the code does something</comment>
     <statement name="FUNCTIONCODE">
@@ -1523,125 +1523,144 @@ Spawns structures, some more stuff and gamerules
                                           </block>
                                         </value>
                                         <statement name="DO0">
-                                          <block type="setvariablevalue" id="rsV$-x{~(0_:}[zAaOOq">
-                                            <field name="VARNAME">itemType</field>
-                                            <value name="EXPRESSION">
-                                              <block type="materialdata" id="2a0#TIw6rpbmsWFXhs6[">
-                                                <value name="STACK">
-                                                  <block type="stackinoffhand" id="?bL_{:!U82|=,o{Z:VzF">
-                                                    <value name="PLAYER">
-                                                      <block type="varname" id="60{3A`uG};ezfKehsir-">
-                                                        <field name="VARNAME">player</field>
-                                                      </block>
-                                                    </value>
+                                          <block type="controls_if" id="lVVN(G/~#k:r}*AItH;r">
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="Fu5]QyASymcD^uyMb=]]">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="varname" id="yqjL4CDq!9Yzf_~.k**/">
+                                                    <field name="VARNAME">action</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="actiontype" id="%e%cHV)pB(1+A*AMG3,`">
+                                                    <field name="ACTION">LEFT_CLICK_AIR</field>
                                                   </block>
                                                 </value>
                                               </block>
                                             </value>
-                                            <next>
-                                              <block type="controls_if" id="!W3iGo{69WJ!g?oWFViC">
-                                                <mutation else="1"></mutation>
-                                                <value name="IF0">
-                                                  <block type="logic_operation" id="tRV%50MF4.S,%g_,hGuD">
-                                                    <field name="OP">OR</field>
-                                                    <value name="A">
-                                                      <block type="logic_compare" id="$EPJd/kQVH[8:wSqrJ:h">
-                                                        <field name="OP">EQ</field>
-                                                        <value name="A">
-                                                          <block type="varname" id="X.@*pVzE+t~^4Ivkc*g}">
-                                                            <field name="VARNAME">itemType</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="materialtype" id="%C@R/O/)KvI_@g^yb40J">
-                                                            <field name="MATERIAL">ARROW</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </value>
-                                                    <value name="B">
-                                                      <block type="logic_compare" id=":#;l|(szh4k!%I/bFJ8l">
-                                                        <field name="OP">EQ</field>
-                                                        <value name="A">
-                                                          <block type="varname" id="Y;ZKdvp!OA886Ra/8bMb">
-                                                            <field name="VARNAME">itemType</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="B">
-                                                          <block type="materialtype" id="qRp}`F]0{otR2WFQo]`g">
-                                                            <field name="MATERIAL">SNOWBALL</field>
+                                            <statement name="DO0">
+                                              <block type="setvariablevalue" id="rsV$-x{~(0_:}[zAaOOq">
+                                                <field name="VARNAME">itemType</field>
+                                                <value name="EXPRESSION">
+                                                  <block type="materialdata" id="2a0#TIw6rpbmsWFXhs6[">
+                                                    <value name="STACK">
+                                                      <block type="stackinoffhand" id="?bL_{:!U82|=,o{Z:VzF">
+                                                        <value name="PLAYER">
+                                                          <block type="varname" id="60{3A`uG};ezfKehsir-">
+                                                            <field name="VARNAME">player</field>
                                                           </block>
                                                         </value>
                                                       </block>
                                                     </value>
                                                   </block>
                                                 </value>
-                                                <statement name="DO0">
-                                                  <block type="setvariablevalue" id="@m~Gq,?xgK}-_u.4]dLJ">
-                                                    <field name="VARNAME">newLocation</field>
-                                                    <value name="EXPRESSION">
-                                                      <block type="locationadd" id="C-iWqZVjN$%)E6yW8KsN">
-                                                        <field name="X">0</field>
-                                                        <field name="Y">20</field>
-                                                        <field name="Z">0</field>
-                                                        <value name="LOCATION">
-                                                          <block type="locationof" id="tSrGo_k6IEoN(UbAiYoQ">
-                                                            <value name="OBJECT">
-                                                              <block type="varname" id="~H:GR{C-pjXqT`!pa11M">
-                                                                <field name="VARNAME">player</field>
+                                                <next>
+                                                  <block type="controls_if" id="!W3iGo{69WJ!g?oWFViC">
+                                                    <mutation else="1"></mutation>
+                                                    <value name="IF0">
+                                                      <block type="logic_operation" id="tRV%50MF4.S,%g_,hGuD">
+                                                        <field name="OP">OR</field>
+                                                        <value name="A">
+                                                          <block type="logic_compare" id="$EPJd/kQVH[8:wSqrJ:h">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="varname" id="X.@*pVzE+t~^4Ivkc*g}">
+                                                                <field name="VARNAME">itemType</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="materialtype" id="%C@R/O/)KvI_@g^yb40J">
+                                                                <field name="MATERIAL">ARROW</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="B">
+                                                          <block type="logic_compare" id=":#;l|(szh4k!%I/bFJ8l">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="varname" id="Y;ZKdvp!OA886Ra/8bMb">
+                                                                <field name="VARNAME">itemType</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="materialtype" id="qRp}`F]0{otR2WFQo]`g">
+                                                                <field name="MATERIAL">SNOWBALL</field>
                                                               </block>
                                                             </value>
                                                           </block>
                                                         </value>
                                                       </block>
                                                     </value>
-                                                    <next>
-                                                      <block type="instantteleport" id="bmlzzyRgm$r9``ozF7Zq">
-                                                        <value name="ENTITY">
-                                                          <block type="varname" id="W:`Pb[%G$(nr`]@Az0fN">
-                                                            <field name="VARNAME">player</field>
-                                                          </block>
-                                                        </value>
-                                                        <value name="LOCATION">
-                                                          <block type="varname" id="d^2mO#7xJo4*@$g2/]oy">
-                                                            <field name="VARNAME">newLocation</field>
+                                                    <statement name="DO0">
+                                                      <block type="setvariablevalue" id="@m~Gq,?xgK}-_u.4]dLJ">
+                                                        <field name="VARNAME">newLocation</field>
+                                                        <value name="EXPRESSION">
+                                                          <block type="locationadd" id="C-iWqZVjN$%)E6yW8KsN">
+                                                            <field name="X">0</field>
+                                                            <field name="Y">20</field>
+                                                            <field name="Z">0</field>
+                                                            <value name="LOCATION">
+                                                              <block type="locationof" id="tSrGo_k6IEoN(UbAiYoQ">
+                                                                <value name="OBJECT">
+                                                                  <block type="varname" id="~H:GR{C-pjXqT`!pa11M">
+                                                                    <field name="VARNAME">player</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
                                                           </block>
                                                         </value>
                                                         <next>
-                                                          <block type="addpotioneffect" id="NE$-W{i}$ax}6w!h7+Aa">
-                                                            <value name="EFFECT">
-                                                              <block type="whicheffect" id="+,S,qHU|Q=}RtX^H5qkB">
-                                                                <field name="EFFECT">slow_falling</field>
-                                                              </block>
-                                                            </value>
-                                                            <value name="PLAYER">
-                                                              <block type="varname" id="e+Oc8klOMPX2K-1:sKhg">
+                                                          <block type="instantteleport" id="bmlzzyRgm$r9``ozF7Zq">
+                                                            <value name="ENTITY">
+                                                              <block type="varname" id="W:`Pb[%G$(nr`]@Az0fN">
                                                                 <field name="VARNAME">player</field>
                                                               </block>
                                                             </value>
-                                                            <value name="DURATION">
-                                                              <block type="math_number" id="N3ErZD`=V@`A|g20K1}S">
-                                                                <field name="NUM">10</field>
+                                                            <value name="LOCATION">
+                                                              <block type="varname" id="d^2mO#7xJo4*@$g2/]oy">
+                                                                <field name="VARNAME">newLocation</field>
                                                               </block>
                                                             </value>
+                                                            <next>
+                                                              <block type="addpotioneffect" id="NE$-W{i}$ax}6w!h7+Aa">
+                                                                <value name="EFFECT">
+                                                                  <block type="whicheffect" id="+,S,qHU|Q=}RtX^H5qkB">
+                                                                    <field name="EFFECT">slow_falling</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="PLAYER">
+                                                                  <block type="varname" id="e+Oc8klOMPX2K-1:sKhg">
+                                                                    <field name="VARNAME">player</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="DURATION">
+                                                                  <block type="math_number" id="N3ErZD`=V@`A|g20K1}S">
+                                                                    <field name="NUM">10</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
-                                                    </next>
-                                                  </block>
-                                                </statement>
-                                                <statement name="ELSE">
-                                                  <block type="sendmessage" id="[PFb|EKA{bZZ.l`5URb0">
-                                                    <field name="MESSAGE">"Sorry, arrows or snowballs need to be in your offhand to launch "</field>
-                                                    <value name="PLAYER">
-                                                      <block type="varname" id="!k(mTMO_~%e~4UDDZo|x">
-                                                        <field name="VARNAME">player</field>
+                                                    </statement>
+                                                    <statement name="ELSE">
+                                                      <block type="sendmessage" id="[PFb|EKA{bZZ.l`5URb0">
+                                                        <field name="MESSAGE">"Sorry, arrows or snowballs need to be in your offhand to launch "</field>
+                                                        <value name="PLAYER">
+                                                          <block type="varname" id="!k(mTMO_~%e~4UDDZo|x">
+                                                            <field name="VARNAME">player</field>
+                                                          </block>
+                                                        </value>
                                                       </block>
-                                                    </value>
+                                                    </statement>
                                                   </block>
-                                                </statement>
+                                                </next>
                                               </block>
-                                            </next>
+                                            </statement>
                                           </block>
                                         </statement>
                                         <statement name="ELSE">

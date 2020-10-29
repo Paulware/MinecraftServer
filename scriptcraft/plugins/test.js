@@ -348,26 +348,28 @@ function PlayerClick (event) {
     }
     else {
       if (player.isOnGround()){
-        itemType=((player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand() == null ) ? null : ((player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand().getType == null) ? null : (player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand().getType();
-        if (((itemType) == (org.bukkit.Material.ARROW)) || ((itemType) == (org.bukkit.Material.SNOWBALL))){
-          newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var _loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return _loc; })();
-          (function () { var _pitch; var _yaw; var _velocity;
-            _pitch    = player.location.getPitch();
-            _yaw      = player.location.getYaw();
-            _velocity = player.getVelocity();
-            newLocation.setPitch (_pitch);
-            newLocation.setYaw   (_yaw);
-            player.teleport(newLocation, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
-            player.setVelocity(_velocity);
-          })();
-          player.addPotionEffect(new org.bukkit.potion.PotionEffect (org.bukkit.potion.PotionEffectType.SLOW_FALLING,200, 1));
-        }
-        else {
-          (function() {
-            if (player != null ) {
-               player.sendMessage ("Sorry, arrows or snowballs need to be in your offhand to launch ");
-            }
-           })();
+        if (((action) == (org.bukkit.event.block.Action.LEFT_CLICK_AIR))){
+          itemType=((player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand() == null ) ? null : ((player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand().getType == null) ? null : (player== null) ? null : ( player.getInventory().getItemInOffHand == null) ? null : player.getInventory().getItemInOffHand().getType();
+          if (((itemType) == (org.bukkit.Material.ARROW)) || ((itemType) == (org.bukkit.Material.SNOWBALL))){
+            newLocation=(function() { var _x = (player== null)?null:player.location.x + 0;var _y = (player== null)?null:player.location.y + 20;var _z = (player== null)?null:player.location.z + 0;var _loc = new org.bukkit.Location(server.worlds[0],_x,_y,_z);return _loc; })();
+            (function () { var _pitch; var _yaw; var _velocity;
+              _pitch    = player.location.getPitch();
+              _yaw      = player.location.getYaw();
+              _velocity = player.getVelocity();
+              newLocation.setPitch (_pitch);
+              newLocation.setYaw   (_yaw);
+              player.teleport(newLocation, org.bukkit.event.player.PlayerTeleportEvent.TeleportCause.PLUGIN);
+              player.setVelocity(_velocity);
+            })();
+            player.addPotionEffect(new org.bukkit.potion.PotionEffect (org.bukkit.potion.PotionEffectType.SLOW_FALLING,200, 1));
+          }
+          else {
+            (function() {
+              if (player != null ) {
+                 player.sendMessage ("Sorry, arrows or snowballs need to be in your offhand to launch ");
+              }
+             })();
+          }
         }
       }
       else {
