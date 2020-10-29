@@ -231,38 +231,40 @@ function PlayerDied (event) {
   var block;
   player=(event.getEntity== null) ? null : event.getEntity();
   team=(player== null)? null : (player.getMetadata == null)?null:(player.getMetadata("_team_").length == 0)?null:player.getMetadata("_team_")[0].value();
-  console.log (team + " team has lost a player" );
-  console.log (player.name + " has died");
-  teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
-     console.log ( 'Number of players: ' + _players.length );
-     for (var i=0; i<_players.length;i++) {
-        if ((player) != _players[i] ) {
-           _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
-           if (_teamColor != null) {
-              if (_teams.indexOf (_teamColor) == -1){
-                 if (_players[i].getGameMode().toString() != "SPECTATOR"){
-                   _teams.push (_teamColor);
-                 }
-              }
-           }
-        }
-     }
-     console.log ( "Active teams: " + _teams );
-     return _teams;
-   })();
-  numTeams=teams.length;
-  console.log ("active teams: " + numTeams);
-  if (((team) == ("red"))){
-    block=server.worlds[0].getBlockAt (exports.redBed);
-  }
-  else {
-    block=server.worlds[0].getBlockAt (exports.blueBed);
-  }
-  if ((((block==null)?null:block.getType()) == (org.bukkit.Material.RED_BED))){
-    console.log ("Your bed still exists" );
-  }
-  else {
-    console.log ("Your bed has been destroyed" );
+  if (((team) != (null))){
+    console.log (team + " team has lost a player" );
+    console.log (player.name + " has died");
+    teams=(function() {    var _players=server.getOnlinePlayers();var _teams=[];var _teamColor;
+       console.log ( 'Number of players: ' + _players.length );
+       for (var i=0; i<_players.length;i++) {
+          if ((player) != _players[i] ) {
+             _teamColor=(_players[i]== null)? null : (_players[i].getMetadata == null)?null:(_players[i].getMetadata("_team_").length == 0)?null:_players[i].getMetadata("_team_")[0].value();
+             if (_teamColor != null) {
+                if (_teams.indexOf (_teamColor) == -1){
+                   if (_players[i].getGameMode().toString() != "SPECTATOR"){
+                     _teams.push (_teamColor);
+                   }
+                }
+             }
+          }
+       }
+       console.log ( "Active teams: " + _teams );
+       return _teams;
+     })();
+    numTeams=teams.length;
+    console.log ("active teams: " + numTeams);
+    if (((team) == ("red"))){
+      block=server.worlds[0].getBlockAt (exports.redBed);
+    }
+    else {
+      block=server.worlds[0].getBlockAt (exports.blueBed);
+    }
+    if ((((block==null)?null:block.getType()) == (org.bukkit.Material.RED_BED))){
+      console.log ("Your bed still exists" );
+    }
+    else {
+      console.log ("Your bed has been destroyed" );
+    }
   }
 };
 
@@ -525,7 +527,6 @@ function careerFighter (player,block,hand,action) {
   var stack;
   var material;
   if (((hand) == (org.bukkit.inventory.EquipmentSlot.OFF_HAND))){
-    console.log ("action: " + action );
     if (((action) == (org.bukkit.event.block.Action.RIGHT_CLICK_AIR))){
       vector=(player== null)?null:player.location.getDirection().normalize();
       vector=vector.multiply (5);
